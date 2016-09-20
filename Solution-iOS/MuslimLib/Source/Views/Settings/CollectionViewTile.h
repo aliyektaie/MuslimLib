@@ -14,5 +14,8 @@
 @property (strong, nonatomic) NSString* image;
 @property (strong, nonatomic) NSString* segueToPerform;
 
+@property (assign, nonatomic) BOOL isImageCoveringAllBackground;
+
+
 
 @end

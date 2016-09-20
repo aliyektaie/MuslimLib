@@ -35,6 +35,13 @@ Sidebar/MafatihBook:مفاتیح الجنان
 Sidebar/Settings:تنظیمات
 Sidebar/About:درباره
 
+// Quran Home Page:
+// -----------------
+QuranHomePage/Sections/Read:خواندن قرآن
+QuranHomePage/Sections/ReadRandomPage:خواندن یک صفحه‌ی تصادفی
+QuranHomePage/Sections/ReadKhatmContinue:ادامه‌ی ختم قرآن
+QuranHomePage/Sections/ReadKhatmStart:شروع یک ختم قرآن
+
 // Tab Control:
 // -------------
 

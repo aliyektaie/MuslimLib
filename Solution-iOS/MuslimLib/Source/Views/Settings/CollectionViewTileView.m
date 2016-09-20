@@ -42,19 +42,19 @@
     self.icon = [UIButton buttonWithType:UIButtonTypeSystem];
     self.icon.tintColor = [Theme instance].defaultTextColor;
         
-    [self addSubview:self.titleText];
     [self addSubview:self.icon];
+    [self addSubview:self.titleText];
     
     [self.titleText addTarget:self
-                       action:@selector(onTouch)
+                       action:@selector(onTouch:)
              forControlEvents:UIControlEventTouchUpInside];
     
     [self.icon addTarget:self
-                  action:@selector(onTouch)
+                  action:@selector(onTouch:)
         forControlEvents:UIControlEventTouchUpInside];
 }
 
-- (void)onTouch {
+- (void)onTouch:(id)sender {
     [self.page performSegueWithIdentifier:self.segueToPerform sender:self.page];
 }
 
@@ -67,7 +67,13 @@
     self.titleText.frame = CGRectMake (8, TOP_MARGIN, (float)self.frame.size.width - 16, HEIGHT - 5);
     int marginImage = 5;
     int width = TOP_MARGIN - 2 * marginImage;
-    self.icon.frame = CGRectMake ((float)(self.frame.size.width - width) / 2, marginImage, width, width);
+    
+    if (self.shouldFillImage) {
+        self.icon.frame = CGRectMake (10, 10, CGRectGetWidth(self.frame) - 20, CGRectGetHeight(self.frame) - 20);
+        self.titleText.frame = CGRectMake (10, (CGRectGetHeight(self.frame) * 0.75) - 10, CGRectGetWidth(self.frame) - 20, (float)(CGRectGetHeight(self.frame) * 0.25));
+    } else {
+        self.icon.frame = CGRectMake ((float)(self.frame.size.width - width) / 2, marginImage, width, width);
+    }
 }
 
 - (void)setTitle:(NSString*)title {
@@ -76,11 +82,20 @@
         language = [LanguageStrings instance].name;
     }
     
+    if (self.shouldFillImage) {
+        self.titleText.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+        self.titleText.titleLabel.font = [Utils createDefaultBoldFont:14];
+    }
+
     [self.titleText setTitle:title forState:UIControlStateNormal];
 }
 
 - (void)setImage:(NSString*)image {
-    [self.icon setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    if (self.shouldFillImage) {
+        [self.icon setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    } else {
+        [self.icon setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    }
 }
 
 @end

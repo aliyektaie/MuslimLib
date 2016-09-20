@@ -57,8 +57,8 @@
                     </view>
                     <connections>
                         <outlet property="tblItems" destination="30t-Um-AZs" id="ttd-dJ-iBb"/>
-                        <segue destination="Jqx-js-e6j" kind="custom" identifier="s_ShowQuran" customClass="SidebarItemSegue" id="CGR-Nk-Qfz"/>
                         <segue destination="UwP-fs-Iav" kind="custom" identifier="s_ShowSettingsPage" customClass="SidebarItemSegue" id="PXj-Y2-gT9"/>
+                        <segue destination="aDB-9H-65p" kind="custom" identifier="s_ShowQuran" customClass="SidebarItemSegue" id="aUi-1n-qdw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UMx-WX-IAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +82,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu7-Q9-AM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4595" y="-1095"/>
+            <point key="canvasLocation" x="9716" y="-1001"/>
         </scene>
         <!--Quran View Controller-->
         <scene sceneID="8Ye-JM-izS">
@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuA-iw-rIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4595" y="-1847"/>
+            <point key="canvasLocation" x="9716" y="-1754"/>
         </scene>
         <!--Quran Tab View Controller-->
         <scene sceneID="kdk-82-6Fd">
@@ -137,7 +137,62 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tX2-jc-vuI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="-1095"/>
+            <point key="canvasLocation" x="7708" y="-1001"/>
+        </scene>
+        <!--Quran Home Page-->
+        <scene sceneID="t21-MG-PVh">
+            <objects>
+                <viewController id="aDB-9H-65p" customClass="QuranHomePage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B2u-HF-eZC"/>
+                        <viewControllerLayoutGuide type="bottom" id="dUK-eK-ml2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1S8-Ga-gRc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l8s-8Z-Q0I">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VRW-vL-vgZ">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lHk-Sp-DKj">
+                                        <rect key="frame" x="0.0" y="50" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SETTING_HEADER" id="trb-VB-VC7" customClass="CollectionViewTileView">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="l8s-8Z-Q0I" secondAttribute="trailing" id="CW3-wH-D3r"/>
+                            <constraint firstItem="l8s-8Z-Q0I" firstAttribute="top" secondItem="B2u-HF-eZC" secondAttribute="bottom" constant="-64" id="Jtm-45-fp6"/>
+                            <constraint firstItem="l8s-8Z-Q0I" firstAttribute="leading" secondItem="1S8-Ga-gRc" secondAttribute="leading" id="p9F-aX-vcD"/>
+                            <constraint firstItem="dUK-eK-ml2" firstAttribute="top" secondItem="l8s-8Z-Q0I" secondAttribute="bottom" id="w0w-6n-AFQ"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="collectionView" destination="l8s-8Z-Q0I" id="FNV-Uh-ZDE"/>
+                        <segue destination="Jqx-js-e6j" kind="show" identifier="s_ShowReadingQuran" id="ba0-ic-7sU"/>
+                        <segue destination="Jqx-js-e6j" kind="show" identifier="s_ShowReadingQuranRandom" id="Br7-fb-30r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kj-IG-PEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2985" y="4106"/>
         </scene>
         <!--Title-->
         <scene sceneID="XYD-OO-O4e">
@@ -243,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1S-88-NmK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.5" y="2187.676056338028"/>
+            <point key="canvasLocation" x="-2001" y="4107"/>
         </scene>
         <!--Quran Pages Index-->
         <scene sceneID="Ew6-d8-OSd">
@@ -283,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a07-7j-TlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2765.625" y="3072.8873239436621"/>
+            <point key="canvasLocation" x="-1628" y="4993"/>
         </scene>
         <!--Quran Sourah Index-->
         <scene sceneID="Jlq-oZ-hE0">
@@ -345,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkk-K1-1jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985.625" y="3072.8873239436621"/>
+            <point key="canvasLocation" x="-2408" y="4993"/>
         </scene>
         <!--Main Window View Controller-->
         <scene sceneID="7CF-1e-sdf">
@@ -394,7 +449,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RrB-NO-KZZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Quran" image="QuranTabsQuran" id="TSv-xY-zwJ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rbi-D4-2m2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Rbi-D4-2m2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -405,7 +460,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIo-Lw-JGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="-1847"/>
+            <point key="canvasLocation" x="8925" y="-1754"/>
         </scene>
         <!--Commentary-->
         <scene sceneID="c4t-xd-jlB">
@@ -413,7 +468,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZv-S9-MAV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Commentary" image="QuranTabsCommentary" id="EmI-hg-e9p"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LtU-7Q-MNH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LtU-7Q-MNH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -424,7 +479,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cKf-vh-ex3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="-1095"/>
+            <point key="canvasLocation" x="8925" y="-1001"/>
         </scene>
         <!--Sourah List View Controller-->
         <scene sceneID="Coz-Rt-1A7">
@@ -476,7 +531,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m4X-YW-vf7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4595" y="-335"/>
+            <point key="canvasLocation" x="9716" y="-242"/>
         </scene>
         <!--Quran Sourah Options And Details View Controller-->
         <scene sceneID="qoq-SD-P34">
@@ -510,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbd-PW-Lu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5353" y="-335"/>
+            <point key="canvasLocation" x="10474" y="-242"/>
         </scene>
         <!--Quran Sourah Summary View Controller-->
         <scene sceneID="D6K-yE-INP">
@@ -543,7 +598,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Mh-N2-vnN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6121" y="-335"/>
+            <point key="canvasLocation" x="11243" y="-242"/>
         </scene>
         <!--Sourah List-->
         <scene sceneID="CI4-QX-wFT">
@@ -551,7 +606,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2y9-Ri-N5K" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sourah List" image="TabsList" id="uM4-Js-Qy2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XVZ-Wm-pw3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XVZ-Wm-pw3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -562,7 +617,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eg9-k0-d6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="-335"/>
+            <point key="canvasLocation" x="8925" y="-242"/>
         </scene>
         <!--Quran Search View Controller-->
         <scene sceneID="w9d-V5-WnI">
@@ -581,7 +636,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ee-9F-rcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4595" y="449"/>
+            <point key="canvasLocation" x="9716" y="543"/>
         </scene>
         <!--Search-->
         <scene sceneID="UTE-0U-9wl">
@@ -589,7 +644,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="weZ-kT-dx0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="TabsSearch" id="I7r-nR-0HI"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FRa-l0-f4q">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FRa-l0-f4q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -600,7 +655,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRa-4N-cdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3803" y="449"/>
+            <point key="canvasLocation" x="8925" y="543"/>
         </scene>
         <!--Quran Settings View Controller-->
         <scene sceneID="R3Y-rK-CxE">
@@ -619,7 +674,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0KW-W3-bXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5407" y="1220"/>
+            <point key="canvasLocation" x="10528" y="1313"/>
         </scene>
         <!--Settings-->
         <scene sceneID="sp1-Zg-xmq">
@@ -627,7 +682,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="L19-ru-RKN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="TabsSettings" id="eEj-7T-AvT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SXq-4P-5oZ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SXq-4P-5oZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -638,14 +693,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSk-7a-Du3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4615" y="1220"/>
+            <point key="canvasLocation" x="9737" y="1313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pEj-PR-LO4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxC-BV-O1D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzC-Pg-bjV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kzC-Pg-bjV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -858,7 +913,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9A4-AY-9WJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2706" y="2121"/>
+            <point key="canvasLocation" x="-5696" y="1106"/>
         </scene>
         <!--Select Quran Translation View Controller-->
         <scene sceneID="5cC-7D-3O2">
@@ -972,8 +1027,9 @@
         <image name="TabsSettings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="PXj-Y2-gT9"/>
         <segue reference="OUm-E4-fcT"/>
         <segue reference="TtZ-lB-RKI"/>
-        <segue reference="vAL-0G-eIA"/>
+        <segue reference="Br7-fb-30r"/>
     </inferredMetricsTieBreakers>
 </document>

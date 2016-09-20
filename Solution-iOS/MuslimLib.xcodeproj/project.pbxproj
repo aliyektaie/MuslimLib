@@ -78,6 +78,7 @@
 		284897591D5CC8680077529D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284897581D5CC8680077529D /* CoreText.framework */; };
 		2848975C1D5CCE4C0077529D /* QuranVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848975B1D5CCE4C0077529D /* QuranVerse.m */; };
 		2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */; };
+		287A32021D91C7C300A2505A /* QuranHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A32011D91C7C300A2505A /* QuranHomePage.m */; };
 		289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */; };
 		28A101E61D83C4670022B159 /* ChangeLanguagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101E51D83C4670022B159 /* ChangeLanguagePage.m */; };
 		28A101EA1D83C73C0022B159 /* SetLanguageSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101E91D83C73C0022B159 /* SetLanguageSegue.m */; };
@@ -223,6 +224,8 @@
 		2848975B1D5CCE4C0077529D /* QuranVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerse.m; path = Source/Models/Quran/QuranVerse.m; sourceTree = "<group>"; };
 		2858B9811D79FA0A00F91338 /* QuranSourahIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahIndexViewController.h; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.h"; sourceTree = "<group>"; };
 		2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahIndexViewController.m; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.m"; sourceTree = "<group>"; };
+		287A32001D91C7C300A2505A /* QuranHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranHomePage.h; path = Source/Views/Quran/QuranHomePage.h; sourceTree = "<group>"; };
+		287A32011D91C7C300A2505A /* QuranHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranHomePage.m; path = Source/Views/Quran/QuranHomePage.m; sourceTree = "<group>"; };
 		289FFBAD1D7BD7F6008ED24F /* ArabicLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArabicLabel.h; path = Source/Views/Bases/ArabicLabel.h; sourceTree = "<group>"; };
 		289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArabicLabel.m; path = Source/Views/Bases/ArabicLabel.m; sourceTree = "<group>"; };
 		28A101E41D83C4670022B159 /* ChangeLanguagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeLanguagePage.h; path = Source/Views/Settings/Pages/ChangeLanguagePage.h; sourceTree = "<group>"; };
@@ -462,6 +465,8 @@
 				283C3B981D53F79200E67E49 /* QuranTabViewController.m */,
 				2813E59A1D604CE1002E9BA6 /* MainQuranViewController.h */,
 				2813E59B1D604CE1002E9BA6 /* MainQuranViewController.m */,
+				287A32001D91C7C300A2505A /* QuranHomePage.h */,
+				287A32011D91C7C300A2505A /* QuranHomePage.m */,
 			);
 			name = Quran;
 			sourceTree = "<group>";
@@ -970,6 +975,7 @@
 				289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */,
 				283C3B8A1D53F4BA00E67E49 /* SourahListViewController.m in Sources */,
 				2813E5991D601798002E9BA6 /* SidebarItem.m in Sources */,
+				287A32021D91C7C300A2505A /* QuranHomePage.m in Sources */,
 				2813E58C1D60168A002E9BA6 /* SidebarViewController.m in Sources */,
 				283C3B761D53F1D000E67E49 /* LanguageStrings.m in Sources */,
 				283C3BA71D54DA5000E67E49 /* NSString+Contains.m in Sources */,

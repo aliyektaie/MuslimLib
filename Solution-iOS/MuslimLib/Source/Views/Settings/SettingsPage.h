@@ -12,7 +12,7 @@
 @interface SettingsPage : BaseViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) NSArray* tiles;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSArray* sections;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end

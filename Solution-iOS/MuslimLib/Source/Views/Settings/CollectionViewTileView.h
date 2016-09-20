@@ -17,6 +17,8 @@
 @property (strong, nonatomic) NSString* segueToPerform;
 @property (strong, nonatomic) UIViewController* page;
 
+@property (assign, nonatomic) BOOL shouldFillImage;
+
 - (void)initialize:(NSString*)text;
 
 - (void)setTitle:(NSString*)title;

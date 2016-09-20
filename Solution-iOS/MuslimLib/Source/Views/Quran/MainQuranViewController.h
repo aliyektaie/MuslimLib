@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIView *actionSheetSource;
 
 @property (assign, nonatomic) int page;
+@property (assign, nonatomic) BOOL saveCurrentPage;
 @property (strong, nonatomic) NSArray* content;
 @property (strong, nonatomic) NSArray* translations;
 @property (assign, nonatomic) int mode;

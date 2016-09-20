@@ -11,7 +11,6 @@
 #import "LanguageStrings.h"
 #import "Theme.h"
 #import "QuranPagesIndexViewController.h"
-#import "Settings.h"
 #import "MuslimLib.h"
 #import "QuranSourahIndexViewController.h"
 #import "Settings.h"
@@ -45,7 +44,6 @@
                                  forState:UIControlStateNormal];
 
     self.mode = [Settings getLastViewedQuranMode];
-    self.page = [Settings getLastViewedQuranPage];
     
     if (self.mode == MODE_BOOK) {
         [self setupBookMode];
@@ -77,8 +75,11 @@
     self.currntSourah.title = [[MuslimLib instance] getQuranPageFirstSourahName:page];
 
     [self.tableView reloadData];
+    [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
 
-    [Settings setLastViewedQuranPage:page];
+    if (self.saveCurrentPage) {
+        [Settings setLastViewedQuranPage:page];
+    }
     [Settings setLastViewedQuranMode:self.mode];
 }
 

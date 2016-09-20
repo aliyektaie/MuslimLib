@@ -35,6 +35,13 @@ Sidebar/Settings:Settings
 Sidebar/About:About
 
 
+// Quran Home Page:
+// -----------------
+QuranHomePage/Sections/Read:Read the Quran
+QuranHomePage/Sections/ReadRandomPage:Read a Random Page
+QuranHomePage/Sections/ReadKhatmContinue:Continue Reading
+QuranHomePage/Sections/ReadKhatmStart:Start Reading
+
 // Tab Control:
 // -------------
 
@@ -126,3 +133,5 @@ ChangeLanguageWindow/ConfirmLanguageChange:Note that you will have to close this
 // Select Special Arabic Chars:
 // -----------------------------
 SelectSpecialArabicChars/Description:Please select the way you want the Quran to be shown. You can either select the full special characters or the reduced one. Note that if you select the full mode, you won't be able to customize the font anymore.
+
+

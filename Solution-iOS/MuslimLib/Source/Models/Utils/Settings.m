@@ -62,7 +62,7 @@
     NSString* result = (NSString*)[defaults objectForKey:@"LAST_QURAN_PAGE_VIEW"];
 
     if (result == nil) {
-        result = @"300";
+        result = @"1";
     }
 
     return [result intValue];
