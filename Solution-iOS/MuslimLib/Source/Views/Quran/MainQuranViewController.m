@@ -254,26 +254,42 @@
 
     
     NSArray* translations = [self getTranslations];
-    for (int i = 0; i < translations.count; i++) {
-        QuranTranslationInfo* info = [translations objectAtIndex:i];
+    if (translations.count == 1) {
+        QuranTranslationInfo* info = [translations objectAtIndex:0];
         
         contentLabel.font = TRANSLATION_CONTENT_LABEL_FONT(info);
-        titleLabel.font = TRANSLATION_TITLE_LABEL_FONT(info);
-        
-        titleLabel.text = info.title;
         contentLabel.text = [info getTranslation:verse];
         
-        CGSize size = [titleLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.frame) - 20, 0)];
+        CGSize size = [contentLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.frame) - 20, 0)];
         result += size.height;
         
-        size = [contentLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.frame) - 20, 0)];
-        result += size.height;
-        
-        result += 10;
         result += 20;
+    } else {
+        for (int i = 0; i < translations.count; i++) {
+            QuranTranslationInfo* info = [translations objectAtIndex:i];
+            
+            contentLabel.font = TRANSLATION_CONTENT_LABEL_FONT(info);
+            titleLabel.font = TRANSLATION_TITLE_LABEL_FONT(info);
+            
+            titleLabel.text = info.title;
+            contentLabel.text = [info getTranslation:verse];
+            
+            CGSize size = [titleLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.frame) - 20, 0)];
+            result += size.height;
+            
+            size = [contentLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.tableView.frame) - 20, 0)];
+            result += size.height;
+            
+            result += 10;
+            result += 20;
+        }
     }
 
     return result;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -61,12 +61,14 @@
         for (int i = 0; i < translations.count; i++) {
             QuranTranslationInfo* info = [translations objectAtIndex:i];
             
-            UILabel* titleLabel = [[UILabel alloc] init];
-            titleLabel.font = TRANSLATION_TITLE_LABEL_FONT(info);
-            titleLabel.textColor = [Utils colorFromRed:140 Green:105 Blue:0];
-            
-            [self addSubview:titleLabel];
-            [labels addObject:titleLabel];
+            if (translations.count > 1) {
+                UILabel* titleLabel = [[UILabel alloc] init];
+                titleLabel.font = TRANSLATION_TITLE_LABEL_FONT(info);
+                titleLabel.textColor = [Utils colorFromRed:140 Green:105 Blue:0];
+                
+                [self addSubview:titleLabel];
+                [labels addObject:titleLabel];
+            }
 
             UILabel* contentLabel = [[UILabel alloc] init];
             contentLabel.font = TRANSLATION_CONTENT_LABEL_FONT(info);
@@ -79,15 +81,23 @@
         self.translationsLabel = labels;
     }
     
-    for (int i = 0; i < translations.count; i++) {
-        UILabel* titleLabel = [self.translationsLabel objectAtIndex:i * 2];
-        UILabel* contentLabel = [self.translationsLabel objectAtIndex:i * 2 + 1];
-        QuranTranslationInfo* info = [translations objectAtIndex:i];
+    if (translations.count == 1) {
+        UILabel* contentLabel = [self.translationsLabel objectAtIndex:0];
+        QuranTranslationInfo* info = [translations objectAtIndex:0];
         
-        titleLabel.text = info.title;
         contentLabel.text = [info getTranslation:self.verse];
         contentLabel.textAlignment = [self getTextAlignment:info];
-        titleLabel.textAlignment = [self getTextAlignment:info];
+    } else {
+        for (int i = 0; i < translations.count; i++) {
+            UILabel* titleLabel = [self.translationsLabel objectAtIndex:i * 2];
+            UILabel* contentLabel = [self.translationsLabel objectAtIndex:i * 2 + 1];
+            QuranTranslationInfo* info = [translations objectAtIndex:i];
+            
+            titleLabel.text = info.title;
+            contentLabel.text = [info getTranslation:self.verse];
+            contentLabel.textAlignment = [self getTextAlignment:info];
+            titleLabel.textAlignment = [self getTextAlignment:info];
+        }
     }
 }
 

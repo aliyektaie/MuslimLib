@@ -112,7 +112,7 @@ static NSMutableArray* cache;
             isLastLine = YES;
         }
 
-        [self drawLine:line atY:currentY - 5 isEnd:isLastLine];
+        [self drawLine:line atY:currentY isEnd:isLastLine];
         currentY += [ArabicLabel getLineHeight];
     }
 }
