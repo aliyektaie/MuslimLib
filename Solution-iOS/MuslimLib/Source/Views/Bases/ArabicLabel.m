@@ -112,7 +112,7 @@ static NSMutableArray* cache;
             isLastLine = YES;
         }
 
-        [self drawLine:line atY:currentY isEnd:isLastLine];
+        [self drawLine:line atY:currentY - 5 isEnd:isLastLine];
         currentY += [ArabicLabel getLineHeight];
     }
 }
@@ -219,7 +219,7 @@ static NSMutableArray* cache;
         } else {
             wordWidth = [ArabicLabel widthOfString:word withFont:quranFont];
 
-            CGRect textRect = CGRectMake(endX - wordWidth, yPosition, wordWidth, [ArabicLabel getLineHeight] * 2);
+            CGRect textRect = CGRectMake(endX - wordWidth, yPosition, wordWidth, [ArabicLabel getLineHeight] * 10);
             NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
             textStyle.alignment = NSTextAlignmentLeft;
 
@@ -377,7 +377,7 @@ static NSMutableDictionary* stringWidthCache;
 + (int)getLineHeight {
     int result = 0;
 
-    result = 50;
+    result = 60;
     return result;
 }
 
