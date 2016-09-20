@@ -87,7 +87,7 @@
         titleLabel.text = info.title;
         contentLabel.text = [info getTranslation:self.verse];
         contentLabel.textAlignment = [self getTextAlignment:info];
-        [titleLabel ].textAlignment = [self getTextAlignment:info];
+        titleLabel.textAlignment = [self getTextAlignment:info];
     }
 }
 

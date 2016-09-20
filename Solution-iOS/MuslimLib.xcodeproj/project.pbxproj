@@ -23,6 +23,7 @@
 		28190C2C1D4B615300CAFB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28190C2B1D4B615300CAFB88 /* AppDelegate.m */; };
 		28190C321D4B615300CAFB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28190C301D4B615300CAFB88 /* Main.storyboard */; };
 		28190C341D4B615300CAFB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28190C331D4B615300CAFB88 /* Assets.xcassets */; };
+		282772D71D9194B100CBD2E9 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 282772D61D9194B100CBD2E9 /* NSString+MD5.m */; };
 		283C3B611D53E3E100E67E49 /* SidebarParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B5E1D53E3E100E67E49 /* SidebarParameters.m */; };
 		283C3B621D53E3E100E67E49 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B601D53E3E100E67E49 /* SWRevealViewController.m */; };
 		283C3B701D53F17500E67E49 /* English.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3B6F1D53F17500E67E49 /* English.txt */; };
@@ -128,6 +129,8 @@
 		28190C311D4B615300CAFB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28190C331D4B615300CAFB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28190C381D4B615300CAFB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		282772D51D9194B100CBD2E9 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+MD5.h"; path = "Source/Models/Utils/NSString+MD5.h"; sourceTree = "<group>"; };
+		282772D61D9194B100CBD2E9 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+MD5.m"; path = "Source/Models/Utils/NSString+MD5.m"; sourceTree = "<group>"; };
 		283C3B5D1D53E3E100E67E49 /* SidebarParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarParameters.h; path = Source/Components/Sidebar/SidebarParameters.h; sourceTree = "<group>"; };
 		283C3B5E1D53E3E100E67E49 /* SidebarParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarParameters.m; path = Source/Components/Sidebar/SidebarParameters.m; sourceTree = "<group>"; };
 		283C3B5F1D53E3E100E67E49 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Source/Components/Sidebar/SWRevealViewController.h; sourceTree = "<group>"; };
@@ -518,6 +521,8 @@
 			children = (
 				283C3BA51D54DA5000E67E49 /* NSString+Contains.h */,
 				283C3BA61D54DA5000E67E49 /* NSString+Contains.m */,
+				282772D51D9194B100CBD2E9 /* NSString+MD5.h */,
+				282772D61D9194B100CBD2E9 /* NSString+MD5.m */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1003,6 +1008,7 @@
 				284897151D58DB500077529D /* TrieFile.m in Sources */,
 				28F4305B1D7D30990064900A /* SelectDefaultArabicFontViewController.m in Sources */,
 				2813E5821D5E6C04002E9BA6 /* QuranVerseCell.m in Sources */,
+				282772D71D9194B100CBD2E9 /* NSString+MD5.m in Sources */,
 				283C3B7C1D53F1E800E67E49 /* Utils.m in Sources */,
 				284897211D58DBBA0077529D /* Guid.m in Sources */,
 				2813E5A41D6364DE002E9BA6 /* PresentViewSegue.m in Sources */,
@@ -1129,6 +1135,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2VT7W25E3S;
 				INFOPLIST_FILE = MuslimLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1146,6 +1153,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 2VT7W25E3S;
 				INFOPLIST_FILE = MuslimLib/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -10,6 +10,8 @@
 #import "Utils.h"
 #import "MuslimLib.h"
 #import "Settings.h"
+#import "NSString+MD5.h"
+#import "ArabicLabel.h"
 
 #define SOURAH_HEADER_HEIGHT [self getSourahHeaderHeight]
 #define AYA_SIGN_DIM [self getAyaSignDim]
@@ -454,9 +456,26 @@ static UIImage* besmAllah;
     return aya;
 }
 
+static NSMutableDictionary* stringWidthCache;
+
 - (CGFloat)widthOfString:(NSString *)string withFont:(UIFont *)font {
-    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
-    return [[[NSAttributedString alloc] initWithString:string attributes:attributes] size].width;
+    if (stringWidthCache == nil) {
+        stringWidthCache = [[NSMutableDictionary alloc] init];
+    }
+    
+    NSString* hash = [NSString stringWithFormat:@"%@[at]%@%d", [string md5Hash], font.fontName, (int)font.pointSize];
+    
+    TempFloatContainer* value = [stringWidthCache objectForKey:hash];
+    if (value == nil) {
+        NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+        CGFloat w = [[[NSAttributedString alloc] initWithString:string attributes:attributes] size].width;
+        value = [[TempFloatContainer alloc] init];
+        value.value = w;
+        
+        [stringWidthCache setObject:value forKey:hash];
+    }
+    
+    return value.value;
 }
 
 - (NSMutableArray*)removeEmpties:(NSArray*)list {

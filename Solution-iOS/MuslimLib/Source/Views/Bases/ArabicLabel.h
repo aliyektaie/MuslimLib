@@ -16,3 +16,9 @@
 + (void)invalidateQuranFont;
 
 @end
+
+@interface TempFloatContainer : NSObject
+
+@property (assign, nonatomic) CGFloat value;
+
+@end
