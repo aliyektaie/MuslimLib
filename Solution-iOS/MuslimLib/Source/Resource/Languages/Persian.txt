@@ -1,0 +1,129 @@
+// ============================================================
+//    General Settings
+// ============================================================
+Direction:rtl
+DefaultFont:IRANSans
+DefaultBoldFont:IRANSans-Bold
+Ok:تایید
+Cancel:انصراف
+UsePersianDigits:true
+Yes:بله
+Login:ورود
+No:خیر
+Error:خطا
+Language:Persian
+Close:بستن
+ChangeNavigationControllerTitleFont:true
+ChangeTabBarItemTitleFont:true
+TabBarItemTitleFont:IRANSans
+TabBarItemTitleFontSize:9
+
+// ============================================================
+//    Quran Section
+// ============================================================
+// Generals:
+// ----------
+Quran/Maki:مکی
+Quran/Madani:مدنی
+
+// Sidebar:
+// ---------
+Sidebar/Quran:قرآن کریم
+Sidebar/ImamsPublications:کتب ائمه
+Sidebar/HadithBooks:کتب حدیث
+Sidebar/MafatihBook:مفاتیح الجنان
+Sidebar/Settings:تنظیمات
+Sidebar/About:درباره
+
+// Tab Control:
+// -------------
+
+QuranTab/Quran:قرآن
+QuranTab/Commentary:تفسیر
+QuranTab/SourahList:سوره‌ها
+QuranTab/Search:جستجو
+QuranTab/Settings:تنظیمات
+
+// Sourah List:
+// -------------
+QuranTab/SourahList/Item/PrimaryTitle:$order. $arabicName
+QuranTab/SourahList/Item/VerseCount:%@ آیه
+QuranTab/SourahList/Item/TitleFontSize:17
+
+// Sourah Options & Details:
+// --------------------------
+QuranTab/SourahList/Details/HeaderPosition:ترتیب در قرآن
+QuranTab/SourahList/Details/HeaderDetails:چکیده‌ی سوره
+QuranTab/SourahList/Details/HeaderOptions:گزینه‌ها
+QuranTab/SourahList/Details/Title:سوره‌ی $arabicName
+QuranTab/SourahList/Details/Positions/ChronologicalOrder:ترتیب نزول
+QuranTab/SourahList/Details/Positions/BookOrder:ترتیب در قرآن
+QuranTab/SourahList/Details/Options/ShowQuran:مشاهده‌ی متن سوره
+QuranTab/SourahList/Details/Options/ShowCommentary:مشاهده‌ی تفسیر
+QuranTab/SourahList/Details/Options/ShowArticle:چکیده سوره
+QuranTab/SourahList/Details/Details/Classification:دسته بندی
+QuranTab/SourahList/Details/Details/HasTitleTranslation:false
+QuranTab/SourahList/Details/Details/TitleTranslation:معنی عنوان سوره
+QuranTab/SourahList/Details/Details/TitleRefersTo:عنوان سوره بر اساس
+QuranTab/SourahList/Details/Details/ContentConcepts:محتوای کلی سوره
+QuranTab/SourahList/Details/Details/VerseCount:تعداد آیه
+QuranTab/SourahList/Details/Details/WordCount:تعداد لغت
+QuranTab/SourahList/Details/Details/LetterCount:تعداد حرف
+QuranTab/SourahList/Details/Details/MoghataaLetters:حروف مقطعه
+QuranTab/SourahList/Details/Details/HizbNumber:شماره حزب
+QuranTab/SourahList/Details/Details/NumberOfSajdah:تعداد سجده
+QuranTab/SourahList/Details/Details/OtherNames:نام‌های دیگر
+QuranTab/SourahList/Details/Details/OtherNamesArabic:نام‌های دیگر عربی
+QuranTab/SourahList/Details/Details/MoghataaLettersFormat:$arabicLetters
+QuranTab/SourahList/Details/NavigationOption:گزینه‌ها
+QuranTab/SourahList/Details/Actions/Title:مرتب سازی
+QuranTab/SourahList/Details/Actions/Message:لطفا معیار مرتب سازی سوره‌ها را مشخص کنید.
+QuranTab/SourahList/Details/Actions/Standard:ترتیب در قرآن
+QuranTab/SourahList/Details/Actions/Chronological:ترتیب نزول
+
+// Read Quran Tab:
+// ----------------
+QuranTab/ReadQuran/ViewsMode:نمایش
+QuranTab/ReadQuran/ViewsModeTitle:انتخاب شیوه‌ی نمایش
+QuranTab/ReadQuran/ViewsModeMessage:لطفا چینش مورد نظر خود را انتخاب کنید.
+QuranTab/ReadQuran/ViewModes/Page:کتابی (عثمان طه)
+QuranTab/ReadQuran/ViewModes/QuranOnly:متن عربی
+QuranTab/ReadQuran/ViewModes/QuranAndTranslation:متن عربی با ترجمه
+
+
+// Select Quran Page:
+// -------------------
+QuranTab/SelectQuranPage/JuzText:جزء %@
+QuranTab/SelectQuranPage/Title:فهرست صفحه‌های قرآن
+
+// Select Quran Sourah:
+// ---------------------
+QuranTab/SelectQuranSourah/Title:فهرست سوره‌های قرآن
+
+
+
+// ============================================================
+//    Settings Section
+// ============================================================
+SettingsPage/Sections/General:تنظیمات عمومی
+SettingsPage/Sections/Quran:تنظیمات بخش قرآن
+SettingsPage/Title:تنظیمات
+
+SettingsPage/Settings/ChangeLanguage:تغییر زبان
+SettingsPage/Settings/DefaultFont:فونت عربی پیش‌فرض
+
+SettingsPage/Settings/Quran/Translations:انتخاب ترجمه
+SettingsPage/Settings/Quran/SpecialChars:حرکات خاص
+
+// Select Default Arabic Font:
+// ---------------------------
+SelectDefaultArabicFontPage/Description:لطفا فونت عربی مورد نظر خود را انتخاب کنید. این فونت در بخش قرآن و ادعیه مورد استفاده قرار می‌گیرد.\r\nشما می‌توانید نمایی از فونت انتخاب شده در زیر ببینید
+
+//    Change Language Page:
+// -------------------------
+ChangeLanguageWindow/Title:تغییر زبان
+ChangeLanguageWindow/ConfirmLanguageChange:برای اعمال تغییر زبان یک بار باید نرم افزار را ببندید و مجددا باز کنید
+
+// Select Special Arabic Chars:
+// -----------------------------
+SelectSpecialArabicChars/Description:لطفا نوع حرکت گذاری قرآن را مشخص کنید. توجه داشته باشید که در صورتی که حرکت گذاری کامل را انتخاب کنید دیگر قادر به انتخاب فونت عربی قرآن نخواهید بود.

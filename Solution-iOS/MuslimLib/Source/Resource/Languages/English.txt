@@ -1,0 +1,128 @@
+// ============================================================
+//    General Settings
+// ============================================================
+Direction:ltr
+DefaultFont:Avenir-Medium
+DefaultBoldFont:Avenir-Black
+Ok:Ok
+Cancel:Cancel
+UsePersianDigits:false
+Yes:Yes
+Login:Login
+No:No
+Error:Error
+Language:English
+Close:Close
+ChangeNavigationControllerTitleFont:false
+ChangeTabBarItemTitleFont:false
+
+
+// ============================================================
+//    Quran Section
+// ============================================================
+// Generals:
+// ----------
+Quran/Maki:Meccan
+Quran/Madani:Medinan
+
+// Sidebar:
+// ---------
+Sidebar/Quran:Holy Quran
+Sidebar/ImamsPublications:Imams Books
+Sidebar/HadithBooks:Hadiths Books
+Sidebar/MafatihBook:Mafatih ol Janan
+Sidebar/Settings:Settings
+Sidebar/About:About
+
+
+// Tab Control:
+// -------------
+
+QuranTab/Quran:Quran
+QuranTab/Commentary:Commentary
+QuranTab/SourahList:Chapters
+QuranTab/Search:Search
+QuranTab/Settings:Settings
+
+// Sourah List:
+// -------------
+QuranTab/SourahList/Item/PrimaryTitle:$order. $englishName [$arabicName]
+QuranTab/SourahList/Item/VerseCount:%@ verses
+QuranTab/SourahList/Item/TitleFontSize:16
+
+// Sourah Options & Details:
+// --------------------------
+QuranTab/SourahList/Details/HeaderPosition:Position
+QuranTab/SourahList/Details/HeaderDetails:Quick Details
+QuranTab/SourahList/Details/HeaderOptions:Options & Links
+QuranTab/SourahList/Details/Title:$englishName [$arabicName]
+QuranTab/SourahList/Details/Positions/ChronologicalOrder:Chronological Order
+QuranTab/SourahList/Details/Positions/BookOrder:Quran's Order
+QuranTab/SourahList/Details/Options/ShowQuran:View Sourah
+QuranTab/SourahList/Details/Options/ShowCommentary:View Commentaries
+QuranTab/SourahList/Details/Options/ShowArticle:More About this Sourah
+QuranTab/SourahList/Details/Details/Classification:Classification
+QuranTab/SourahList/Details/Details/HasTitleTranslation:true
+QuranTab/SourahList/Details/Details/TitleTranslation:Title Meaning
+QuranTab/SourahList/Details/Details/TitleRefersTo:Title Refers To
+QuranTab/SourahList/Details/Details/ContentConcepts:Content Concept(s)
+QuranTab/SourahList/Details/Details/VerseCount:Verse Count
+QuranTab/SourahList/Details/Details/WordCount:Word Count
+QuranTab/SourahList/Details/Details/LetterCount:Letter Count
+QuranTab/SourahList/Details/Details/MoghataaLetters:Opening muqaṭṭaʻāt
+QuranTab/SourahList/Details/Details/HizbNumber:Hizb Number
+QuranTab/SourahList/Details/Details/NumberOfSajdah:Number of Sajdah
+QuranTab/SourahList/Details/Details/OtherNames:Other Names
+QuranTab/SourahList/Details/Details/OtherNamesArabic:Other Names in Arabic
+QuranTab/SourahList/Details/Details/MoghataaLettersFormat:$englishLetters [$arabicLetters]
+QuranTab/SourahList/Details/NavigationOption:Options
+QuranTab/SourahList/Details/Actions/Title:Sorting Mode
+QuranTab/SourahList/Details/Actions/Message:Please select the index you want to sort the sourahs with.
+QuranTab/SourahList/Details/Actions/Standard:Position in Quran
+QuranTab/SourahList/Details/Actions/Chronological:Chronological
+
+// Read Quran Tab:
+// ----------------
+QuranTab/ReadQuran/ViewsMode:Views
+QuranTab/ReadQuran/ViewsModeTitle:Select View Mode
+QuranTab/ReadQuran/ViewsModeMessage:Please select the mode you want the Holy Quran to be shown.
+QuranTab/ReadQuran/ViewModes/Page:Othman Taha Layout
+QuranTab/ReadQuran/ViewModes/QuranOnly:Reading Friendly (Arabic Only)
+QuranTab/ReadQuran/ViewModes/QuranAndTranslation:Reading Friendly (Arabic & Translation)
+
+// Select Quran Page:
+// -------------------
+QuranTab/SelectQuranPage/JuzText:Juzʼ %@
+QuranTab/SelectQuranPage/Title:Quran Pages Index
+
+// Select Quran Sourah:
+// ---------------------
+QuranTab/SelectQuranSourah/Title:Quran Sourahs Index
+
+
+// ============================================================
+//    Settings Section
+// ============================================================
+SettingsPage/Sections/General:Generals
+SettingsPage/Sections/Quran:Quran Settings
+SettingsPage/Title:Settings
+
+SettingsPage/Settings/ChangeLanguage:Change Language
+SettingsPage/Settings/DefaultFont:Default Arabic Font
+
+SettingsPage/Settings/Quran/Translations:Select Translations
+SettingsPage/Settings/Quran/SpecialChars:Special Characters
+
+// Select Default Arabic Font:
+// ---------------------------
+SelectDefaultArabicFontPage/Description:Please select the default Arabic font. This font will be used in the Quran pages and Duas.\r\nYou can see the preview of the font below.
+
+//    Change Language Page:
+// -------------------------
+ChangeLanguageWindow/Title:Change Language
+ChangeLanguageWindow/ConfirmLanguageChange:Note that you will have to close this app and reopen it for the change to make effect.
+
+
+// Select Special Arabic Chars:
+// -----------------------------
+SelectSpecialArabicChars/Description:Please select the way you want the Quran to be shown. You can either select the full special characters or the reduced one. Note that if you select the full mode, you won't be able to customize the font anymore.

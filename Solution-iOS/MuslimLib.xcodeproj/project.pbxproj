@@ -1,0 +1,1182 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2813E57F1D5E6546002E9BA6 /* CacheUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E57E1D5E6546002E9BA6 /* CacheUtils.m */; };
+		2813E5821D5E6C04002E9BA6 /* QuranVerseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5811D5E6C04002E9BA6 /* QuranVerseCell.m */; };
+		2813E5881D6013F6002E9BA6 /* MainWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5871D6013F6002E9BA6 /* MainWindowViewController.m */; };
+		2813E58C1D60168A002E9BA6 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E58B1D60168A002E9BA6 /* SidebarViewController.m */; };
+		2813E5941D60175C002E9BA6 /* SidebarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E58F1D60175C002E9BA6 /* SidebarCell.m */; };
+		2813E5951D60175C002E9BA6 /* SidebarItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5911D60175C002E9BA6 /* SidebarItemCell.m */; };
+		2813E5961D60175C002E9BA6 /* SidebarItemSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5931D60175C002E9BA6 /* SidebarItemSegue.m */; };
+		2813E5991D601798002E9BA6 /* SidebarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5981D601798002E9BA6 /* SidebarItem.m */; };
+		2813E59C1D604CE1002E9BA6 /* MainQuranViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E59B1D604CE1002E9BA6 /* MainQuranViewController.m */; };
+		2813E5A01D636455002E9BA6 /* QuranPagesIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E59F1D636455002E9BA6 /* QuranPagesIndexViewController.m */; };
+		2813E5A41D6364DE002E9BA6 /* PresentViewSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5A31D6364DE002E9BA6 /* PresentViewSegue.m */; };
+		2813E5A71D636FEA002E9BA6 /* QuranPageIndexCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2813E5A61D636FEA002E9BA6 /* QuranPageIndexCell.m */; };
+		28190C291D4B615300CAFB88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28190C281D4B615300CAFB88 /* main.m */; };
+		28190C2C1D4B615300CAFB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28190C2B1D4B615300CAFB88 /* AppDelegate.m */; };
+		28190C321D4B615300CAFB88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28190C301D4B615300CAFB88 /* Main.storyboard */; };
+		28190C341D4B615300CAFB88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28190C331D4B615300CAFB88 /* Assets.xcassets */; };
+		283C3B611D53E3E100E67E49 /* SidebarParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B5E1D53E3E100E67E49 /* SidebarParameters.m */; };
+		283C3B621D53E3E100E67E49 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B601D53E3E100E67E49 /* SWRevealViewController.m */; };
+		283C3B701D53F17500E67E49 /* English.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3B6F1D53F17500E67E49 /* English.txt */; };
+		283C3B721D53F18800E67E49 /* Persian.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3B711D53F18800E67E49 /* Persian.txt */; };
+		283C3B761D53F1D000E67E49 /* LanguageStrings.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B751D53F1D000E67E49 /* LanguageStrings.m */; };
+		283C3B7B1D53F1E800E67E49 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B781D53F1E800E67E49 /* Settings.m */; };
+		283C3B7C1D53F1E800E67E49 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B7A1D53F1E800E67E49 /* Utils.m */; };
+		283C3B8A1D53F4BA00E67E49 /* SourahListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B891D53F4BA00E67E49 /* SourahListViewController.m */; };
+		283C3B961D53F68E00E67E49 /* BaseTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B951D53F68E00E67E49 /* BaseTabViewController.m */; };
+		283C3B991D53F79200E67E49 /* QuranTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B981D53F79200E67E49 /* QuranTabViewController.m */; };
+		283C3B9C1D53FA5800E67E49 /* BaseTabItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3B9B1D53FA5800E67E49 /* BaseTabItemViewController.m */; };
+		283C3BA31D54D99200E67E49 /* Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3BA21D54D99200E67E49 /* Theme.m */; };
+		283C3BA71D54DA5000E67E49 /* NSString+Contains.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C3BA61D54DA5000E67E49 /* NSString+Contains.m */; };
+		283C3BAA1D54DB8F00E67E49 /* Blue.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BA91D54DB8F00E67E49 /* Blue.txt */; };
+		283C3BAC1D54DBAF00E67E49 /* Green.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BAB1D54DBAF00E67E49 /* Green.txt */; };
+		283C3BB61D55014B00E67E49 /* Al_Mushaf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */; };
+		283C3BB71D55014B00E67E49 /* SaleemQuranFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */; };
+		283C3BB81D55014B00E67E49 /* Scheherazade-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */; };
+		283C3BB91D55014B00E67E49 /* Scheherazade-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */; };
+		283C3BBA1D55014B00E67E49 /* UthmanTN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB41D55014B00E67E49 /* UthmanTN.otf */; };
+		283C3BBB1D55014B00E67E49 /* UthmanTNB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB51D55014B00E67E49 /* UthmanTNB.otf */; };
+		283C3BC11D55016900E67E49 /* IRANSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBD1D55016900E67E49 /* IRANSans-Bold.ttf */; };
+		283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBE1D55016900E67E49 /* IRANSans.ttf */; };
+		283C3BC31D55016900E67E49 /* roya.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBF1D55016900E67E49 /* roya.ttf */; };
+		283C3BC41D55016900E67E49 /* royabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BC01D55016900E67E49 /* royabold.ttf */; };
+		284896FB1D58DACE0077529D /* content.db in Resources */ = {isa = PBXBuildFile; fileRef = 284896FA1D58DACE0077529D /* content.db */; };
+		2848970F1D58DB500077529D /* ContentFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 284896FE1D58DB500077529D /* ContentFile.m */; };
+		284897101D58DB500077529D /* ContentFileValueFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897001D58DB500077529D /* ContentFileValueFactory.m */; };
+		284897121D58DB500077529D /* LazyLoadTrieNodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897061D58DB500077529D /* LazyLoadTrieNodeInfo.m */; };
+		284897131D58DB500077529D /* RandomAccessFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897081D58DB500077529D /* RandomAccessFile.m */; };
+		284897141D58DB500077529D /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848970A1D58DB500077529D /* Trie.m */; };
+		284897151D58DB500077529D /* TrieFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848970C1D58DB500077529D /* TrieFile.m */; };
+		284897161D58DB500077529D /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848970E1D58DB500077529D /* TrieNode.m */; };
+		2848971C1D58DB920077529D /* BinaryBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897191D58DB920077529D /* BinaryBuffer.m */; };
+		2848971D1D58DB920077529D /* ByteArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848971B1D58DB920077529D /* ByteArray.m */; };
+		284897211D58DBBA0077529D /* Guid.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897201D58DBBA0077529D /* Guid.m */; };
+		284897251D58DBF90077529D /* DateTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897241D58DBF90077529D /* DateTime.m */; };
+		284897281D58DC7E0077529D /* MuslimLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897271D58DC7E0077529D /* MuslimLib.m */; };
+		2848972C1D58E1930077529D /* QuranSourahInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848972B1D58E1930077529D /* QuranSourahInfo.m */; };
+		284897301D5905860077529D /* QuranSourahListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848972F1D5905860077529D /* QuranSourahListCell.m */; };
+		284897341D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897331D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m */; };
+		284897371D5A11A70077529D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897361D5A11A70077529D /* BaseViewController.m */; };
+		2848973A1D5A1AD20077529D /* ValuePair.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897391D5A1AD20077529D /* ValuePair.m */; };
+		284897411D5A26130077529D /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897401D5A26130077529D /* BaseCell.m */; };
+		284897451D5A269B0077529D /* TableViewLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897441D5A269B0077529D /* TableViewLinkCell.m */; };
+		284897481D5A375F0077529D /* TableViewInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897471D5A375F0077529D /* TableViewInfoCell.m */; };
+		2848974C1D5AB6DE0077529D /* QuranSourahSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848974B1D5AB6DE0077529D /* QuranSourahSummaryViewController.m */; };
+		284897501D5B989D0077529D /* QuranPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848974F1D5B989D0077529D /* QuranPageView.m */; };
+		284897531D5BAFBA0077529D /* QuranVerseInPageIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897521D5BAFBA0077529D /* QuranVerseInPageIndex.m */; };
+		284897551D5BBDC80077529D /* BahijUthmanTaha.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */; };
+		284897571D5CC4D90077529D /* me_quran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 284897561D5CC4D90077529D /* me_quran.ttf */; };
+		284897591D5CC8680077529D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284897581D5CC8680077529D /* CoreText.framework */; };
+		2848975C1D5CCE4C0077529D /* QuranVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848975B1D5CCE4C0077529D /* QuranVerse.m */; };
+		2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */; };
+		289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */; };
+		28A101E61D83C4670022B159 /* ChangeLanguagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101E51D83C4670022B159 /* ChangeLanguagePage.m */; };
+		28A101EA1D83C73C0022B159 /* SetLanguageSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101E91D83C73C0022B159 /* SetLanguageSegue.m */; };
+		28A101EE1D83C9290022B159 /* ShowQuranSpecialCharsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101ED1D83C9290022B159 /* ShowQuranSpecialCharsViewController.m */; };
+		28A101F21D83CEF10022B159 /* SelectQuranTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101F11D83CEF10022B159 /* SelectQuranTranslationViewController.m */; };
+		28A101F51D83D43C0022B159 /* QuranTranslationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101F41D83D43C0022B159 /* QuranTranslationInfo.m */; };
+		28A101FB1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */; };
+		28F4304C1D7D25C90064900A /* CollectionViewTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303D1D7D25C90064900A /* CollectionViewTile.m */; };
+		28F4304D1D7D25C90064900A /* CollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303F1D7D25C90064900A /* CollectionViewTileView.m */; };
+		28F4304E1D7D25C90064900A /* LightCollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430411D7D25C90064900A /* LightCollectionViewTileView.m */; };
+		28F4304F1D7D25C90064900A /* RateOnMarketSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430431D7D25C90064900A /* RateOnMarketSegue.m */; };
+		28F430501D7D25C90064900A /* SettingsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430451D7D25C90064900A /* SettingsHeaderView.m */; };
+		28F430511D7D25C90064900A /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430471D7D25C90064900A /* SettingsPage.m */; };
+		28F430571D7D261A0064900A /* MessageBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430561D7D261A0064900A /* MessageBox.m */; };
+		28F4305B1D7D30990064900A /* SelectDefaultArabicFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4305A1D7D30990064900A /* SelectDefaultArabicFontViewController.m */; };
+		28F4305D1D7D3C800064900A /* KacstQurnMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */; };
+		83E9552CB3D0BD1141E022E6 /* libPods-MuslimLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EF4122FA3C2E21CA591EF4 /* libPods-MuslimLib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2813E57D1D5E6546002E9BA6 /* CacheUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CacheUtils.h; path = Source/Models/Utils/CacheUtils.h; sourceTree = "<group>"; };
+		2813E57E1D5E6546002E9BA6 /* CacheUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CacheUtils.m; path = Source/Models/Utils/CacheUtils.m; sourceTree = "<group>"; };
+		2813E5801D5E6C04002E9BA6 /* QuranVerseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerseCell.h; path = Source/Views/Quran/Quran/Cells/QuranVerseCell.h; sourceTree = "<group>"; };
+		2813E5811D5E6C04002E9BA6 /* QuranVerseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerseCell.m; path = Source/Views/Quran/Quran/Cells/QuranVerseCell.m; sourceTree = "<group>"; };
+		2813E5861D6013F6002E9BA6 /* MainWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainWindowViewController.h; path = Source/Views/MainWindowViewController.h; sourceTree = "<group>"; };
+		2813E5871D6013F6002E9BA6 /* MainWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainWindowViewController.m; path = Source/Views/MainWindowViewController.m; sourceTree = "<group>"; };
+		2813E58A1D60168A002E9BA6 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = Source/Views/Sidebar/SidebarViewController.h; sourceTree = "<group>"; };
+		2813E58B1D60168A002E9BA6 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = Source/Views/Sidebar/SidebarViewController.m; sourceTree = "<group>"; };
+		2813E58E1D60175C002E9BA6 /* SidebarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarCell.h; path = Source/Views/Sidebar/SidebarCell.h; sourceTree = "<group>"; };
+		2813E58F1D60175C002E9BA6 /* SidebarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarCell.m; path = Source/Views/Sidebar/SidebarCell.m; sourceTree = "<group>"; };
+		2813E5901D60175C002E9BA6 /* SidebarItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarItemCell.h; path = Source/Views/Sidebar/SidebarItemCell.h; sourceTree = "<group>"; };
+		2813E5911D60175C002E9BA6 /* SidebarItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarItemCell.m; path = Source/Views/Sidebar/SidebarItemCell.m; sourceTree = "<group>"; };
+		2813E5921D60175C002E9BA6 /* SidebarItemSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarItemSegue.h; path = Source/Views/Sidebar/SidebarItemSegue.h; sourceTree = "<group>"; };
+		2813E5931D60175C002E9BA6 /* SidebarItemSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarItemSegue.m; path = Source/Views/Sidebar/SidebarItemSegue.m; sourceTree = "<group>"; };
+		2813E5971D601798002E9BA6 /* SidebarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarItem.h; path = Source/Views/Sidebar/SidebarItem.h; sourceTree = "<group>"; };
+		2813E5981D601798002E9BA6 /* SidebarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarItem.m; path = Source/Views/Sidebar/SidebarItem.m; sourceTree = "<group>"; };
+		2813E59A1D604CE1002E9BA6 /* MainQuranViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainQuranViewController.h; path = Source/Views/Quran/MainQuranViewController.h; sourceTree = "<group>"; };
+		2813E59B1D604CE1002E9BA6 /* MainQuranViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainQuranViewController.m; path = Source/Views/Quran/MainQuranViewController.m; sourceTree = "<group>"; };
+		2813E59E1D636455002E9BA6 /* QuranPagesIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranPagesIndexViewController.h; path = "Source/Views/Quran/Pages Index/QuranPagesIndexViewController.h"; sourceTree = "<group>"; };
+		2813E59F1D636455002E9BA6 /* QuranPagesIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranPagesIndexViewController.m; path = "Source/Views/Quran/Pages Index/QuranPagesIndexViewController.m"; sourceTree = "<group>"; };
+		2813E5A21D6364DE002E9BA6 /* PresentViewSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresentViewSegue.h; path = Source/Views/Bases/Segues/PresentViewSegue.h; sourceTree = "<group>"; };
+		2813E5A31D6364DE002E9BA6 /* PresentViewSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PresentViewSegue.m; path = Source/Views/Bases/Segues/PresentViewSegue.m; sourceTree = "<group>"; };
+		2813E5A51D636FEA002E9BA6 /* QuranPageIndexCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranPageIndexCell.h; path = "Source/Views/Quran/Pages Index/QuranPageIndexCell.h"; sourceTree = "<group>"; };
+		2813E5A61D636FEA002E9BA6 /* QuranPageIndexCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranPageIndexCell.m; path = "Source/Views/Quran/Pages Index/QuranPageIndexCell.m"; sourceTree = "<group>"; };
+		28190C241D4B615300CAFB88 /* MuslimLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MuslimLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28190C281D4B615300CAFB88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28190C2A1D4B615300CAFB88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28190C2B1D4B615300CAFB88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28190C311D4B615300CAFB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28190C331D4B615300CAFB88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28190C381D4B615300CAFB88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283C3B5D1D53E3E100E67E49 /* SidebarParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarParameters.h; path = Source/Components/Sidebar/SidebarParameters.h; sourceTree = "<group>"; };
+		283C3B5E1D53E3E100E67E49 /* SidebarParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarParameters.m; path = Source/Components/Sidebar/SidebarParameters.m; sourceTree = "<group>"; };
+		283C3B5F1D53E3E100E67E49 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Source/Components/Sidebar/SWRevealViewController.h; sourceTree = "<group>"; };
+		283C3B601D53E3E100E67E49 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Source/Components/Sidebar/SWRevealViewController.m; sourceTree = "<group>"; };
+		283C3B6F1D53F17500E67E49 /* English.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = English.txt; path = Source/Resource/Languages/English.txt; sourceTree = "<group>"; };
+		283C3B711D53F18800E67E49 /* Persian.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Persian.txt; path = Source/Resource/Languages/Persian.txt; sourceTree = "<group>"; };
+		283C3B741D53F1D000E67E49 /* LanguageStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LanguageStrings.h; path = Source/Models/Language/LanguageStrings.h; sourceTree = "<group>"; };
+		283C3B751D53F1D000E67E49 /* LanguageStrings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LanguageStrings.m; path = Source/Models/Language/LanguageStrings.m; sourceTree = "<group>"; };
+		283C3B771D53F1E800E67E49 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Settings.h; path = Source/Models/Utils/Settings.h; sourceTree = "<group>"; };
+		283C3B781D53F1E800E67E49 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Settings.m; path = Source/Models/Utils/Settings.m; sourceTree = "<group>"; };
+		283C3B791D53F1E800E67E49 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = Source/Models/Utils/Utils.h; sourceTree = "<group>"; };
+		283C3B7A1D53F1E800E67E49 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = Source/Models/Utils/Utils.m; sourceTree = "<group>"; };
+		283C3B881D53F4BA00E67E49 /* SourahListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SourahListViewController.h; path = Source/Views/Quran/SourahListViewController.h; sourceTree = "<group>"; };
+		283C3B891D53F4BA00E67E49 /* SourahListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SourahListViewController.m; path = Source/Views/Quran/SourahListViewController.m; sourceTree = "<group>"; };
+		283C3B941D53F68E00E67E49 /* BaseTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabViewController.h; path = Source/Views/Bases/BaseTabViewController.h; sourceTree = "<group>"; };
+		283C3B951D53F68E00E67E49 /* BaseTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabViewController.m; path = Source/Views/Bases/BaseTabViewController.m; sourceTree = "<group>"; };
+		283C3B971D53F79200E67E49 /* QuranTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranTabViewController.h; path = Source/Views/Quran/QuranTabViewController.h; sourceTree = "<group>"; };
+		283C3B981D53F79200E67E49 /* QuranTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranTabViewController.m; path = Source/Views/Quran/QuranTabViewController.m; sourceTree = "<group>"; };
+		283C3B9A1D53FA5800E67E49 /* BaseTabItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTabItemViewController.h; path = Source/Views/Bases/BaseTabItemViewController.h; sourceTree = "<group>"; };
+		283C3B9B1D53FA5800E67E49 /* BaseTabItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabItemViewController.m; path = Source/Views/Bases/BaseTabItemViewController.m; sourceTree = "<group>"; };
+		283C3BA11D54D99200E67E49 /* Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Theme.h; path = Source/Models/Theme/Theme.h; sourceTree = "<group>"; };
+		283C3BA21D54D99200E67E49 /* Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Theme.m; path = Source/Models/Theme/Theme.m; sourceTree = "<group>"; };
+		283C3BA51D54DA5000E67E49 /* NSString+Contains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Contains.h"; path = "Source/Models/Utils/NSString+Contains.h"; sourceTree = "<group>"; };
+		283C3BA61D54DA5000E67E49 /* NSString+Contains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Contains.m"; path = "Source/Models/Utils/NSString+Contains.m"; sourceTree = "<group>"; };
+		283C3BA91D54DB8F00E67E49 /* Blue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Blue.txt; path = Source/Resource/Themes/Blue.txt; sourceTree = "<group>"; };
+		283C3BAB1D54DBAF00E67E49 /* Green.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Green.txt; path = Source/Resource/Themes/Green.txt; sourceTree = "<group>"; };
+		283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Al_Mushaf.ttf; path = Source/Resource/Fonts/Arabic/Al_Mushaf.ttf; sourceTree = "<group>"; };
+		283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SaleemQuranFont.ttf; path = Source/Resource/Fonts/Arabic/SaleemQuranFont.ttf; sourceTree = "<group>"; };
+		283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scheherazade-Bold.ttf"; path = "Source/Resource/Fonts/Arabic/Scheherazade-Bold.ttf"; sourceTree = "<group>"; };
+		283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scheherazade-Regular.ttf"; path = "Source/Resource/Fonts/Arabic/Scheherazade-Regular.ttf"; sourceTree = "<group>"; };
+		283C3BB41D55014B00E67E49 /* UthmanTN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UthmanTN.otf; path = Source/Resource/Fonts/Arabic/UthmanTN.otf; sourceTree = "<group>"; };
+		283C3BB51D55014B00E67E49 /* UthmanTNB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UthmanTNB.otf; path = Source/Resource/Fonts/Arabic/UthmanTNB.otf; sourceTree = "<group>"; };
+		283C3BBD1D55016900E67E49 /* IRANSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSans-Bold.ttf"; path = "Source/Resource/Fonts/Persian/IRANSans-Bold.ttf"; sourceTree = "<group>"; };
+		283C3BBE1D55016900E67E49 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSans.ttf; path = Source/Resource/Fonts/Persian/IRANSans.ttf; sourceTree = "<group>"; };
+		283C3BBF1D55016900E67E49 /* roya.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = roya.ttf; path = Source/Resource/Fonts/Persian/roya.ttf; sourceTree = "<group>"; };
+		283C3BC01D55016900E67E49 /* royabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = royabold.ttf; path = Source/Resource/Fonts/Persian/royabold.ttf; sourceTree = "<group>"; };
+		284896FA1D58DACE0077529D /* content.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = content.db; path = MuslimLib/Content/content.db; sourceTree = "<group>"; };
+		284896FD1D58DB500077529D /* ContentFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentFile.h; path = Source/Models/Trie/ContentFile.h; sourceTree = "<group>"; };
+		284896FE1D58DB500077529D /* ContentFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentFile.m; path = Source/Models/Trie/ContentFile.m; sourceTree = "<group>"; };
+		284896FF1D58DB500077529D /* ContentFileValueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentFileValueFactory.h; path = Source/Models/Trie/ContentFileValueFactory.h; sourceTree = "<group>"; };
+		284897001D58DB500077529D /* ContentFileValueFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentFileValueFactory.m; path = Source/Models/Trie/ContentFileValueFactory.m; sourceTree = "<group>"; };
+		284897031D58DB500077529D /* ITrieIndexValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ITrieIndexValue.h; path = Source/Models/Trie/ITrieIndexValue.h; sourceTree = "<group>"; };
+		284897041D58DB500077529D /* IValueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IValueFactory.h; path = Source/Models/Trie/IValueFactory.h; sourceTree = "<group>"; };
+		284897051D58DB500077529D /* LazyLoadTrieNodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LazyLoadTrieNodeInfo.h; path = Source/Models/Trie/LazyLoadTrieNodeInfo.h; sourceTree = "<group>"; };
+		284897061D58DB500077529D /* LazyLoadTrieNodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LazyLoadTrieNodeInfo.m; path = Source/Models/Trie/LazyLoadTrieNodeInfo.m; sourceTree = "<group>"; };
+		284897071D58DB500077529D /* RandomAccessFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RandomAccessFile.h; path = Source/Models/Trie/RandomAccessFile.h; sourceTree = "<group>"; };
+		284897081D58DB500077529D /* RandomAccessFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RandomAccessFile.m; path = Source/Models/Trie/RandomAccessFile.m; sourceTree = "<group>"; };
+		284897091D58DB500077529D /* Trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Trie.h; path = Source/Models/Trie/Trie.h; sourceTree = "<group>"; };
+		2848970A1D58DB500077529D /* Trie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Trie.m; path = Source/Models/Trie/Trie.m; sourceTree = "<group>"; };
+		2848970B1D58DB500077529D /* TrieFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrieFile.h; path = Source/Models/Trie/TrieFile.h; sourceTree = "<group>"; };
+		2848970C1D58DB500077529D /* TrieFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrieFile.m; path = Source/Models/Trie/TrieFile.m; sourceTree = "<group>"; };
+		2848970D1D58DB500077529D /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrieNode.h; path = Source/Models/Trie/TrieNode.h; sourceTree = "<group>"; };
+		2848970E1D58DB500077529D /* TrieNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrieNode.m; path = Source/Models/Trie/TrieNode.m; sourceTree = "<group>"; };
+		284897181D58DB920077529D /* BinaryBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinaryBuffer.h; path = Source/Models/Utils/Binary/BinaryBuffer.h; sourceTree = "<group>"; };
+		284897191D58DB920077529D /* BinaryBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinaryBuffer.m; path = Source/Models/Utils/Binary/BinaryBuffer.m; sourceTree = "<group>"; };
+		2848971A1D58DB920077529D /* ByteArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ByteArray.h; path = Source/Models/Utils/Binary/ByteArray.h; sourceTree = "<group>"; };
+		2848971B1D58DB920077529D /* ByteArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ByteArray.m; path = Source/Models/Utils/Binary/ByteArray.m; sourceTree = "<group>"; };
+		2848971F1D58DBBA0077529D /* Guid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Guid.h; path = Source/Models/Utils/Guid.h; sourceTree = "<group>"; };
+		284897201D58DBBA0077529D /* Guid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Guid.m; path = Source/Models/Utils/Guid.m; sourceTree = "<group>"; };
+		284897231D58DBF90077529D /* DateTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateTime.h; path = Source/Models/Utils/Date/DateTime.h; sourceTree = "<group>"; };
+		284897241D58DBF90077529D /* DateTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateTime.m; path = Source/Models/Utils/Date/DateTime.m; sourceTree = "<group>"; };
+		284897261D58DC7E0077529D /* MuslimLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuslimLib.h; path = Source/Models/Trie/MuslimLib.h; sourceTree = "<group>"; };
+		284897271D58DC7E0077529D /* MuslimLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuslimLib.m; path = Source/Models/Trie/MuslimLib.m; sourceTree = "<group>"; };
+		2848972A1D58E1930077529D /* QuranSourahInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahInfo.h; path = Source/Models/Quran/QuranSourahInfo.h; sourceTree = "<group>"; };
+		2848972B1D58E1930077529D /* QuranSourahInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahInfo.m; path = Source/Models/Quran/QuranSourahInfo.m; sourceTree = "<group>"; };
+		2848972E1D5905860077529D /* QuranSourahListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahListCell.h; path = "Source/Views/Quran/Sourah List/QuranSourahListCell.h"; sourceTree = "<group>"; };
+		2848972F1D5905860077529D /* QuranSourahListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahListCell.m; path = "Source/Views/Quran/Sourah List/QuranSourahListCell.m"; sourceTree = "<group>"; };
+		284897321D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahOptionsAndDetailsViewController.h; path = "Source/Views/Quran/Sourah List/QuranSourahOptionsAndDetailsViewController.h"; sourceTree = "<group>"; };
+		284897331D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahOptionsAndDetailsViewController.m; path = "Source/Views/Quran/Sourah List/QuranSourahOptionsAndDetailsViewController.m"; sourceTree = "<group>"; };
+		284897351D5A11A70077529D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Source/Views/Bases/BaseViewController.h; sourceTree = "<group>"; };
+		284897361D5A11A70077529D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Source/Views/Bases/BaseViewController.m; sourceTree = "<group>"; };
+		284897381D5A1AD20077529D /* ValuePair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ValuePair.h; path = Source/Models/Utils/ValuePair.h; sourceTree = "<group>"; };
+		284897391D5A1AD20077529D /* ValuePair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ValuePair.m; path = Source/Models/Utils/ValuePair.m; sourceTree = "<group>"; };
+		2848973F1D5A26130077529D /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseCell.h; path = Source/Views/Bases/Cells/BaseCell.h; sourceTree = "<group>"; };
+		284897401D5A26130077529D /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseCell.m; path = Source/Views/Bases/Cells/BaseCell.m; sourceTree = "<group>"; };
+		284897431D5A269B0077529D /* TableViewLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewLinkCell.h; path = Source/Views/Bases/Cells/TableViewLinkCell.h; sourceTree = "<group>"; };
+		284897441D5A269B0077529D /* TableViewLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewLinkCell.m; path = Source/Views/Bases/Cells/TableViewLinkCell.m; sourceTree = "<group>"; };
+		284897461D5A375F0077529D /* TableViewInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewInfoCell.h; path = Source/Views/Bases/Cells/TableViewInfoCell.h; sourceTree = "<group>"; };
+		284897471D5A375F0077529D /* TableViewInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewInfoCell.m; path = Source/Views/Bases/Cells/TableViewInfoCell.m; sourceTree = "<group>"; };
+		2848974A1D5AB6DE0077529D /* QuranSourahSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahSummaryViewController.h; path = "Source/Views/Quran/Sourah List/QuranSourahSummaryViewController.h"; sourceTree = "<group>"; };
+		2848974B1D5AB6DE0077529D /* QuranSourahSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahSummaryViewController.m; path = "Source/Views/Quran/Sourah List/QuranSourahSummaryViewController.m"; sourceTree = "<group>"; };
+		2848974E1D5B989D0077529D /* QuranPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranPageView.h; path = Source/Views/Quran/Quran/Cells/QuranPageView.h; sourceTree = "<group>"; };
+		2848974F1D5B989D0077529D /* QuranPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranPageView.m; path = Source/Views/Quran/Quran/Cells/QuranPageView.m; sourceTree = "<group>"; };
+		284897511D5BAFBA0077529D /* QuranVerseInPageIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerseInPageIndex.h; path = Source/Models/Quran/QuranVerseInPageIndex.h; sourceTree = "<group>"; };
+		284897521D5BAFBA0077529D /* QuranVerseInPageIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerseInPageIndex.m; path = Source/Models/Quran/QuranVerseInPageIndex.m; sourceTree = "<group>"; };
+		284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BahijUthmanTaha.ttf; path = Source/Resource/Fonts/Arabic/BahijUthmanTaha.ttf; sourceTree = "<group>"; };
+		284897561D5CC4D90077529D /* me_quran.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = me_quran.ttf; path = Source/Resource/Fonts/Arabic/me_quran.ttf; sourceTree = "<group>"; };
+		284897581D5CC8680077529D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		2848975A1D5CCE4C0077529D /* QuranVerse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerse.h; path = Source/Models/Quran/QuranVerse.h; sourceTree = "<group>"; };
+		2848975B1D5CCE4C0077529D /* QuranVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerse.m; path = Source/Models/Quran/QuranVerse.m; sourceTree = "<group>"; };
+		2858B9811D79FA0A00F91338 /* QuranSourahIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahIndexViewController.h; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.h"; sourceTree = "<group>"; };
+		2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahIndexViewController.m; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.m"; sourceTree = "<group>"; };
+		289FFBAD1D7BD7F6008ED24F /* ArabicLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArabicLabel.h; path = Source/Views/Bases/ArabicLabel.h; sourceTree = "<group>"; };
+		289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArabicLabel.m; path = Source/Views/Bases/ArabicLabel.m; sourceTree = "<group>"; };
+		28A101E41D83C4670022B159 /* ChangeLanguagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChangeLanguagePage.h; path = Source/Views/Settings/Pages/ChangeLanguagePage.h; sourceTree = "<group>"; };
+		28A101E51D83C4670022B159 /* ChangeLanguagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChangeLanguagePage.m; path = Source/Views/Settings/Pages/ChangeLanguagePage.m; sourceTree = "<group>"; };
+		28A101E81D83C73C0022B159 /* SetLanguageSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SetLanguageSegue.h; path = Source/Views/Settings/Segues/SetLanguageSegue.h; sourceTree = "<group>"; };
+		28A101E91D83C73C0022B159 /* SetLanguageSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SetLanguageSegue.m; path = Source/Views/Settings/Segues/SetLanguageSegue.m; sourceTree = "<group>"; };
+		28A101EC1D83C9290022B159 /* ShowQuranSpecialCharsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShowQuranSpecialCharsViewController.h; path = Source/Views/Settings/Pages/ShowQuranSpecialCharsViewController.h; sourceTree = "<group>"; };
+		28A101ED1D83C9290022B159 /* ShowQuranSpecialCharsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShowQuranSpecialCharsViewController.m; path = Source/Views/Settings/Pages/ShowQuranSpecialCharsViewController.m; sourceTree = "<group>"; };
+		28A101F01D83CEF10022B159 /* SelectQuranTranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectQuranTranslationViewController.h; path = Source/Views/Settings/Pages/SelectQuranTranslationViewController.h; sourceTree = "<group>"; };
+		28A101F11D83CEF10022B159 /* SelectQuranTranslationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectQuranTranslationViewController.m; path = Source/Views/Settings/Pages/SelectQuranTranslationViewController.m; sourceTree = "<group>"; };
+		28A101F31D83D43C0022B159 /* QuranTranslationInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranTranslationInfo.h; path = Source/Models/Quran/QuranTranslationInfo.h; sourceTree = "<group>"; };
+		28A101F41D83D43C0022B159 /* QuranTranslationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranTranslationInfo.m; path = Source/Models/Quran/QuranTranslationInfo.m; sourceTree = "<group>"; };
+		28A101F91D83D7C70022B159 /* TableViewImageLabelSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewImageLabelSwitchCell.h; path = Source/Views/Bases/Cells/TableViewImageLabelSwitchCell.h; sourceTree = "<group>"; };
+		28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewImageLabelSwitchCell.m; path = Source/Views/Bases/Cells/TableViewImageLabelSwitchCell.m; sourceTree = "<group>"; };
+		28F4303C1D7D25C90064900A /* CollectionViewTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTile.h; path = Source/Views/Settings/CollectionViewTile.h; sourceTree = "<group>"; };
+		28F4303D1D7D25C90064900A /* CollectionViewTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewTile.m; path = Source/Views/Settings/CollectionViewTile.m; sourceTree = "<group>"; };
+		28F4303E1D7D25C90064900A /* CollectionViewTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTileView.h; path = Source/Views/Settings/CollectionViewTileView.h; sourceTree = "<group>"; };
+		28F4303F1D7D25C90064900A /* CollectionViewTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewTileView.m; path = Source/Views/Settings/CollectionViewTileView.m; sourceTree = "<group>"; };
+		28F430401D7D25C90064900A /* LightCollectionViewTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LightCollectionViewTileView.h; path = Source/Views/Settings/LightCollectionViewTileView.h; sourceTree = "<group>"; };
+		28F430411D7D25C90064900A /* LightCollectionViewTileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LightCollectionViewTileView.m; path = Source/Views/Settings/LightCollectionViewTileView.m; sourceTree = "<group>"; };
+		28F430421D7D25C90064900A /* RateOnMarketSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RateOnMarketSegue.h; path = Source/Views/Settings/RateOnMarketSegue.h; sourceTree = "<group>"; };
+		28F430431D7D25C90064900A /* RateOnMarketSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RateOnMarketSegue.m; path = Source/Views/Settings/RateOnMarketSegue.m; sourceTree = "<group>"; };
+		28F430441D7D25C90064900A /* SettingsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsHeaderView.h; path = Source/Views/Settings/SettingsHeaderView.h; sourceTree = "<group>"; };
+		28F430451D7D25C90064900A /* SettingsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsHeaderView.m; path = Source/Views/Settings/SettingsHeaderView.m; sourceTree = "<group>"; };
+		28F430461D7D25C90064900A /* SettingsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsPage.h; path = Source/Views/Settings/SettingsPage.h; sourceTree = "<group>"; };
+		28F430471D7D25C90064900A /* SettingsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsPage.m; path = Source/Views/Settings/SettingsPage.m; sourceTree = "<group>"; };
+		28F430551D7D261A0064900A /* MessageBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageBox.h; path = Source/Views/Bases/MessageBox.h; sourceTree = "<group>"; };
+		28F430561D7D261A0064900A /* MessageBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageBox.m; path = Source/Views/Bases/MessageBox.m; sourceTree = "<group>"; };
+		28F430591D7D30990064900A /* SelectDefaultArabicFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectDefaultArabicFontViewController.h; path = Source/Views/Settings/Pages/SelectDefaultArabicFontViewController.h; sourceTree = "<group>"; };
+		28F4305A1D7D30990064900A /* SelectDefaultArabicFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectDefaultArabicFontViewController.m; path = Source/Views/Settings/Pages/SelectDefaultArabicFontViewController.m; sourceTree = "<group>"; };
+		28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KacstQurnMedium.ttf; path = Source/Resource/Fonts/Arabic/KacstQurnMedium.ttf; sourceTree = "<group>"; };
+		30EF4122FA3C2E21CA591EF4 /* libPods-MuslimLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuslimLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AA39D3A964CA3DA1D443C5 /* Pods-MuslimLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib.release.xcconfig"; sourceTree = "<group>"; };
+		E22A68205248C02F32782238 /* Pods-MuslimLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28190C211D4B615300CAFB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				284897591D5CC8680077529D /* CoreText.framework in Frameworks */,
+				83E9552CB3D0BD1141E022E6 /* libPods-MuslimLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2813E57C1D5E652E002E9BA6 /* CacheUtils */ = {
+			isa = PBXGroup;
+			children = (
+				2813E57D1D5E6546002E9BA6 /* CacheUtils.h */,
+				2813E57E1D5E6546002E9BA6 /* CacheUtils.m */,
+			);
+			name = CacheUtils;
+			sourceTree = "<group>";
+		};
+		2813E5891D601667002E9BA6 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				2813E58D1D60170F002E9BA6 /* Helpers */,
+				2813E58A1D60168A002E9BA6 /* SidebarViewController.h */,
+				2813E58B1D60168A002E9BA6 /* SidebarViewController.m */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		2813E58D1D60170F002E9BA6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2813E5971D601798002E9BA6 /* SidebarItem.h */,
+				2813E5981D601798002E9BA6 /* SidebarItem.m */,
+				2813E58E1D60175C002E9BA6 /* SidebarCell.h */,
+				2813E58F1D60175C002E9BA6 /* SidebarCell.m */,
+				2813E5901D60175C002E9BA6 /* SidebarItemCell.h */,
+				2813E5911D60175C002E9BA6 /* SidebarItemCell.m */,
+				2813E5921D60175C002E9BA6 /* SidebarItemSegue.h */,
+				2813E5931D60175C002E9BA6 /* SidebarItemSegue.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2813E59D1D63642A002E9BA6 /* QuranPagesIndex */ = {
+			isa = PBXGroup;
+			children = (
+				2813E59E1D636455002E9BA6 /* QuranPagesIndexViewController.h */,
+				2813E59F1D636455002E9BA6 /* QuranPagesIndexViewController.m */,
+				2813E5A51D636FEA002E9BA6 /* QuranPageIndexCell.h */,
+				2813E5A61D636FEA002E9BA6 /* QuranPageIndexCell.m */,
+			);
+			name = QuranPagesIndex;
+			sourceTree = "<group>";
+		};
+		2813E5A11D6364AB002E9BA6 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				2813E5A21D6364DE002E9BA6 /* PresentViewSegue.h */,
+				2813E5A31D6364DE002E9BA6 /* PresentViewSegue.m */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		28190C1B1D4B615300CAFB88 = {
+			isa = PBXGroup;
+			children = (
+				28190C261D4B615300CAFB88 /* MuslimLib */,
+				284896F91D58DAB60077529D /* Content */,
+				28190C251D4B615300CAFB88 /* Products */,
+				804F3E822DE3D2FE08E88964 /* Pods */,
+				44D3121E5AA2A418AA7B8359 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		28190C251D4B615300CAFB88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28190C241D4B615300CAFB88 /* MuslimLib.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28190C261D4B615300CAFB88 /* MuslimLib */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BAD1D55012400E67E49 /* Resource */,
+				283C3B5B1D53E35E00E67E49 /* Components */,
+				283C3B731D53F1B400E67E49 /* Models */,
+				283C3B7D1D53F2BA00E67E49 /* Views */,
+				28190C2A1D4B615300CAFB88 /* AppDelegate.h */,
+				28190C2B1D4B615300CAFB88 /* AppDelegate.m */,
+				28190C301D4B615300CAFB88 /* Main.storyboard */,
+				28190C331D4B615300CAFB88 /* Assets.xcassets */,
+				28190C381D4B615300CAFB88 /* Info.plist */,
+				28190C271D4B615300CAFB88 /* Supporting Files */,
+			);
+			path = MuslimLib;
+			sourceTree = "<group>";
+		};
+		28190C271D4B615300CAFB88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28190C281D4B615300CAFB88 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		283C3B5B1D53E35E00E67E49 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				283C3B5C1D53E36700E67E49 /* Sidebar */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		283C3B5C1D53E36700E67E49 /* Sidebar */ = {
+			isa = PBXGroup;
+			children = (
+				283C3B5D1D53E3E100E67E49 /* SidebarParameters.h */,
+				283C3B5E1D53E3E100E67E49 /* SidebarParameters.m */,
+				283C3B5F1D53E3E100E67E49 /* SWRevealViewController.h */,
+				283C3B601D53E3E100E67E49 /* SWRevealViewController.m */,
+			);
+			name = Sidebar;
+			sourceTree = "<group>";
+		};
+		283C3B631D53E3F200E67E49 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				284897221D58DBDD0077529D /* DateTime */,
+				2848971E1D58DBAB0077529D /* Guid */,
+				284897171D58DB7C0077529D /* Binary */,
+				283C3BA41D54DA2E00E67E49 /* Extension */,
+				283C3B771D53F1E800E67E49 /* Settings.h */,
+				283C3B781D53F1E800E67E49 /* Settings.m */,
+				283C3B791D53F1E800E67E49 /* Utils.h */,
+				283C3B7A1D53F1E800E67E49 /* Utils.m */,
+				284897381D5A1AD20077529D /* ValuePair.h */,
+				284897391D5A1AD20077529D /* ValuePair.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		283C3B671D53E41B00E67E49 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				283C3B6E1D53F13600E67E49 /* Languages */,
+				283C3B741D53F1D000E67E49 /* LanguageStrings.h */,
+				283C3B751D53F1D000E67E49 /* LanguageStrings.m */,
+			);
+			name = Language;
+			sourceTree = "<group>";
+		};
+		283C3B6E1D53F13600E67E49 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				283C3B6F1D53F17500E67E49 /* English.txt */,
+				283C3B711D53F18800E67E49 /* Persian.txt */,
+			);
+			name = Languages;
+			sourceTree = "<group>";
+		};
+		283C3B731D53F1B400E67E49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2813E57C1D5E652E002E9BA6 /* CacheUtils */,
+				284897291D58E16E0077529D /* Quran */,
+				284896FC1D58DAE00077529D /* Trie */,
+				283C3BA01D54D96700E67E49 /* Theme */,
+				283C3B671D53E41B00E67E49 /* Language */,
+				283C3B631D53E3F200E67E49 /* Utils */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		283C3B7D1D53F2BA00E67E49 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2813E5891D601667002E9BA6 /* Sidebar */,
+				283C3B931D53F65800E67E49 /* Bases */,
+				283C3B7E1D53F2D200E67E49 /* Quran */,
+				28F4303B1D7D25630064900A /* Settings */,
+				2813E5861D6013F6002E9BA6 /* MainWindowViewController.h */,
+				2813E5871D6013F6002E9BA6 /* MainWindowViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		283C3B7E1D53F2D200E67E49 /* Quran */ = {
+			isa = PBXGroup;
+			children = (
+				2858B9801D79F9B800F91338 /* QuranSourahIndex */,
+				2813E59D1D63642A002E9BA6 /* QuranPagesIndex */,
+				283C3B871D53F49500E67E49 /* SourahListTab */,
+				283C3B7F1D53F2DA00E67E49 /* QuranTab */,
+				283C3B971D53F79200E67E49 /* QuranTabViewController.h */,
+				283C3B981D53F79200E67E49 /* QuranTabViewController.m */,
+				2813E59A1D604CE1002E9BA6 /* MainQuranViewController.h */,
+				2813E59B1D604CE1002E9BA6 /* MainQuranViewController.m */,
+			);
+			name = Quran;
+			sourceTree = "<group>";
+		};
+		283C3B7F1D53F2DA00E67E49 /* QuranTab */ = {
+			isa = PBXGroup;
+			children = (
+				2848974E1D5B989D0077529D /* QuranPageView.h */,
+				2848974F1D5B989D0077529D /* QuranPageView.m */,
+				2848974D1D5B987A0077529D /* Cells */,
+			);
+			name = QuranTab;
+			sourceTree = "<group>";
+		};
+		283C3B871D53F49500E67E49 /* SourahListTab */ = {
+			isa = PBXGroup;
+			children = (
+				284897491D5AB6B10077529D /* SourahSummary */,
+				284897311D5A10FA0077529D /* SourahOptionsAndDetails */,
+				2848972D1D5905550077529D /* Cell */,
+				283C3B881D53F4BA00E67E49 /* SourahListViewController.h */,
+				283C3B891D53F4BA00E67E49 /* SourahListViewController.m */,
+			);
+			name = SourahListTab;
+			sourceTree = "<group>";
+		};
+		283C3B931D53F65800E67E49 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				28F430541D7D260A0064900A /* MessageBox */,
+				2813E5A11D6364AB002E9BA6 /* Segues */,
+				2848973B1D5A1EE80077529D /* Cells */,
+				283C3B941D53F68E00E67E49 /* BaseTabViewController.h */,
+				283C3B951D53F68E00E67E49 /* BaseTabViewController.m */,
+				283C3B9A1D53FA5800E67E49 /* BaseTabItemViewController.h */,
+				283C3B9B1D53FA5800E67E49 /* BaseTabItemViewController.m */,
+				284897351D5A11A70077529D /* BaseViewController.h */,
+				284897361D5A11A70077529D /* BaseViewController.m */,
+				289FFBAD1D7BD7F6008ED24F /* ArabicLabel.h */,
+				289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */,
+			);
+			name = Bases;
+			sourceTree = "<group>";
+		};
+		283C3BA01D54D96700E67E49 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BA81D54DB5800E67E49 /* Themes */,
+				283C3BA11D54D99200E67E49 /* Theme.h */,
+				283C3BA21D54D99200E67E49 /* Theme.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
+		283C3BA41D54DA2E00E67E49 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BA51D54DA5000E67E49 /* NSString+Contains.h */,
+				283C3BA61D54DA5000E67E49 /* NSString+Contains.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		283C3BA81D54DB5800E67E49 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BA91D54DB8F00E67E49 /* Blue.txt */,
+				283C3BAB1D54DBAF00E67E49 /* Green.txt */,
+			);
+			name = Themes;
+			sourceTree = "<group>";
+		};
+		283C3BAD1D55012400E67E49 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BAE1D55013000E67E49 /* Fonts */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		283C3BAE1D55013000E67E49 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BBC1D55015500E67E49 /* Persian */,
+				283C3BAF1D55013900E67E49 /* Arabic */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		283C3BAF1D55013900E67E49 /* Arabic */ = {
+			isa = PBXGroup;
+			children = (
+				28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */,
+				284897561D5CC4D90077529D /* me_quran.ttf */,
+				284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */,
+				283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */,
+				283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */,
+				283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */,
+				283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */,
+				283C3BB41D55014B00E67E49 /* UthmanTN.otf */,
+				283C3BB51D55014B00E67E49 /* UthmanTNB.otf */,
+			);
+			name = Arabic;
+			sourceTree = "<group>";
+		};
+		283C3BBC1D55015500E67E49 /* Persian */ = {
+			isa = PBXGroup;
+			children = (
+				283C3BBD1D55016900E67E49 /* IRANSans-Bold.ttf */,
+				283C3BBE1D55016900E67E49 /* IRANSans.ttf */,
+				283C3BBF1D55016900E67E49 /* roya.ttf */,
+				283C3BC01D55016900E67E49 /* royabold.ttf */,
+			);
+			name = Persian;
+			sourceTree = "<group>";
+		};
+		284896F91D58DAB60077529D /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				284896FA1D58DACE0077529D /* content.db */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		284896FC1D58DAE00077529D /* Trie */ = {
+			isa = PBXGroup;
+			children = (
+				284896FD1D58DB500077529D /* ContentFile.h */,
+				284896FE1D58DB500077529D /* ContentFile.m */,
+				284896FF1D58DB500077529D /* ContentFileValueFactory.h */,
+				284897001D58DB500077529D /* ContentFileValueFactory.m */,
+				284897031D58DB500077529D /* ITrieIndexValue.h */,
+				284897041D58DB500077529D /* IValueFactory.h */,
+				284897051D58DB500077529D /* LazyLoadTrieNodeInfo.h */,
+				284897061D58DB500077529D /* LazyLoadTrieNodeInfo.m */,
+				284897071D58DB500077529D /* RandomAccessFile.h */,
+				284897081D58DB500077529D /* RandomAccessFile.m */,
+				284897091D58DB500077529D /* Trie.h */,
+				2848970A1D58DB500077529D /* Trie.m */,
+				2848970B1D58DB500077529D /* TrieFile.h */,
+				2848970C1D58DB500077529D /* TrieFile.m */,
+				2848970D1D58DB500077529D /* TrieNode.h */,
+				2848970E1D58DB500077529D /* TrieNode.m */,
+				284897261D58DC7E0077529D /* MuslimLib.h */,
+				284897271D58DC7E0077529D /* MuslimLib.m */,
+			);
+			name = Trie;
+			sourceTree = "<group>";
+		};
+		284897171D58DB7C0077529D /* Binary */ = {
+			isa = PBXGroup;
+			children = (
+				284897181D58DB920077529D /* BinaryBuffer.h */,
+				284897191D58DB920077529D /* BinaryBuffer.m */,
+				2848971A1D58DB920077529D /* ByteArray.h */,
+				2848971B1D58DB920077529D /* ByteArray.m */,
+			);
+			name = Binary;
+			sourceTree = "<group>";
+		};
+		2848971E1D58DBAB0077529D /* Guid */ = {
+			isa = PBXGroup;
+			children = (
+				2848971F1D58DBBA0077529D /* Guid.h */,
+				284897201D58DBBA0077529D /* Guid.m */,
+			);
+			name = Guid;
+			sourceTree = "<group>";
+		};
+		284897221D58DBDD0077529D /* DateTime */ = {
+			isa = PBXGroup;
+			children = (
+				284897231D58DBF90077529D /* DateTime.h */,
+				284897241D58DBF90077529D /* DateTime.m */,
+			);
+			name = DateTime;
+			sourceTree = "<group>";
+		};
+		284897291D58E16E0077529D /* Quran */ = {
+			isa = PBXGroup;
+			children = (
+				2848972A1D58E1930077529D /* QuranSourahInfo.h */,
+				2848972B1D58E1930077529D /* QuranSourahInfo.m */,
+				284897511D5BAFBA0077529D /* QuranVerseInPageIndex.h */,
+				284897521D5BAFBA0077529D /* QuranVerseInPageIndex.m */,
+				2848975A1D5CCE4C0077529D /* QuranVerse.h */,
+				2848975B1D5CCE4C0077529D /* QuranVerse.m */,
+				28A101F31D83D43C0022B159 /* QuranTranslationInfo.h */,
+				28A101F41D83D43C0022B159 /* QuranTranslationInfo.m */,
+			);
+			name = Quran;
+			sourceTree = "<group>";
+		};
+		2848972D1D5905550077529D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2848972E1D5905860077529D /* QuranSourahListCell.h */,
+				2848972F1D5905860077529D /* QuranSourahListCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		284897311D5A10FA0077529D /* SourahOptionsAndDetails */ = {
+			isa = PBXGroup;
+			children = (
+				284897321D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.h */,
+				284897331D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m */,
+			);
+			name = SourahOptionsAndDetails;
+			sourceTree = "<group>";
+		};
+		2848973B1D5A1EE80077529D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				284897421D5A26690077529D /* Base */,
+				284897431D5A269B0077529D /* TableViewLinkCell.h */,
+				284897441D5A269B0077529D /* TableViewLinkCell.m */,
+				284897461D5A375F0077529D /* TableViewInfoCell.h */,
+				284897471D5A375F0077529D /* TableViewInfoCell.m */,
+				28A101F91D83D7C70022B159 /* TableViewImageLabelSwitchCell.h */,
+				28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		284897421D5A26690077529D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2848973F1D5A26130077529D /* BaseCell.h */,
+				284897401D5A26130077529D /* BaseCell.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		284897491D5AB6B10077529D /* SourahSummary */ = {
+			isa = PBXGroup;
+			children = (
+				2848974A1D5AB6DE0077529D /* QuranSourahSummaryViewController.h */,
+				2848974B1D5AB6DE0077529D /* QuranSourahSummaryViewController.m */,
+			);
+			name = SourahSummary;
+			sourceTree = "<group>";
+		};
+		2848974D1D5B987A0077529D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2813E5801D5E6C04002E9BA6 /* QuranVerseCell.h */,
+				2813E5811D5E6C04002E9BA6 /* QuranVerseCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2858B9801D79F9B800F91338 /* QuranSourahIndex */ = {
+			isa = PBXGroup;
+			children = (
+				2858B9811D79FA0A00F91338 /* QuranSourahIndexViewController.h */,
+				2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */,
+			);
+			name = QuranSourahIndex;
+			sourceTree = "<group>";
+		};
+		28A101E31D83C4480022B159 /* Change Language */ = {
+			isa = PBXGroup;
+			children = (
+				28A101E41D83C4670022B159 /* ChangeLanguagePage.h */,
+				28A101E51D83C4670022B159 /* ChangeLanguagePage.m */,
+			);
+			name = "Change Language";
+			sourceTree = "<group>";
+		};
+		28A101E71D83C7230022B159 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				28A101E81D83C73C0022B159 /* SetLanguageSegue.h */,
+				28A101E91D83C73C0022B159 /* SetLanguageSegue.m */,
+			);
+			name = Segues;
+			sourceTree = "<group>";
+		};
+		28A101EB1D83C8FC0022B159 /* Show Quran Special Chars */ = {
+			isa = PBXGroup;
+			children = (
+				28A101EC1D83C9290022B159 /* ShowQuranSpecialCharsViewController.h */,
+				28A101ED1D83C9290022B159 /* ShowQuranSpecialCharsViewController.m */,
+			);
+			name = "Show Quran Special Chars";
+			sourceTree = "<group>";
+		};
+		28A101EF1D83CEC40022B159 /* Select Quran Translation */ = {
+			isa = PBXGroup;
+			children = (
+				28A101F01D83CEF10022B159 /* SelectQuranTranslationViewController.h */,
+				28A101F11D83CEF10022B159 /* SelectQuranTranslationViewController.m */,
+			);
+			name = "Select Quran Translation";
+			sourceTree = "<group>";
+		};
+		28F4303B1D7D25630064900A /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				28A101EF1D83CEC40022B159 /* Select Quran Translation */,
+				28A101EB1D83C8FC0022B159 /* Show Quran Special Chars */,
+				28A101E31D83C4480022B159 /* Change Language */,
+				28F430581D7D30670064900A /* Default Arabic Font */,
+				28A101E71D83C7230022B159 /* Segues */,
+				28F4303C1D7D25C90064900A /* CollectionViewTile.h */,
+				28F4303D1D7D25C90064900A /* CollectionViewTile.m */,
+				28F4303E1D7D25C90064900A /* CollectionViewTileView.h */,
+				28F4303F1D7D25C90064900A /* CollectionViewTileView.m */,
+				28F430401D7D25C90064900A /* LightCollectionViewTileView.h */,
+				28F430411D7D25C90064900A /* LightCollectionViewTileView.m */,
+				28F430421D7D25C90064900A /* RateOnMarketSegue.h */,
+				28F430431D7D25C90064900A /* RateOnMarketSegue.m */,
+				28F430441D7D25C90064900A /* SettingsHeaderView.h */,
+				28F430451D7D25C90064900A /* SettingsHeaderView.m */,
+				28F430461D7D25C90064900A /* SettingsPage.h */,
+				28F430471D7D25C90064900A /* SettingsPage.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		28F430541D7D260A0064900A /* MessageBox */ = {
+			isa = PBXGroup;
+			children = (
+				28F430551D7D261A0064900A /* MessageBox.h */,
+				28F430561D7D261A0064900A /* MessageBox.m */,
+			);
+			name = MessageBox;
+			sourceTree = "<group>";
+		};
+		28F430581D7D30670064900A /* Default Arabic Font */ = {
+			isa = PBXGroup;
+			children = (
+				28F430591D7D30990064900A /* SelectDefaultArabicFontViewController.h */,
+				28F4305A1D7D30990064900A /* SelectDefaultArabicFontViewController.m */,
+			);
+			name = "Default Arabic Font";
+			sourceTree = "<group>";
+		};
+		44D3121E5AA2A418AA7B8359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				284897581D5CC8680077529D /* CoreText.framework */,
+				30EF4122FA3C2E21CA591EF4 /* libPods-MuslimLib.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		804F3E822DE3D2FE08E88964 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E22A68205248C02F32782238 /* Pods-MuslimLib.debug.xcconfig */,
+				80AA39D3A964CA3DA1D443C5 /* Pods-MuslimLib.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28190C231D4B615300CAFB88 /* MuslimLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28190C3B1D4B615300CAFB88 /* Build configuration list for PBXNativeTarget "MuslimLib" */;
+			buildPhases = (
+				7E0381D4E8644D8689505172 /* [CP] Check Pods Manifest.lock */,
+				28190C201D4B615300CAFB88 /* Sources */,
+				28190C211D4B615300CAFB88 /* Frameworks */,
+				28190C221D4B615300CAFB88 /* Resources */,
+				E56C2E8FB1FACBA8429290A0 /* [CP] Embed Pods Frameworks */,
+				873A4355678FE0872EB93EF3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MuslimLib;
+			productName = MuslimLib;
+			productReference = 28190C241D4B615300CAFB88 /* MuslimLib.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28190C1C1D4B615300CAFB88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YekiSoft;
+				TargetAttributes = {
+					28190C231D4B615300CAFB88 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2VT7W25E3S;
+					};
+				};
+			};
+			buildConfigurationList = 28190C1F1D4B615300CAFB88 /* Build configuration list for PBXProject "MuslimLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28190C1B1D4B615300CAFB88;
+			productRefGroup = 28190C251D4B615300CAFB88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28190C231D4B615300CAFB88 /* MuslimLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28190C221D4B615300CAFB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				283C3BAA1D54DB8F00E67E49 /* Blue.txt in Resources */,
+				283C3B701D53F17500E67E49 /* English.txt in Resources */,
+				28190C341D4B615300CAFB88 /* Assets.xcassets in Resources */,
+				283C3BB61D55014B00E67E49 /* Al_Mushaf.ttf in Resources */,
+				283C3BC41D55016900E67E49 /* royabold.ttf in Resources */,
+				284896FB1D58DACE0077529D /* content.db in Resources */,
+				283C3BB71D55014B00E67E49 /* SaleemQuranFont.ttf in Resources */,
+				283C3BC31D55016900E67E49 /* roya.ttf in Resources */,
+				28F4305D1D7D3C800064900A /* KacstQurnMedium.ttf in Resources */,
+				283C3BBA1D55014B00E67E49 /* UthmanTN.otf in Resources */,
+				283C3BC11D55016900E67E49 /* IRANSans-Bold.ttf in Resources */,
+				283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */,
+				283C3BB81D55014B00E67E49 /* Scheherazade-Bold.ttf in Resources */,
+				28190C321D4B615300CAFB88 /* Main.storyboard in Resources */,
+				284897571D5CC4D90077529D /* me_quran.ttf in Resources */,
+				283C3BAC1D54DBAF00E67E49 /* Green.txt in Resources */,
+				283C3BBB1D55014B00E67E49 /* UthmanTNB.otf in Resources */,
+				283C3BB91D55014B00E67E49 /* Scheherazade-Regular.ttf in Resources */,
+				284897551D5BBDC80077529D /* BahijUthmanTaha.ttf in Resources */,
+				283C3B721D53F18800E67E49 /* Persian.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7E0381D4E8644D8689505172 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		873A4355678FE0872EB93EF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E56C2E8FB1FACBA8429290A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28190C201D4B615300CAFB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2848971D1D58DB920077529D /* ByteArray.m in Sources */,
+				283C3B991D53F79200E67E49 /* QuranTabViewController.m in Sources */,
+				284897531D5BAFBA0077529D /* QuranVerseInPageIndex.m in Sources */,
+				284897121D58DB500077529D /* LazyLoadTrieNodeInfo.m in Sources */,
+				28F4304C1D7D25C90064900A /* CollectionViewTile.m in Sources */,
+				2848972C1D58E1930077529D /* QuranSourahInfo.m in Sources */,
+				284897341D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m in Sources */,
+				289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */,
+				283C3B8A1D53F4BA00E67E49 /* SourahListViewController.m in Sources */,
+				2813E5991D601798002E9BA6 /* SidebarItem.m in Sources */,
+				2813E58C1D60168A002E9BA6 /* SidebarViewController.m in Sources */,
+				283C3B761D53F1D000E67E49 /* LanguageStrings.m in Sources */,
+				283C3BA71D54DA5000E67E49 /* NSString+Contains.m in Sources */,
+				2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */,
+				284897161D58DB500077529D /* TrieNode.m in Sources */,
+				28A101EA1D83C73C0022B159 /* SetLanguageSegue.m in Sources */,
+				283C3B9C1D53FA5800E67E49 /* BaseTabItemViewController.m in Sources */,
+				283C3B611D53E3E100E67E49 /* SidebarParameters.m in Sources */,
+				284897481D5A375F0077529D /* TableViewInfoCell.m in Sources */,
+				28A101F51D83D43C0022B159 /* QuranTranslationInfo.m in Sources */,
+				283C3BA31D54D99200E67E49 /* Theme.m in Sources */,
+				28F4304D1D7D25C90064900A /* CollectionViewTileView.m in Sources */,
+				2813E59C1D604CE1002E9BA6 /* MainQuranViewController.m in Sources */,
+				2848974C1D5AB6DE0077529D /* QuranSourahSummaryViewController.m in Sources */,
+				284897371D5A11A70077529D /* BaseViewController.m in Sources */,
+				284897101D58DB500077529D /* ContentFileValueFactory.m in Sources */,
+				283C3B961D53F68E00E67E49 /* BaseTabViewController.m in Sources */,
+				2813E5951D60175C002E9BA6 /* SidebarItemCell.m in Sources */,
+				2848975C1D5CCE4C0077529D /* QuranVerse.m in Sources */,
+				284897501D5B989D0077529D /* QuranPageView.m in Sources */,
+				28F430501D7D25C90064900A /* SettingsHeaderView.m in Sources */,
+				283C3B7B1D53F1E800E67E49 /* Settings.m in Sources */,
+				284897251D58DBF90077529D /* DateTime.m in Sources */,
+				28F4304E1D7D25C90064900A /* LightCollectionViewTileView.m in Sources */,
+				2813E5961D60175C002E9BA6 /* SidebarItemSegue.m in Sources */,
+				28F430511D7D25C90064900A /* SettingsPage.m in Sources */,
+				2848971C1D58DB920077529D /* BinaryBuffer.m in Sources */,
+				283C3B621D53E3E100E67E49 /* SWRevealViewController.m in Sources */,
+				28A101EE1D83C9290022B159 /* ShowQuranSpecialCharsViewController.m in Sources */,
+				284897131D58DB500077529D /* RandomAccessFile.m in Sources */,
+				28F4304F1D7D25C90064900A /* RateOnMarketSegue.m in Sources */,
+				28A101E61D83C4670022B159 /* ChangeLanguagePage.m in Sources */,
+				2813E5A01D636455002E9BA6 /* QuranPagesIndexViewController.m in Sources */,
+				2813E57F1D5E6546002E9BA6 /* CacheUtils.m in Sources */,
+				28190C2C1D4B615300CAFB88 /* AppDelegate.m in Sources */,
+				284897151D58DB500077529D /* TrieFile.m in Sources */,
+				28F4305B1D7D30990064900A /* SelectDefaultArabicFontViewController.m in Sources */,
+				2813E5821D5E6C04002E9BA6 /* QuranVerseCell.m in Sources */,
+				283C3B7C1D53F1E800E67E49 /* Utils.m in Sources */,
+				284897211D58DBBA0077529D /* Guid.m in Sources */,
+				2813E5A41D6364DE002E9BA6 /* PresentViewSegue.m in Sources */,
+				284897141D58DB500077529D /* Trie.m in Sources */,
+				28A101F21D83CEF10022B159 /* SelectQuranTranslationViewController.m in Sources */,
+				284897451D5A269B0077529D /* TableViewLinkCell.m in Sources */,
+				28A101FB1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m in Sources */,
+				2848973A1D5A1AD20077529D /* ValuePair.m in Sources */,
+				2813E5881D6013F6002E9BA6 /* MainWindowViewController.m in Sources */,
+				2813E5A71D636FEA002E9BA6 /* QuranPageIndexCell.m in Sources */,
+				28190C291D4B615300CAFB88 /* main.m in Sources */,
+				284897411D5A26130077529D /* BaseCell.m in Sources */,
+				2848970F1D58DB500077529D /* ContentFile.m in Sources */,
+				2813E5941D60175C002E9BA6 /* SidebarCell.m in Sources */,
+				28F430571D7D261A0064900A /* MessageBox.m in Sources */,
+				284897301D5905860077529D /* QuranSourahListCell.m in Sources */,
+				284897281D58DC7E0077529D /* MuslimLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		28190C301D4B615300CAFB88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28190C311D4B615300CAFB88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28190C391D4B615300CAFB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28190C3A1D4B615300CAFB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28190C3C1D4B615300CAFB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22A68205248C02F32782238 /* Pods-MuslimLib.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MuslimLib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yekisoft.muslim.library;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		28190C3D1D4B615300CAFB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80AA39D3A964CA3DA1D443C5 /* Pods-MuslimLib.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = MuslimLib/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yekisoft.muslim.library;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28190C1F1D4B615300CAFB88 /* Build configuration list for PBXProject "MuslimLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28190C391D4B615300CAFB88 /* Debug */,
+				28190C3A1D4B615300CAFB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28190C3B1D4B615300CAFB88 /* Build configuration list for PBXNativeTarget "MuslimLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28190C3C1D4B615300CAFB88 /* Debug */,
+				28190C3D1D4B615300CAFB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28190C1C1D4B615300CAFB88 /* Project object */;
+}

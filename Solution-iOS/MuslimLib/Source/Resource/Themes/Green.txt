@@ -1,0 +1,12 @@
+DefaultPageGradientTopColor:b7d200
+DefaultPageGradientBottomColor:014d3f
+LightPageGradientTopColor:255, 255, 255
+LightPageGradientBottomColor:f3ffe7
+NavigationBarTintColor:518823
+DefaultSidebarGradientTopColor:b7d200
+DefaultSidebarGradientBottomColor:014d3f
+SidebarItemTextColor:255, 255, 255
+DefaultTextColor:255, 255, 255
+LightTextColor:0, 45, 39
+DefaultFlashCardTextColor:128, 101, 50
+SidebarMyAccountBackgroundColor:0, 45, 39

@@ -1,0 +1,9 @@
+Solution-iOS/DerivedData/
+
+*.xcuserstate
+
+*.xcbkptlist
+
+Solution-iOS/Pods/
+
+Solution-iOS/Podfile.lock
