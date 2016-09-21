@@ -19,9 +19,18 @@
 @property (strong, nonatomic) NSArray* translations;
 @property (strong, nonatomic) NSArray* translationsLabel;
 @property (strong, nonatomic) ArabicLabel* quranText;
+@property (strong, nonatomic) UIImageView* besmAllahImage;
+@property (strong, nonatomic) UILabel* besmAllahSourahInfoLabel;
 @property (strong, nonatomic) QuranVerse* verse;
+
+@property (assign, nonatomic) BOOL isBesmAllah;
+@property (assign, nonatomic) QuranSourahInfo* besmAllahSourahInfo;
+
 
 + (UIFont*)getTranlationTitleFont:(QuranTranslationInfo*)info;
 + (UIFont*)getTranlationContentFont:(QuranTranslationInfo*)info;
++ (int)getBesmAllahWidth:(int)width;
++ (int)getBesmAllahCellHeight:(int)width sourahInfo:(QuranSourahInfo*)info;
+
 
 @end

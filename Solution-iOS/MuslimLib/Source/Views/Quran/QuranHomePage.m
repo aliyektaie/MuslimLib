@@ -122,7 +122,7 @@
 
 - (CGSize)getSettingsTileSize {
     if ([Utils isTablet]) {
-        return CGSizeMake (120, 120);
+        return CGSizeMake (240, 240);
     }
     
     int width = (int)(([UIScreen mainScreen].bounds.size.width) / 2);
@@ -150,6 +150,8 @@
         int lowerBound = 1;
         int upperBound = 604;
         int page = lowerBound + arc4random() % (upperBound - lowerBound);
+        
+        page = 604;
         
         controller.page = page;
         controller.saveCurrentPage = NO;

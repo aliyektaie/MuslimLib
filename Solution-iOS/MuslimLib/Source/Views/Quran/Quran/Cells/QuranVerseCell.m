@@ -11,6 +11,9 @@
 #import "QuranTranslationInfo.h"
 
 #define MARGIN 10
+#define BESM_HEIGHT_TO_WIDTH_RATIO 0.135
+#define BESM_SOURAH_INFO_HEIGHT_NORMAL 25
+#define BESM_SOURAH_INFO_HEIGHT_WITHOUT_BESM_ALLAH 50
 
 @interface QuranVerseCell() {
 }
@@ -28,24 +31,88 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-
     CGFloat width = CGRectGetWidth(self.frame);
-    int textHeight = [ArabicLabel getHeightForText:self.verse.text inWidth:width - 2 * MARGIN];
-    self.quranText.frame = CGRectMake(MARGIN, MARGIN, CGRectGetWidth(self.frame) - 2 * MARGIN, textHeight);
-    
-    CGFloat currentY = textHeight + 2 * MARGIN;
-    for (int i = 0; i < self.translationsLabel.count; i++) {
-        currentY += MARGIN;
-        UILabel* label = [self.translationsLabel objectAtIndex:i];
+
+    if (self.isBesmAllah) {
+        if ([self.besmAllahSourahInfo hasBesmAllah]) {
+            int besmWidth = [QuranVerseCell getBesmAllahWidth:width];
+            self.besmAllahImage.frame = CGRectMake((width - besmWidth) / 2, MARGIN, besmWidth, (int)(besmWidth * BESM_HEIGHT_TO_WIDTH_RATIO));
+            self.besmAllahSourahInfoLabel.frame = CGRectMake(0, 2 * MARGIN + (int)(besmWidth * BESM_HEIGHT_TO_WIDTH_RATIO), width, BESM_SOURAH_INFO_HEIGHT_NORMAL);
+        } else {
+            self.besmAllahSourahInfoLabel.frame = CGRectMake(0, MARGIN, width, BESM_SOURAH_INFO_HEIGHT_WITHOUT_BESM_ALLAH);
+        }
+    } else {
+        int textHeight = [ArabicLabel getHeightForText:self.verse.text inWidth:width - 2 * MARGIN];
+        self.quranText.frame = CGRectMake(MARGIN, MARGIN, CGRectGetWidth(self.frame) - 2 * MARGIN, textHeight);
         
-        CGSize size = [label sizeThatFits:CGSizeMake(width - 2 * MARGIN, 0)];
-        label.frame = CGRectMake(MARGIN, currentY, width - 2 * MARGIN, size.height);
-        
-        currentY += size.height;
-        if ((i % 2) == 1) {
+        CGFloat currentY = textHeight + 2 * MARGIN;
+        for (int i = 0; i < self.translationsLabel.count; i++) {
             currentY += MARGIN;
+            UILabel* label = [self.translationsLabel objectAtIndex:i];
+            
+            CGSize size = [label sizeThatFits:CGSizeMake(width - 2 * MARGIN, 0)];
+            label.frame = CGRectMake(MARGIN, currentY, width - 2 * MARGIN, size.height);
+            
+            currentY += size.height;
+            if ((i % 2) == 1) {
+                currentY += MARGIN;
+            }
         }
     }
+}
+
++ (int)getBesmAllahWidth:(int)width {
+    int result = 0;
+    
+    if ([Utils isTablet]) {
+        result = 300;
+    } else {
+        result = (int)(width * 0.7);
+    }
+    
+    return result;
+}
+
++ (int)getBesmAllahCellHeight:(int)width sourahInfo:(QuranSourahInfo*)info {
+    if ([info hasBesmAllah]) {
+        return (int)(3 * MARGIN + BESM_HEIGHT_TO_WIDTH_RATIO * [QuranVerseCell getBesmAllahWidth:width] + BESM_SOURAH_INFO_HEIGHT_NORMAL);
+    } else {
+        return (int)(2 * MARGIN + BESM_SOURAH_INFO_HEIGHT_WITHOUT_BESM_ALLAH);
+    }
+}
+
+- (void)setIsBesmAllah:(BOOL)isBesmAllah {
+    _isBesmAllah = isBesmAllah;
+    
+    self.backgroundColor = isBesmAllah ? [Utils colorFromRed:205 Green:195 Blue:164] : [UIColor clearColor];
+    self.quranText.hidden = isBesmAllah;
+    if (isBesmAllah) {
+        self.translations = @[];
+    }
+    
+    if (self.besmAllahImage == nil) {
+        self.besmAllahImage = [[UIImageView alloc] init];
+        self.besmAllahSourahInfoLabel = [[UILabel alloc] init];
+        
+        self.besmAllahImage.image = [UIImage imageNamed:@"BesmAllah"];
+        self.besmAllahSourahInfoLabel.textAlignment = NSTextAlignmentCenter;
+        self.besmAllahSourahInfoLabel.font = [UIFont fontWithName:@"IRANSans" size:13];
+
+        [self addSubview:self.besmAllahImage];
+        [self addSubview:self.besmAllahSourahInfoLabel];
+    }
+
+    if (isBesmAllah) {
+        if ([self.besmAllahSourahInfo hasBesmAllah]) {
+            self.besmAllahSourahInfoLabel.font = [UIFont fontWithName:@"IRANSans" size:13];
+        } else {
+            self.besmAllahSourahInfoLabel.font = [UIFont fontWithName:@"IRANSans" size:18];
+        }
+    }
+    
+    self.besmAllahSourahInfoLabel.hidden = !isBesmAllah;
+    self.besmAllahImage.hidden = !isBesmAllah || ![self.besmAllahSourahInfo hasBesmAllah];
+    self.besmAllahSourahInfoLabel.text = [NSString stringWithFormat:@"سوره %@", self.besmAllahSourahInfo.titleArabic];
 }
 
 - (void)setTranslations:(NSArray *)translations {

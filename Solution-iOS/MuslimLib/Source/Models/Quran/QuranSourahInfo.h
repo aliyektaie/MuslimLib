@@ -40,5 +40,6 @@
 - (BOOL)hasContentConcepts;
 - (NSString*)getContentConcepts;
 - (BOOL)hasMoghataat;
+- (BOOL)hasBesmAllah;
 
 @end

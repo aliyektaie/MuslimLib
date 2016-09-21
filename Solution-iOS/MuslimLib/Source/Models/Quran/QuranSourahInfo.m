@@ -91,5 +91,9 @@
     return [self.moghataatEnglish length] > 0;
 }
 
+- (BOOL)hasBesmAllah {
+    return !(self.orderInBook == 1 || self.orderInBook == 9);
+}
+
 
 @end

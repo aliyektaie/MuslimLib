@@ -203,10 +203,20 @@
         cell = [[QuranVerseCell alloc] initWithReuseIdentifier:CELL_IDENTIFIER_VERSE];
     }
 
-    QuranVerse* verse = [self.content objectAtIndex:indexPath.row];
-    cell.verse = verse;
-    cell.translations = [self getTranslations];
-    cell.quranText.text = verse.text;
+    if ([self isSourahTitleRow:(int)indexPath.row]) {
+        int besmCountBefore = [self getSourahHeaderBeforeRow:(int)indexPath.row + 1];
+        QuranVerse* verse = [self.content objectAtIndex:indexPath.row - besmCountBefore + 1];
+
+        cell.besmAllahSourahInfo = verse.sourahInfo;
+        cell.isBesmAllah = YES;
+    } else {
+        cell.isBesmAllah = NO;
+        int besmCountBefore = [self getSourahHeaderBeforeRow:(int)indexPath.row];
+        QuranVerse* verse = [self.content objectAtIndex:indexPath.row - besmCountBefore];
+        cell.verse = verse;
+        cell.translations = [self getTranslations];
+        cell.quranText.text = verse.text;
+    }
 
     return cell;
 }
@@ -237,14 +247,30 @@
     if (self.content == nil) {
         return 0;
     }
+    
+    int numberOfSourahHeader = 0;
+    for (int i = 0; i < self.content.count; i++) {
+        QuranVerse* verse = [self.content objectAtIndex:i];
+        if (verse.verseNumber == 1) {
+            numberOfSourahHeader++;
+        }
+    }
 
-    return self.content.count;
+    return self.content.count + numberOfSourahHeader;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat result = 20;
+    
+    if ([self isSourahTitleRow:(int)indexPath.row]) {
+        int besmCountBefore = [self getSourahHeaderBeforeRow:(int)indexPath.row + 1];
+        QuranVerse* verse = [self.content objectAtIndex:indexPath.row - besmCountBefore + 1];
 
-    QuranVerse* verse = [self.content objectAtIndex:indexPath.row];
+        return [QuranVerseCell getBesmAllahCellHeight:CGRectGetWidth(tableView.frame) sourahInfo:verse.sourahInfo];
+    }
+
+    int besmCountBefore = [self getSourahHeaderBeforeRow:(int)indexPath.row];
+    QuranVerse* verse = [self.content objectAtIndex:indexPath.row - besmCountBefore];
     result += [ArabicLabel getHeightForText:verse.text inWidth:CGRectGetWidth(self.tableView.frame) - 20];
     
     UILabel* titleLabel = [[UILabel alloc] init];
@@ -285,6 +311,34 @@
         }
     }
 
+    return result;
+}
+
+- (BOOL)isSourahTitleRow:(int)rowIndex {
+    int currentCount = rowIndex - [self getSourahHeaderBeforeRow:rowIndex];
+    if (currentCount + 1 >= self.content.count) {
+        return NO;
+    }
+    
+    int nextCount = rowIndex - [self getSourahHeaderBeforeRow:rowIndex + 1];
+    
+    return nextCount != currentCount;
+}
+
+- (int)getSourahHeaderBeforeRow:(int)rowIndex {
+    int result = 0;
+    
+    int index = 0;
+    for (int i = 0; i < rowIndex; i++) {
+        QuranVerse* verse = [self.content objectAtIndex:index];
+        if (verse.verseNumber == 1) {
+            result++;
+            i++;
+        }
+        
+        index++;
+    }
+    
     return result;
 }
 
