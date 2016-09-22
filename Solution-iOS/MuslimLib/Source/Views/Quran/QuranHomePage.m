@@ -151,8 +151,6 @@
         int upperBound = 604;
         int page = lowerBound + arc4random() % (upperBound - lowerBound);
         
-        page = 604;
-        
         controller.page = page;
         controller.saveCurrentPage = NO;
     }

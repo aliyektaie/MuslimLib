@@ -86,6 +86,7 @@
 		28A101F21D83CEF10022B159 /* SelectQuranTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101F11D83CEF10022B159 /* SelectQuranTranslationViewController.m */; };
 		28A101F51D83D43C0022B159 /* QuranTranslationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101F41D83D43C0022B159 /* QuranTranslationInfo.m */; };
 		28A101FB1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */; };
+		28DBB9881D9430320069FBAD /* QuranViewOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DBB9871D9430320069FBAD /* QuranViewOptionsViewController.m */; };
 		28F4304C1D7D25C90064900A /* CollectionViewTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303D1D7D25C90064900A /* CollectionViewTile.m */; };
 		28F4304D1D7D25C90064900A /* CollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303F1D7D25C90064900A /* CollectionViewTileView.m */; };
 		28F4304E1D7D25C90064900A /* LightCollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430411D7D25C90064900A /* LightCollectionViewTileView.m */; };
@@ -240,6 +241,8 @@
 		28A101F41D83D43C0022B159 /* QuranTranslationInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranTranslationInfo.m; path = Source/Models/Quran/QuranTranslationInfo.m; sourceTree = "<group>"; };
 		28A101F91D83D7C70022B159 /* TableViewImageLabelSwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewImageLabelSwitchCell.h; path = Source/Views/Bases/Cells/TableViewImageLabelSwitchCell.h; sourceTree = "<group>"; };
 		28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewImageLabelSwitchCell.m; path = Source/Views/Bases/Cells/TableViewImageLabelSwitchCell.m; sourceTree = "<group>"; };
+		28DBB9861D9430320069FBAD /* QuranViewOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranViewOptionsViewController.h; path = "Source/Views/Quran/Views Options/QuranViewOptionsViewController.h"; sourceTree = "<group>"; };
+		28DBB9871D9430320069FBAD /* QuranViewOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranViewOptionsViewController.m; path = "Source/Views/Quran/Views Options/QuranViewOptionsViewController.m"; sourceTree = "<group>"; };
 		28F4303C1D7D25C90064900A /* CollectionViewTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTile.h; path = Source/Views/Settings/CollectionViewTile.h; sourceTree = "<group>"; };
 		28F4303D1D7D25C90064900A /* CollectionViewTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewTile.m; path = Source/Views/Settings/CollectionViewTile.m; sourceTree = "<group>"; };
 		28F4303E1D7D25C90064900A /* CollectionViewTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTileView.h; path = Source/Views/Settings/CollectionViewTileView.h; sourceTree = "<group>"; };
@@ -457,6 +460,7 @@
 		283C3B7E1D53F2D200E67E49 /* Quran */ = {
 			isa = PBXGroup;
 			children = (
+				28DBB9851D94300A0069FBAD /* Quran Views Option */,
 				2858B9801D79F9B800F91338 /* QuranSourahIndex */,
 				2813E59D1D63642A002E9BA6 /* QuranPagesIndex */,
 				283C3B871D53F49500E67E49 /* SourahListTab */,
@@ -766,6 +770,15 @@
 			name = "Select Quran Translation";
 			sourceTree = "<group>";
 		};
+		28DBB9851D94300A0069FBAD /* Quran Views Option */ = {
+			isa = PBXGroup;
+			children = (
+				28DBB9861D9430320069FBAD /* QuranViewOptionsViewController.h */,
+				28DBB9871D9430320069FBAD /* QuranViewOptionsViewController.m */,
+			);
+			name = "Quran Views Option";
+			sourceTree = "<group>";
+		};
 		28F4303B1D7D25630064900A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -861,6 +874,7 @@
 					28190C231D4B615300CAFB88 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2VT7W25E3S;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1017,6 +1031,7 @@
 				282772D71D9194B100CBD2E9 /* NSString+MD5.m in Sources */,
 				283C3B7C1D53F1E800E67E49 /* Utils.m in Sources */,
 				284897211D58DBBA0077529D /* Guid.m in Sources */,
+				28DBB9881D9430320069FBAD /* QuranViewOptionsViewController.m in Sources */,
 				2813E5A41D6364DE002E9BA6 /* PresentViewSegue.m in Sources */,
 				284897141D58DB500077529D /* Trie.m in Sources */,
 				28A101F21D83CEF10022B159 /* SelectQuranTranslationViewController.m in Sources */,
@@ -1148,6 +1163,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yekisoft.muslim.library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1166,6 +1182,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yekisoft.muslim.library;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

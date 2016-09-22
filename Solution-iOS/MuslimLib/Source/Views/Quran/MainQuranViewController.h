@@ -37,4 +37,8 @@
 
 - (void)setQuranPage:(int)page;
 
+- (void)setupBookMode;
+- (void)setupReadingMode;
+- (void)updateTranslationChange;
+
 @end

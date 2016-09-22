@@ -16,6 +16,8 @@
 #import "Settings.h"
 #import "QuranVerseCell.h"
 #import "ArabicLabel.h"
+#import <STPopup/STPopup.h>
+#import "QuranViewOptionsViewController.h"
 
 #define CELL_IDENTIFIER_VERSE @"cell_cerse_quran" 
 
@@ -50,6 +52,10 @@
     } else {
         [self setupReadingMode];
     }
+}
+
+- (void)updateTranslationChange {
+    self.translations = nil;
 }
 
 - (BOOL)hasSidebarButton {
@@ -151,34 +157,38 @@
 }
 
 - (IBAction)onSelectViewPressed:(id)sender {
-    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:L(@"QuranTab/ReadQuran/ViewsModeTitle") message:L(@"QuranTab/ReadQuran/ViewsModeMessage") preferredStyle:UIAlertControllerStyleActionSheet];
-
-    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-
-    }]];
-
-    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/Page") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        self.mode = MODE_BOOK;
-        [self setupBookMode];
-    }]];
-
-    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranOnly") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        self.mode = MODE_ARABIC_ONLY;
-
-        [self setupReadingMode];
-//        [self.tableView reloadData];
-    }]];
-
-
-    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranAndTranslation") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        self.mode = MODE_ARABIC_AND_TRANSLATION;
-
-        [self setupReadingMode];
-//        [self.tableView reloadData];
-    }]];
-
-    actionSheet.popoverPresentationController.sourceView = self.actionSheetSource;
-    [self presentViewController:actionSheet animated:YES completion:nil];
+    QuranViewOptionsViewController* controller = (QuranViewOptionsViewController*)[Utils createViewControllerFromStoryboard:@"QuranViewOptionsViewController"];
+    controller.contentSizeInPopup = CGSizeMake(300, 400);
+    controller.parentPage = self;
+    
+    STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:controller];
+    [popupController presentInViewController:self];
+//    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:L(@"QuranTab/ReadQuran/ViewsModeTitle") message:L(@"QuranTab/ReadQuran/ViewsModeMessage") preferredStyle:UIAlertControllerStyleActionSheet];
+//
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//
+//    }]];
+//
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/Page") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        self.mode = MODE_BOOK;
+//        [self setupBookMode];
+//    }]];
+//
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranOnly") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        self.mode = MODE_ARABIC_ONLY;
+//
+//        [self setupReadingMode];
+//    }]];
+//
+//
+//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranAndTranslation") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+//        self.mode = MODE_ARABIC_AND_TRANSLATION;
+//
+//        [self setupReadingMode];
+//    }]];
+//
+//    actionSheet.popoverPresentationController.sourceView = self.actionSheetSource;
+//    [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
 - (void)setupBookMode {

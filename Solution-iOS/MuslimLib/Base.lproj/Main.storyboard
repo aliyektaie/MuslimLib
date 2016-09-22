@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -300,6 +300,115 @@
             </objects>
             <point key="canvasLocation" x="-2001" y="4107"/>
         </scene>
+        <!--Quran View Options View Controller-->
+        <scene sceneID="5yb-5R-At6">
+            <objects>
+                <viewController storyboardIdentifier="QuranViewOptionsViewController" id="PtL-ng-4hf" customClass="QuranViewOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s9C-KB-0A9"/>
+                        <viewControllerLayoutGuide type="bottom" id="d9q-hl-XzX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HS6-yl-C72">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuranViewPages" translatesAutoresizingMaskIntoConstraints="NO" id="9HL-gt-GNZ">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="93H-SU-CB7"/>
+                                    <constraint firstAttribute="width" secondItem="9HL-gt-GNZ" secondAttribute="height" multiplier="7:10" id="Jmf-4t-KQT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuranViewTranslation" translatesAutoresizingMaskIntoConstraints="NO" id="PqA-s5-tnX">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PqA-s5-tnX" secondAttribute="height" multiplier="7:10" id="1b0-KB-UmZ"/>
+                                    <constraint firstAttribute="width" constant="62" id="rS4-Mu-GDF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QuranViewArabicOnly" translatesAutoresizingMaskIntoConstraints="NO" id="xnt-VY-jq8">
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="BCi-qG-rpm"/>
+                                    <constraint firstAttribute="width" secondItem="xnt-VY-jq8" secondAttribute="height" multiplier="7:10" id="aGb-fN-nsQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXY-n9-DFh">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vir-S8-qnW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z83-ab-i8m">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HLU-nu-J22"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbA-Rh-gIt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="xlb-7I-zAA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8r-gC-sBJ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8zW-56-FYd"/>
+                                </constraints>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <action selector="onSettingsTranslations:" destination="PtL-ng-4hf" eventType="touchUpInside" id="dod-yY-RkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lbA-Rh-gIt" secondAttribute="trailing" constant="81" id="4QU-Ob-B2s"/>
+                            <constraint firstAttribute="leading" secondItem="M8r-gC-sBJ" secondAttribute="leading" constant="-16" id="73C-L4-3uG"/>
+                            <constraint firstItem="lbA-Rh-gIt" firstAttribute="top" secondItem="s9C-KB-0A9" secondAttribute="bottom" constant="226" id="B4f-fN-gan"/>
+                            <constraint firstAttribute="trailing" secondItem="z83-ab-i8m" secondAttribute="trailing" constant="80" id="EIj-4e-lzZ"/>
+                            <constraint firstAttribute="trailing" secondItem="xnt-VY-jq8" secondAttribute="trailing" constant="10" id="Ea1-bP-1AI"/>
+                            <constraint firstAttribute="leading" secondItem="lbA-Rh-gIt" secondAttribute="leading" constant="-16" id="Qdi-Rr-hpi"/>
+                            <constraint firstAttribute="trailing" secondItem="9HL-gt-GNZ" secondAttribute="trailing" constant="10" id="RWx-uE-nR8"/>
+                            <constraint firstAttribute="leading" secondItem="BXY-n9-DFh" secondAttribute="leading" constant="-16" id="TYa-iA-KpP"/>
+                            <constraint firstItem="9HL-gt-GNZ" firstAttribute="top" secondItem="s9C-KB-0A9" secondAttribute="bottom" constant="11" id="UBc-uD-IlL"/>
+                            <constraint firstAttribute="leading" secondItem="z83-ab-i8m" secondAttribute="leading" constant="-16" id="VaJ-10-VVM"/>
+                            <constraint firstAttribute="trailing" secondItem="PqA-s5-tnX" secondAttribute="trailing" constant="10" id="WK5-x6-2qe"/>
+                            <constraint firstItem="BXY-n9-DFh" firstAttribute="top" secondItem="s9C-KB-0A9" secondAttribute="bottom" constant="17" id="WaV-8W-Udv"/>
+                            <constraint firstItem="PqA-s5-tnX" firstAttribute="top" secondItem="9HL-gt-GNZ" secondAttribute="bottom" constant="16" id="XBo-jX-2MR"/>
+                            <constraint firstAttribute="trailing" secondItem="M8r-gC-sBJ" secondAttribute="trailing" constant="83" id="alf-a0-dpR"/>
+                            <constraint firstItem="xnt-VY-jq8" firstAttribute="top" secondItem="PqA-s5-tnX" secondAttribute="bottom" constant="16" id="hfA-Vu-uQ6"/>
+                            <constraint firstItem="z83-ab-i8m" firstAttribute="top" secondItem="s9C-KB-0A9" secondAttribute="bottom" constant="122" id="uId-Eg-hQV"/>
+                            <constraint firstItem="M8r-gC-sBJ" firstAttribute="top" secondItem="z83-ab-i8m" secondAttribute="bottom" id="xEk-wo-U0e"/>
+                            <constraint firstAttribute="trailing" secondItem="BXY-n9-DFh" secondAttribute="trailing" constant="80" id="ycj-cz-0ny"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cmdTranslationSettings" destination="M8r-gC-sBJ" id="35Z-0c-Nc2"/>
+                        <outlet property="imgArabic" destination="xnt-VY-jq8" id="0yg-JQ-5MG"/>
+                        <outlet property="imgOthmanTaha" destination="9HL-gt-GNZ" id="7e8-ib-jeW"/>
+                        <outlet property="imgTranslation" destination="PqA-s5-tnX" id="9BE-o6-wzy"/>
+                        <outlet property="layoutHeightTitleArabic" destination="xlb-7I-zAA" id="dZw-9a-VJZ"/>
+                        <outlet property="layoutHeightTitleOthmanTaha" destination="vir-S8-qnW" id="Ftu-dY-FJg"/>
+                        <outlet property="layoutHeightTitleTranslation" destination="HLU-nu-J22" id="eH6-Dp-4G5"/>
+                        <outlet property="titleArabic" destination="lbA-Rh-gIt" id="L4G-49-KCq"/>
+                        <outlet property="titleOthmanTaha" destination="BXY-n9-DFh" id="Mu0-GS-mjf"/>
+                        <outlet property="titleTranslation" destination="z83-ab-i8m" id="kaZ-qh-fJ7"/>
+                        <segue destination="zH2-OC-g2n" kind="custom" identifier="s_ShowTranslationsSettings" customClass="PresentViewSegue" id="96d-cG-v7i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dfl-EZ-FIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1213.125" y="4982.7464788732395"/>
+        </scene>
         <!--Quran Pages Index-->
         <scene sceneID="Ew6-d8-OSd">
             <objects>
@@ -338,7 +447,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a07-7j-TlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1628" y="4993"/>
+            <point key="canvasLocation" x="-2010" y="4984"/>
         </scene>
         <!--Quran Sourah Index-->
         <scene sceneID="Jlq-oZ-hE0">
@@ -400,7 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jkk-K1-1jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2408" y="4993"/>
+            <point key="canvasLocation" x="-2790" y="4984"/>
         </scene>
         <!--Main Window View Controller-->
         <scene sceneID="7CF-1e-sdf">
@@ -418,7 +527,7 @@
                     <navigationItem key="navigationItem" id="n0q-Dz-IoR">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="Ynr-GW-k2E">
-                            <rect key="frame" x="40" y="6" width="240" height="33"/>
+                            <rect key="frame" x="40" y="5.5" width="240" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BesmAllah" translatesAutoresizingMaskIntoConstraints="NO" id="6qu-UI-acj">
@@ -939,6 +1048,8 @@
                             <constraint firstItem="047-hQ-ekr" firstAttribute="leading" secondItem="WMw-wz-tZP" secondAttribute="leading" id="ylW-7b-heL"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="047-hQ-ekr" id="Af9-eY-dob"/>
                     </connections>
@@ -1022,14 +1133,18 @@
         <image name="PreviousPage" width="22" height="22"/>
         <image name="QuranTabsCommentary" width="25" height="25"/>
         <image name="QuranTabsQuran" width="25" height="25"/>
+        <image name="QuranViewArabicOnly" width="70" height="101"/>
+        <image name="QuranViewPages" width="70" height="101"/>
+        <image name="QuranViewTranslation" width="70" height="100"/>
         <image name="TabsList" width="25" height="25"/>
         <image name="TabsSearch" width="25" height="25"/>
         <image name="TabsSettings" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PXj-Y2-gT9"/>
+        <segue reference="96d-cG-v7i"/>
+        <segue reference="Br7-fb-30r"/>
         <segue reference="OUm-E4-fcT"/>
         <segue reference="TtZ-lB-RKI"/>
-        <segue reference="Br7-fb-30r"/>
+        <segue reference="PXj-Y2-gT9"/>
     </inferredMetricsTieBreakers>
 </document>
