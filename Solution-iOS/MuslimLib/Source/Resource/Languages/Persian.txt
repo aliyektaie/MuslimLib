@@ -96,6 +96,12 @@ QuranTab/ReadQuran/ViewsModeMessage:لطفا چینش مورد نظر خود ر�
 QuranTab/ReadQuran/ViewModes/Page:کتابی (عثمان طه)
 QuranTab/ReadQuran/ViewModes/QuranOnly:متن عربی
 QuranTab/ReadQuran/ViewModes/QuranAndTranslation:متن عربی با ترجمه
+QuranTab/ReadQuran/VerseOptions/Title:گزینه‌ها
+QuranTab/ReadQuran/VerseOptions/Recite:قرائت آیه
+QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation:ترجمه‌ی لغت به لغت
+QuranTab/ReadQuran/VerseOptions/ViewVerseStructure:صرف و نحو
+QuranTab/ReadQuran/VerseOptions/Bookmark:بوک مارک
+QuranTab/ReadQuran/VerseOptions/ViewCommentary:مشاهده‌ی تفسیر
 
 
 // Select Quran Page:

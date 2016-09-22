@@ -18,6 +18,7 @@
 #import "ArabicLabel.h"
 #import <STPopup/STPopup.h>
 #import "QuranViewOptionsViewController.h"
+#import "QuranVerseOptionsViewController.h"
 
 #define CELL_IDENTIFIER_VERSE @"cell_cerse_quran" 
 
@@ -163,32 +164,6 @@
     
     STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:controller];
     [popupController presentInViewController:self];
-//    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:L(@"QuranTab/ReadQuran/ViewsModeTitle") message:L(@"QuranTab/ReadQuran/ViewsModeMessage") preferredStyle:UIAlertControllerStyleActionSheet];
-//
-//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"Cancel") style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//
-//    }]];
-//
-//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/Page") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        self.mode = MODE_BOOK;
-//        [self setupBookMode];
-//    }]];
-//
-//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranOnly") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        self.mode = MODE_ARABIC_ONLY;
-//
-//        [self setupReadingMode];
-//    }]];
-//
-//
-//    [actionSheet addAction:[UIAlertAction actionWithTitle:L(@"QuranTab/ReadQuran/ViewModes/QuranAndTranslation") style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//        self.mode = MODE_ARABIC_AND_TRANSLATION;
-//
-//        [self setupReadingMode];
-//    }]];
-//
-//    actionSheet.popoverPresentationController.sourceView = self.actionSheetSource;
-//    [self presentViewController:actionSheet animated:YES completion:nil];
 }
 
 - (void)setupBookMode {
@@ -354,6 +329,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (![self isSourahTitleRow:(int)indexPath.row]) {
+        int besmCountBefore = [self getSourahHeaderBeforeRow:(int)indexPath.row];
+        QuranVerse* verse = [self.content objectAtIndex:indexPath.row - besmCountBefore];
+        
+        [self showVerseOptions:verse];
+    }
+}
+
+- (void)showVerseOptions:(QuranVerse*)verse {
+    QuranVerseOptionsViewController* controller = (QuranVerseOptionsViewController*)[Utils createViewControllerFromStoryboard:@"QuranVerseOptionsViewController"];
+    controller.contentSizeInPopup = CGSizeMake(300, 400);
+    controller.verse = verse;
+    
+    STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:controller];
+    [popupController presentInViewController:self];   
 }
 
 @end
