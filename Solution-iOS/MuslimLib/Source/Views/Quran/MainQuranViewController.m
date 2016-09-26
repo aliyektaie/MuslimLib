@@ -342,6 +342,7 @@
     QuranVerseOptionsViewController* controller = (QuranVerseOptionsViewController*)[Utils createViewControllerFromStoryboard:@"QuranVerseOptionsViewController"];
     controller.contentSizeInPopup = CGSizeMake(300, 400);
     controller.verse = verse;
+    controller.quranMainPage = self;
     
     STPopupController *popupController = [[STPopupController alloc] initWithRootViewController:controller];
     [popupController presentInViewController:self];   

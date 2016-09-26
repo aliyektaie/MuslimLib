@@ -483,6 +483,48 @@
             </objects>
             <point key="canvasLocation" x="-2010" y="4984"/>
         </scene>
+        <!--Quran Verse Word by Word-->
+        <scene sceneID="dM8-gY-Afq">
+            <objects>
+                <viewController storyboardIdentifier="QuranWordByWordTranslationViewController" id="EvP-Sw-HtA" customClass="QuranWordByWordTranslationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qY-qj-yX3"/>
+                        <viewControllerLayoutGuide type="bottom" id="joa-Hc-InO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="exx-xq-rCO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C8V-Pn-lPG">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C8V-Pn-lPG" firstAttribute="top" secondItem="8qY-qj-yX3" secondAttribute="bottom" constant="-64" id="OPx-0j-2Ie"/>
+                            <constraint firstAttribute="trailing" secondItem="C8V-Pn-lPG" secondAttribute="trailing" id="UZX-i2-nPK"/>
+                            <constraint firstItem="C8V-Pn-lPG" firstAttribute="leading" secondItem="exx-xq-rCO" secondAttribute="leading" id="a5x-Zd-dRf"/>
+                            <constraint firstItem="joa-Hc-InO" firstAttribute="top" secondItem="C8V-Pn-lPG" secondAttribute="bottom" id="d2U-C2-4uD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quran Verse Word by Word" id="2HQ-ti-f9r">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="he1-L3-7oD">
+                            <connections>
+                                <action selector="onClose:" destination="EvP-Sw-HtA" id="09U-pi-jMl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cmdClose" destination="he1-L3-7oD" id="a90-Bj-4Lh"/>
+                        <outlet property="tableView" destination="C8V-Pn-lPG" id="2eT-9H-EO0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wRT-lC-su3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3577.5" y="4982.7464788732395"/>
+        </scene>
         <!--Quran Sourah Index-->
         <scene sceneID="Jlq-oZ-hE0">
             <objects>

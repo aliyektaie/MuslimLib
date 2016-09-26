@@ -36,5 +36,14 @@
 - (int)getQuranSourahPage:(int)sourah;
 - (NSString*)removeQuranSpecialCharsForce:(NSString*)aya;
 - (NSArray*)getQuranAvailableTranslations;
+- (NSArray*)getQuranVerseWordByWordTranslations:(QuranVerse*)verse;
+
+@end
+
+@interface VerseWordTranslation : NSObject
+
+@property (strong, nonatomic) NSString* arabicText;
+@property (strong, nonatomic) NSString* translation;
+@property (strong, nonatomic) NSString* transliteration;
 
 @end

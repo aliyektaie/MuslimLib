@@ -2,6 +2,7 @@ package com.yekisoft.muslim_lib;
 
 import com.yekisoft.muslim_lib.core.trie.content.ContentFile;
 import com.yekisoft.muslim_lib.core.trie.content.ContentManager;
+import com.yekisoft.muslim_lib.quran.recitation.AlafasyRecitationDownloader;
 import com.yekisoft.muslim_lib.quran.sourah_list.*;
 import com.yekisoft.muslim_lib.quran.text.*;
 import com.yekisoft.muslim_lib.quran.translation.*;
@@ -18,17 +19,19 @@ public class Program {
         // ==========================================================
         //    Quran
         // ==========================================================
-//        result.add(new BasicSourahListDownloader());
-//        result.add(new SourahSummaryFromWikipediaDownloader());
-//        result.add(new PersianSourahContentDownloader());
-//        result.add(new SourahWordAndLetterCountDownloader());
-//        result.add(new EnglishPersianSourahInfoDownloader());
+        result.add(new BasicSourahListDownloader());
+        result.add(new SourahSummaryFromWikipediaDownloader());
+        result.add(new PersianSourahContentDownloader());
+        result.add(new SourahWordAndLetterCountDownloader());
+        result.add(new EnglishPersianSourahInfoDownloader());
 
         result.add(new QuranTextDownloader());
         result.add(new QuranPageIndexCreator());
         result.add(new QuranEnglishTranslationsDownloader());
         result.add(new QuranPersianTranslationsDownloader());
         result.add(new QuranTranslationsIndexerDownloader());
+
+//        result.add(new AlafasyRecitationDownloader());
 
         return result;
     }

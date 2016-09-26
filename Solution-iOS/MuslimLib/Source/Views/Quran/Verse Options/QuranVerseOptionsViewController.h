@@ -10,9 +10,10 @@
 #import "QuranVerse.h"
 #import <STPopup/STPopup.h>
 
-@interface QuranVerseOptionsViewController : UIViewController <UITableViewDataSource>
+@interface QuranVerseOptionsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) QuranVerse* verse;
+@property (strong, nonatomic) UIViewController* quranMainPage;
 @property (strong, nonatomic) NSArray* items;
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

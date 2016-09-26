@@ -78,6 +78,8 @@
 		284897591D5CC8680077529D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284897581D5CC8680077529D /* CoreText.framework */; };
 		2848975C1D5CCE4C0077529D /* QuranVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848975B1D5CCE4C0077529D /* QuranVerse.m */; };
 		2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */; };
+		287341681D996F2600B24F1F /* QuranWordByWordTranslationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287341671D996F2600B24F1F /* QuranWordByWordTranslationViewController.m */; };
+		2873416B1D997D1C00B24F1F /* QuranWordByWordTranslationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2873416A1D997D1C00B24F1F /* QuranWordByWordTranslationCell.m */; };
 		287A32021D91C7C300A2505A /* QuranHomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A32011D91C7C300A2505A /* QuranHomePage.m */; };
 		289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289FFBAE1D7BD7F6008ED24F /* ArabicLabel.m */; };
 		28A101E61D83C4670022B159 /* ChangeLanguagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101E51D83C4670022B159 /* ChangeLanguagePage.m */; };
@@ -226,6 +228,10 @@
 		2848975B1D5CCE4C0077529D /* QuranVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerse.m; path = Source/Models/Quran/QuranVerse.m; sourceTree = "<group>"; };
 		2858B9811D79FA0A00F91338 /* QuranSourahIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranSourahIndexViewController.h; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.h"; sourceTree = "<group>"; };
 		2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranSourahIndexViewController.m; path = "Source/Views/Quran/Pages Index/QuranSourahIndexViewController.m"; sourceTree = "<group>"; };
+		287341661D996F2600B24F1F /* QuranWordByWordTranslationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranWordByWordTranslationViewController.h; path = "Source/Views/Quran/Word By Word/QuranWordByWordTranslationViewController.h"; sourceTree = "<group>"; };
+		287341671D996F2600B24F1F /* QuranWordByWordTranslationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranWordByWordTranslationViewController.m; path = "Source/Views/Quran/Word By Word/QuranWordByWordTranslationViewController.m"; sourceTree = "<group>"; };
+		287341691D997D1C00B24F1F /* QuranWordByWordTranslationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranWordByWordTranslationCell.h; path = "Source/Views/Quran/Word By Word/QuranWordByWordTranslationCell.h"; sourceTree = "<group>"; };
+		2873416A1D997D1C00B24F1F /* QuranWordByWordTranslationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranWordByWordTranslationCell.m; path = "Source/Views/Quran/Word By Word/QuranWordByWordTranslationCell.m"; sourceTree = "<group>"; };
 		287A32001D91C7C300A2505A /* QuranHomePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranHomePage.h; path = Source/Views/Quran/QuranHomePage.h; sourceTree = "<group>"; };
 		287A32011D91C7C300A2505A /* QuranHomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranHomePage.m; path = Source/Views/Quran/QuranHomePage.m; sourceTree = "<group>"; };
 		289FFBAD1D7BD7F6008ED24F /* ArabicLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArabicLabel.h; path = Source/Views/Bases/ArabicLabel.h; sourceTree = "<group>"; };
@@ -463,6 +469,7 @@
 		283C3B7E1D53F2D200E67E49 /* Quran */ = {
 			isa = PBXGroup;
 			children = (
+				287341651D996ECA00B24F1F /* Word By Word Translation */,
 				28DBB9891D945B5E0069FBAD /* Quran Verse Options */,
 				28DBB9851D94300A0069FBAD /* Quran Views Option */,
 				2858B9801D79F9B800F91338 /* QuranSourahIndex */,
@@ -738,6 +745,17 @@
 			name = QuranSourahIndex;
 			sourceTree = "<group>";
 		};
+		287341651D996ECA00B24F1F /* Word By Word Translation */ = {
+			isa = PBXGroup;
+			children = (
+				287341661D996F2600B24F1F /* QuranWordByWordTranslationViewController.h */,
+				287341671D996F2600B24F1F /* QuranWordByWordTranslationViewController.m */,
+				287341691D997D1C00B24F1F /* QuranWordByWordTranslationCell.h */,
+				2873416A1D997D1C00B24F1F /* QuranWordByWordTranslationCell.m */,
+			);
+			name = "Word By Word Translation";
+			sourceTree = "<group>";
+		};
 		28A101E31D83C4480022B159 /* Change Language */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,6 +1025,7 @@
 				283C3B761D53F1D000E67E49 /* LanguageStrings.m in Sources */,
 				283C3BA71D54DA5000E67E49 /* NSString+Contains.m in Sources */,
 				2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */,
+				287341681D996F2600B24F1F /* QuranWordByWordTranslationViewController.m in Sources */,
 				284897161D58DB500077529D /* TrieNode.m in Sources */,
 				28A101EA1D83C73C0022B159 /* SetLanguageSegue.m in Sources */,
 				283C3B9C1D53FA5800E67E49 /* BaseTabItemViewController.m in Sources */,
@@ -1060,6 +1079,7 @@
 				2813E5941D60175C002E9BA6 /* SidebarCell.m in Sources */,
 				28F430571D7D261A0064900A /* MessageBox.m in Sources */,
 				284897301D5905860077529D /* QuranSourahListCell.m in Sources */,
+				2873416B1D997D1C00B24F1F /* QuranWordByWordTranslationCell.m in Sources */,
 				284897281D58DC7E0077529D /* MuslimLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

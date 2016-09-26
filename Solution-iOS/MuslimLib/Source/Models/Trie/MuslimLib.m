@@ -398,4 +398,26 @@ static MuslimLib* _instance;
     
     return result;
 }
+
+- (NSArray*)getQuranVerseWordByWordTranslations:(QuranVerse*)verse {
+    NSMutableArray* result = [[NSMutableArray alloc] init];
+    ContentFile* file = (ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/Quran/Translation/WordByWord/English/%d/%d", verse.sourahInfo.orderInBook, verse.verseNumber]];
+    NSArray* lines = [file.content componentsSeparatedByString:@"\r\n"];
+    
+    for (int i = 0; i < lines.count / 3; i++) {
+        VerseWordTranslation* word = [[VerseWordTranslation alloc] init];
+        word.arabicText = [lines objectAtIndex:(i * 3)];
+        word.translation = [lines objectAtIndex:(i * 3 + 1)];
+        word.transliteration = [lines objectAtIndex:(i * 3 + 2)];
+        
+        [result addObject:word];
+    }
+    
+    return result;
+}
+
+@end
+
+@implementation VerseWordTranslation
+
 @end

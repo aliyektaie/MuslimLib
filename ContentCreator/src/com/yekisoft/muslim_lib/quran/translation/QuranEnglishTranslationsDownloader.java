@@ -1,9 +1,7 @@
 package com.yekisoft.muslim_lib.quran.translation;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
+import com.google.gson.internal.ObjectConstructor;
 import com.yekisoft.muslim_lib.IContentDownloader;
 import com.yekisoft.muslim_lib.core.Guid;
 import com.yekisoft.muslim_lib.core.Utils;
@@ -47,7 +45,29 @@ public class QuranEnglishTranslationsDownloader implements IContentDownloader{
         sourahsTranslations.add(sourahContainer);
 
         for (int i = 0; i < info.verseCount; i++) {
+            System.out.println("Verse " + i);
             JsonObject translations = (JsonObject) entries.get(i);
+
+            // word by word
+            JsonArray wordList = (JsonArray) translations.get("words");
+            AyaWordTranslationList listOfWordsTranslation = new AyaWordTranslationList();
+            sourahContainer.ayaWordsTranslation.add(listOfWordsTranslation);
+
+            for (JsonElement wordInfo : wordList) {
+                Object o = ((JsonObject)wordInfo).get("arabic");
+                if (o instanceof JsonNull) {
+                    continue;
+                }
+
+                WordTransPair pair = new WordTransPair();
+                listOfWordsTranslation.words.add(pair);
+                pair.arabicText = ((JsonObject)wordInfo).get("arabic").getAsString();
+
+                pair.englishTranslation = ((JsonObject)wordInfo).get("translation").getAsString();
+                pair.transliteration = ((JsonObject)wordInfo).get("transliteration").getAsString();
+            }
+
+            // translation
             JsonArray list = (JsonArray) translations.get("content");
 
             for (JsonElement content : list) {
@@ -113,6 +133,8 @@ public class QuranEnglishTranslationsDownloader implements IContentDownloader{
                 addTranslation(container.translationsYusufAli.get(j), result, String.format("/Quran/Translation/YusufAli/%d/%d", i + 1, j + 1));
                 addTranslation(container.translationsDrGhali.get(j), result, String.format("/Quran/Translation/FrGhali/%d/%d", i + 1, j + 1));
                 addTranslation(container.translationsMuhsenKhan.get(j), result, String.format("/Quran/Translation/MusenKhan/%d/%d", i + 1, j + 1));
+
+                addWordByWordTranslations(container.ayaWordsTranslation.get(j), result, i + 1, j + 1);
             }
         }
 
@@ -124,6 +146,32 @@ public class QuranEnglishTranslationsDownloader implements IContentDownloader{
         QuranTranslationsIndexerDownloader.instance().translations.add(createTranslationInfo("Muhsin Khan", "/Quran/Translation/MusenKhan/%d/%d"));
 
         return result;
+    }
+
+    private void addWordByWordTranslations(AyaWordTranslationList wordByWordTranlations, ArrayList<ContentFile> result, int sourahNumber, int verseNumber) {
+        ContentFile file = new ContentFile();
+        file.Type = ContentFileType.Text;
+        file.Title = "";
+        file.ID = Guid.empty();
+        file.FilePath = String.format("/Quran/Translation/WordByWord/English/%d/%d", sourahNumber, verseNumber);
+        file.Content = getVerseWordByWordTranslationContent(wordByWordTranlations);
+
+        result.add(file);
+    }
+
+    private String getVerseWordByWordTranslationContent(AyaWordTranslationList wordByWordTranlations) {
+        StringBuilder result = new StringBuilder();
+
+        for (WordTransPair pair : wordByWordTranlations.words) {
+            result.append(pair.arabicText);
+            result.append("\r\n");
+            result.append(pair.englishTranslation);
+            result.append("\r\n");
+            result.append(pair.transliteration);
+            result.append("\r\n");
+        }
+
+        return result.toString().trim();
     }
 
     private TranslationInfo createTranslationInfo(String title, String path) {
@@ -178,4 +226,17 @@ class SourahTranlationContainer {
     public ArrayList<AyaWithTranslation> translationsDrGhali = new ArrayList<>();
     public ArrayList<AyaWithTranslation> translationsSakhir = new ArrayList<>();
     public ArrayList<AyaWithTranslation> translationsMuhsenKhan = new ArrayList<>();
+
+    public ArrayList<AyaWordTranslationList> ayaWordsTranslation = new ArrayList<>();
+}
+
+class AyaWordTranslationList {
+    public ArrayList<WordTransPair> words = new ArrayList<>();
+
+}
+
+class WordTransPair {
+    public String arabicText = "";
+    public String englishTranslation = "";
+    public String transliteration = "";
 }

@@ -9,6 +9,7 @@
 #import "QuranVerseOptionsViewController.h"
 #import "Utils.h"
 #import "LanguageStrings.h"
+#import "QuranWordByWordTranslationViewController.h"
 
 #define CELL_IDENTIFIER @"verse_options_id"
 
@@ -33,10 +34,11 @@
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
     self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -52,5 +54,22 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        NSString* titlePressed = [self.items objectAtIndex:indexPath.row];
+        if ([titlePressed isEqualToString:@"QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation"]) {
+            [self showWordByWordTranslation:self.verse];
+        }
+    }];
+}
+
+- (void)showWordByWordTranslation:(QuranVerse*)verse {
+    QuranWordByWordTranslationViewController* vc = [QuranWordByWordTranslationViewController create:verse];
+    UINavigationController* controller = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self.quranMainPage presentViewController:controller animated:YES completion:nil];
+}
 
 @end
