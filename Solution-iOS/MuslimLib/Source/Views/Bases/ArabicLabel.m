@@ -78,7 +78,7 @@ static NSMutableArray* cache;
         result = (int)(result * 1.0);
     } else if ([defaultFont isEqualToString:@"Al_Mushaf"]) {
         result = (int)(result * 0.95);
-    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanTahaNaskh"]) {
+    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanicScriptHAFS"]) {
         result = (int)(result * 0.8);
     }
     
@@ -89,7 +89,17 @@ static NSMutableArray* cache;
     quranFont = nil;
 }
 
++ (NSString*)preprocessText:(NSString*)text withFont:(UIFont*)font {
+    if ([font.fontName isEqualToString:@"KFGQPCUthmanicScriptHAFS"]) {
+        text = [text stringByReplacingOccurrencesOfString:@"۟" withString:@""];
+        text = [text stringByReplacingOccurrencesOfString:@"ۭ" withString:@""];
+    }
+
+    return text;
+}
+
 - (void)setText:(NSString *)text {
+    text = [ArabicLabel preprocessText:text withFont:quranFont];
     _text = text;
 
     lines = nil;
@@ -259,6 +269,7 @@ static NSMutableArray* cache;
 }
 
 + (NSMutableArray*)splitLineStatic:(CGFloat)lineWidth text:(NSString*)text font:(UIFont*)font {
+    [ArabicLabel preprocessText:text withFont:font];
     
     NSString* currentLine = @"";
     CGFloat remainedInLine = lineWidth;

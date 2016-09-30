@@ -175,12 +175,12 @@ static double fontSizeCoefficient;
 
 +(UIFont*) createDefaultArabicFont: (float)size {
     size = size * fontSizeCoefficient;
-    return [UIFont fontWithName:@"KFGQPCUthmanTahaNaskh" size:size];
+    return [UIFont fontWithName:@"KFGQPCUthmanicScriptHAFS" size:size];
 }
 
 +(UIFont*) createDefaultArabicBoldFont: (float)size {
     size = size * fontSizeCoefficient;
-    return [UIFont fontWithName:@"KFGQPCUthmanTahaNaskh-Bold" size:size];
+    return [UIFont fontWithName:@"KFGQPCUthmanicScriptHAFS" size:size];
 }
 
 + (UIViewController*)createViewControllerFromStoryboard:(NSString*)identifier {

@@ -653,7 +653,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZv-S9-MAV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Commentary" image="QuranTabsCommentary" id="EmI-hg-e9p"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LtU-7Q-MNH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LtU-7Q-MNH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -885,7 +885,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxC-BV-O1D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kzC-Pg-bjV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzC-Pg-bjV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -925,8 +925,8 @@
                                 </constraints>
                                 <segments>
                                     <segment title="Scheherazade"/>
-                                    <segment title="Al Mushaf"/>
-                                    <segment title="Pars Quran"/>
+                                    <segment title="المصحف"/>
+                                    <segment title="عثمان طه"/>
                                 </segments>
                                 <connections>
                                     <action selector="onValueChanged:" destination="PjM-lA-1WY" eventType="valueChanged" id="zIS-uM-SdR"/>

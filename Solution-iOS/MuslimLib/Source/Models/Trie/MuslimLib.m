@@ -348,7 +348,7 @@ static MuslimLib* _instance;
     if ([Settings shouldRemoveSpecialCharsForQuran]) {
         aya = [self removeQuranSpecialCharsForce:aya];
     }
-    
+        
     return aya;
 }
 
@@ -401,14 +401,26 @@ static MuslimLib* _instance;
 
 - (NSArray*)getQuranVerseWordByWordTranslations:(QuranVerse*)verse {
     NSMutableArray* result = [[NSMutableArray alloc] init];
-    ContentFile* file = (ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/Quran/Translation/WordByWord/English/%d/%d", verse.sourahInfo.orderInBook, verse.verseNumber]];
-    NSArray* lines = [file.content componentsSeparatedByString:@"\r\n"];
+    ContentFile* file = (ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/Quran/Translation/WordByWord/%d/%d", verse.sourahInfo.orderInBook, verse.verseNumber]];
+    NSArray* parts = [file.content componentsSeparatedByString:@"--------------------------\r\n"];
     
-    for (int i = 0; i < lines.count / 3; i++) {
+    for (int i = 0; i < parts.count; i++) {
+        NSArray* lines = [[parts objectAtIndex:i] componentsSeparatedByString:@"\r\n"];
+        
         VerseWordTranslation* word = [[VerseWordTranslation alloc] init];
-        word.arabicText = [lines objectAtIndex:(i * 3)];
-        word.translation = [lines objectAtIndex:(i * 3 + 1)];
-        word.transliteration = [lines objectAtIndex:(i * 3 + 2)];
+        word.arabicImageLink = [lines objectAtIndex:0];
+        word.arabicGrammar = [lines objectAtIndex:1];
+        word.translation = [lines objectAtIndex:2];
+        word.transliteration = [lines objectAtIndex:3];
+        
+        NSMutableArray* temp = [[NSMutableArray alloc] init];
+        for (int j = 4; j < lines.count; j++) {
+            NSString* line = [lines objectAtIndex:j];
+            if (line.length > 0)
+                [temp addObject:line];
+        }
+        
+        word.syntaxAndMorphology = temp;
         
         [result addObject:word];
     }

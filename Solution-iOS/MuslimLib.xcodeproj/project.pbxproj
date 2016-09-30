@@ -40,11 +40,8 @@
 		283C3BAA1D54DB8F00E67E49 /* Blue.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BA91D54DB8F00E67E49 /* Blue.txt */; };
 		283C3BAC1D54DBAF00E67E49 /* Green.txt in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BAB1D54DBAF00E67E49 /* Green.txt */; };
 		283C3BB61D55014B00E67E49 /* Al_Mushaf.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */; };
-		283C3BB71D55014B00E67E49 /* SaleemQuranFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */; };
 		283C3BB81D55014B00E67E49 /* Scheherazade-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */; };
 		283C3BB91D55014B00E67E49 /* Scheherazade-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */; };
-		283C3BBA1D55014B00E67E49 /* UthmanTN.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB41D55014B00E67E49 /* UthmanTN.otf */; };
-		283C3BBB1D55014B00E67E49 /* UthmanTNB.otf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BB51D55014B00E67E49 /* UthmanTNB.otf */; };
 		283C3BC11D55016900E67E49 /* IRANSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBD1D55016900E67E49 /* IRANSans-Bold.ttf */; };
 		283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBE1D55016900E67E49 /* IRANSans.ttf */; };
 		283C3BC31D55016900E67E49 /* roya.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBF1D55016900E67E49 /* roya.ttf */; };
@@ -73,8 +70,6 @@
 		2848974C1D5AB6DE0077529D /* QuranSourahSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848974B1D5AB6DE0077529D /* QuranSourahSummaryViewController.m */; };
 		284897501D5B989D0077529D /* QuranPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848974F1D5B989D0077529D /* QuranPageView.m */; };
 		284897531D5BAFBA0077529D /* QuranVerseInPageIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897521D5BAFBA0077529D /* QuranVerseInPageIndex.m */; };
-		284897551D5BBDC80077529D /* BahijUthmanTaha.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */; };
-		284897571D5CC4D90077529D /* me_quran.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 284897561D5CC4D90077529D /* me_quran.ttf */; };
 		284897591D5CC8680077529D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284897581D5CC8680077529D /* CoreText.framework */; };
 		2848975C1D5CCE4C0077529D /* QuranVerse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2848975B1D5CCE4C0077529D /* QuranVerse.m */; };
 		2858B9831D79FA0A00F91338 /* QuranSourahIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2858B9821D79FA0A00F91338 /* QuranSourahIndexViewController.m */; };
@@ -90,6 +85,7 @@
 		28A101FB1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A101FA1D83D7C70022B159 /* TableViewImageLabelSwitchCell.m */; };
 		28DBB9881D9430320069FBAD /* QuranViewOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DBB9871D9430320069FBAD /* QuranViewOptionsViewController.m */; };
 		28DBB98C1D945B9E0069FBAD /* QuranVerseOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DBB98B1D945B9E0069FBAD /* QuranVerseOptionsViewController.m */; };
+		28EE1FA91D9EEC6700887BA4 /* OthmanTaha.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28EE1FA81D9EEC6700887BA4 /* OthmanTaha.ttf */; };
 		28F4304C1D7D25C90064900A /* CollectionViewTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303D1D7D25C90064900A /* CollectionViewTile.m */; };
 		28F4304D1D7D25C90064900A /* CollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4303F1D7D25C90064900A /* CollectionViewTileView.m */; };
 		28F4304E1D7D25C90064900A /* LightCollectionViewTileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430411D7D25C90064900A /* LightCollectionViewTileView.m */; };
@@ -98,7 +94,6 @@
 		28F430511D7D25C90064900A /* SettingsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430471D7D25C90064900A /* SettingsPage.m */; };
 		28F430571D7D261A0064900A /* MessageBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F430561D7D261A0064900A /* MessageBox.m */; };
 		28F4305B1D7D30990064900A /* SelectDefaultArabicFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4305A1D7D30990064900A /* SelectDefaultArabicFontViewController.m */; };
-		28F4305D1D7D3C800064900A /* KacstQurnMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */; };
 		83E9552CB3D0BD1141E022E6 /* libPods-MuslimLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30EF4122FA3C2E21CA591EF4 /* libPods-MuslimLib.a */; };
 /* End PBXBuildFile section */
 
@@ -163,11 +158,8 @@
 		283C3BA91D54DB8F00E67E49 /* Blue.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Blue.txt; path = Source/Resource/Themes/Blue.txt; sourceTree = "<group>"; };
 		283C3BAB1D54DBAF00E67E49 /* Green.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Green.txt; path = Source/Resource/Themes/Green.txt; sourceTree = "<group>"; };
 		283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Al_Mushaf.ttf; path = Source/Resource/Fonts/Arabic/Al_Mushaf.ttf; sourceTree = "<group>"; };
-		283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SaleemQuranFont.ttf; path = Source/Resource/Fonts/Arabic/SaleemQuranFont.ttf; sourceTree = "<group>"; };
 		283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scheherazade-Bold.ttf"; path = "Source/Resource/Fonts/Arabic/Scheherazade-Bold.ttf"; sourceTree = "<group>"; };
 		283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Scheherazade-Regular.ttf"; path = "Source/Resource/Fonts/Arabic/Scheherazade-Regular.ttf"; sourceTree = "<group>"; };
-		283C3BB41D55014B00E67E49 /* UthmanTN.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UthmanTN.otf; path = Source/Resource/Fonts/Arabic/UthmanTN.otf; sourceTree = "<group>"; };
-		283C3BB51D55014B00E67E49 /* UthmanTNB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = UthmanTNB.otf; path = Source/Resource/Fonts/Arabic/UthmanTNB.otf; sourceTree = "<group>"; };
 		283C3BBD1D55016900E67E49 /* IRANSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IRANSans-Bold.ttf"; path = "Source/Resource/Fonts/Persian/IRANSans-Bold.ttf"; sourceTree = "<group>"; };
 		283C3BBE1D55016900E67E49 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSans.ttf; path = Source/Resource/Fonts/Persian/IRANSans.ttf; sourceTree = "<group>"; };
 		283C3BBF1D55016900E67E49 /* roya.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = roya.ttf; path = Source/Resource/Fonts/Persian/roya.ttf; sourceTree = "<group>"; };
@@ -221,8 +213,6 @@
 		2848974F1D5B989D0077529D /* QuranPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranPageView.m; path = Source/Views/Quran/Quran/Cells/QuranPageView.m; sourceTree = "<group>"; };
 		284897511D5BAFBA0077529D /* QuranVerseInPageIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerseInPageIndex.h; path = Source/Models/Quran/QuranVerseInPageIndex.h; sourceTree = "<group>"; };
 		284897521D5BAFBA0077529D /* QuranVerseInPageIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerseInPageIndex.m; path = Source/Models/Quran/QuranVerseInPageIndex.m; sourceTree = "<group>"; };
-		284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = BahijUthmanTaha.ttf; path = Source/Resource/Fonts/Arabic/BahijUthmanTaha.ttf; sourceTree = "<group>"; };
-		284897561D5CC4D90077529D /* me_quran.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = me_quran.ttf; path = Source/Resource/Fonts/Arabic/me_quran.ttf; sourceTree = "<group>"; };
 		284897581D5CC8680077529D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		2848975A1D5CCE4C0077529D /* QuranVerse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerse.h; path = Source/Models/Quran/QuranVerse.h; sourceTree = "<group>"; };
 		2848975B1D5CCE4C0077529D /* QuranVerse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerse.m; path = Source/Models/Quran/QuranVerse.m; sourceTree = "<group>"; };
@@ -252,6 +242,7 @@
 		28DBB9871D9430320069FBAD /* QuranViewOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranViewOptionsViewController.m; path = "Source/Views/Quran/Views Options/QuranViewOptionsViewController.m"; sourceTree = "<group>"; };
 		28DBB98A1D945B9E0069FBAD /* QuranVerseOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuranVerseOptionsViewController.h; path = "Source/Views/Quran/Verse Options/QuranVerseOptionsViewController.h"; sourceTree = "<group>"; };
 		28DBB98B1D945B9E0069FBAD /* QuranVerseOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuranVerseOptionsViewController.m; path = "Source/Views/Quran/Verse Options/QuranVerseOptionsViewController.m"; sourceTree = "<group>"; };
+		28EE1FA81D9EEC6700887BA4 /* OthmanTaha.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = OthmanTaha.ttf; path = Source/Resource/Fonts/Arabic/OthmanTaha.ttf; sourceTree = "<group>"; };
 		28F4303C1D7D25C90064900A /* CollectionViewTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTile.h; path = Source/Views/Settings/CollectionViewTile.h; sourceTree = "<group>"; };
 		28F4303D1D7D25C90064900A /* CollectionViewTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionViewTile.m; path = Source/Views/Settings/CollectionViewTile.m; sourceTree = "<group>"; };
 		28F4303E1D7D25C90064900A /* CollectionViewTileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionViewTileView.h; path = Source/Views/Settings/CollectionViewTileView.h; sourceTree = "<group>"; };
@@ -268,7 +259,6 @@
 		28F430561D7D261A0064900A /* MessageBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageBox.m; path = Source/Views/Bases/MessageBox.m; sourceTree = "<group>"; };
 		28F430591D7D30990064900A /* SelectDefaultArabicFontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectDefaultArabicFontViewController.h; path = Source/Views/Settings/Pages/SelectDefaultArabicFontViewController.h; sourceTree = "<group>"; };
 		28F4305A1D7D30990064900A /* SelectDefaultArabicFontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectDefaultArabicFontViewController.m; path = Source/Views/Settings/Pages/SelectDefaultArabicFontViewController.m; sourceTree = "<group>"; };
-		28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = KacstQurnMedium.ttf; path = Source/Resource/Fonts/Arabic/KacstQurnMedium.ttf; sourceTree = "<group>"; };
 		30EF4122FA3C2E21CA591EF4 /* libPods-MuslimLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MuslimLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AA39D3A964CA3DA1D443C5 /* Pods-MuslimLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimLib.release.xcconfig"; path = "Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib.release.xcconfig"; sourceTree = "<group>"; };
 		E22A68205248C02F32782238 /* Pods-MuslimLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MuslimLib.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MuslimLib/Pods-MuslimLib.debug.xcconfig"; sourceTree = "<group>"; };
@@ -576,15 +566,10 @@
 		283C3BAF1D55013900E67E49 /* Arabic */ = {
 			isa = PBXGroup;
 			children = (
-				28F4305C1D7D3C800064900A /* KacstQurnMedium.ttf */,
-				284897561D5CC4D90077529D /* me_quran.ttf */,
-				284897541D5BBDC80077529D /* BahijUthmanTaha.ttf */,
+				28EE1FA81D9EEC6700887BA4 /* OthmanTaha.ttf */,
 				283C3BB01D55014B00E67E49 /* Al_Mushaf.ttf */,
-				283C3BB11D55014B00E67E49 /* SaleemQuranFont.ttf */,
 				283C3BB21D55014B00E67E49 /* Scheherazade-Bold.ttf */,
 				283C3BB31D55014B00E67E49 /* Scheherazade-Regular.ttf */,
-				283C3BB41D55014B00E67E49 /* UthmanTN.otf */,
-				283C3BB51D55014B00E67E49 /* UthmanTNB.otf */,
 			);
 			name = Arabic;
 			sourceTree = "<group>";
@@ -933,24 +918,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				283C3BAA1D54DB8F00E67E49 /* Blue.txt in Resources */,
+				28EE1FA91D9EEC6700887BA4 /* OthmanTaha.ttf in Resources */,
 				283C3B701D53F17500E67E49 /* English.txt in Resources */,
 				28190C341D4B615300CAFB88 /* Assets.xcassets in Resources */,
 				283C3BB61D55014B00E67E49 /* Al_Mushaf.ttf in Resources */,
 				283C3BC41D55016900E67E49 /* royabold.ttf in Resources */,
 				284896FB1D58DACE0077529D /* content.db in Resources */,
-				283C3BB71D55014B00E67E49 /* SaleemQuranFont.ttf in Resources */,
 				283C3BC31D55016900E67E49 /* roya.ttf in Resources */,
-				28F4305D1D7D3C800064900A /* KacstQurnMedium.ttf in Resources */,
-				283C3BBA1D55014B00E67E49 /* UthmanTN.otf in Resources */,
 				283C3BC11D55016900E67E49 /* IRANSans-Bold.ttf in Resources */,
 				283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */,
 				283C3BB81D55014B00E67E49 /* Scheherazade-Bold.ttf in Resources */,
 				28190C321D4B615300CAFB88 /* Main.storyboard in Resources */,
-				284897571D5CC4D90077529D /* me_quran.ttf in Resources */,
 				283C3BAC1D54DBAF00E67E49 /* Green.txt in Resources */,
-				283C3BBB1D55014B00E67E49 /* UthmanTNB.otf in Resources */,
 				283C3BB91D55014B00E67E49 /* Scheherazade-Regular.ttf in Resources */,
-				284897551D5BBDC80077529D /* BahijUthmanTaha.ttf in Resources */,
 				283C3B721D53F18800E67E49 /* Persian.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

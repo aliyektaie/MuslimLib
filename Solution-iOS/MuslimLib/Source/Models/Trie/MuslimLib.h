@@ -42,8 +42,10 @@
 
 @interface VerseWordTranslation : NSObject
 
-@property (strong, nonatomic) NSString* arabicText;
+@property (strong, nonatomic) NSString* arabicImageLink;
 @property (strong, nonatomic) NSString* translation;
 @property (strong, nonatomic) NSString* transliteration;
+@property (strong, nonatomic) NSString* arabicGrammar;
+@property (strong, nonatomic) NSArray* syntaxAndMorphology;
 
 @end

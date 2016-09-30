@@ -32,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = L(@"QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation");
+    
     self.words = [[MuslimLib instance] getQuranVerseWordByWordTranslations:self.verseInfo];
     
     self.tableView.delegate = self;
@@ -65,7 +67,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 55;
+    VerseWordTranslation* info = [self.words objectAtIndex:indexPath.row];
+    
+    return 80 + (info.syntaxAndMorphology.count + 1) * HEIGHT_OF_MORPHOLOGY_LABEL;
 }
 
 - (BOOL)hasSidebarButton {

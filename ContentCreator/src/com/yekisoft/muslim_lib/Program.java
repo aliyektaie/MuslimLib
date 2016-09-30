@@ -2,6 +2,7 @@ package com.yekisoft.muslim_lib;
 
 import com.yekisoft.muslim_lib.core.trie.content.ContentFile;
 import com.yekisoft.muslim_lib.core.trie.content.ContentManager;
+import com.yekisoft.muslim_lib.quran.morphology.*;
 import com.yekisoft.muslim_lib.quran.recitation.AlafasyRecitationDownloader;
 import com.yekisoft.muslim_lib.quran.sourah_list.*;
 import com.yekisoft.muslim_lib.quran.text.*;
@@ -30,6 +31,8 @@ public class Program {
         result.add(new QuranEnglishTranslationsDownloader());
         result.add(new QuranPersianTranslationsDownloader());
         result.add(new QuranTranslationsIndexerDownloader());
+
+        result.add(new QuranMorphologyAndSyntaxDownloader());
 
 //        result.add(new AlafasyRecitationDownloader());
 

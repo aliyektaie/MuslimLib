@@ -105,6 +105,7 @@ static UIImage* besmAllah;
     for (int i = 0; i < self.content.count; i++) {
         QuranVerse* verse = [self.content objectAtIndex:i];
         verse.text = [verse.text stringByAppendingString:[NSString stringWithFormat:@" [%@] ", [Utils formatNumber:verse.verseNumber]]];
+        verse.text = [ArabicLabel preprocessText:verse.text withFont:quranFont];
     }
 
     lines = nil;
@@ -618,7 +619,7 @@ static NSMutableDictionary* stringWidthCache;
         result = (int)(result * 1.0);
     } else if ([defaultFont isEqualToString:@"Al_Mushaf"]) {
         result = (int)(result * 0.95);
-    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanTahaNaskh"]) {
+    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanicScriptHAFS"]) {
         result = (int)(result * 0.8);
     }
 

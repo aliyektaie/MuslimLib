@@ -22,21 +22,22 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>me_quran.ttf</string>
-		<string>BahijUthmanTaha.ttf</string>
-		<string>UthmanTNB.otf</string>
-		<string>UthmanTN.otf</string>
+		<string>OthmanTaha.ttf</string>
 		<string>Scheherazade-Regular.ttf</string>
 		<string>Scheherazade-Bold.ttf</string>
-		<string>SaleemQuranFont.ttf</string>
 		<string>Al_Mushaf.ttf</string>
 		<string>royabold.ttf</string>
 		<string>roya.ttf</string>
 		<string>IRANSans.ttf</string>
 		<string>IRANSans-Bold.ttf</string>
-        <string>KacstQurnMedium.ttf</string>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>

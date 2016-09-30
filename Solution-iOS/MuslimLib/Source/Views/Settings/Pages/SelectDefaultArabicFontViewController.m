@@ -34,7 +34,7 @@
         self.segmentSelector.selectedSegmentIndex = 0;
     } else if ([defaultFont isEqualToString:@"Al_Mushaf"]) {
         self.segmentSelector.selectedSegmentIndex = 1;
-    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanTahaNaskh"]) {
+    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanicScriptHAFS"]) {
         self.segmentSelector.selectedSegmentIndex = 2;
     }
 
@@ -63,7 +63,7 @@
             fontName = @"Al_Mushaf";
             break;
         case 2:
-            fontName = @"KFGQPCUthmanTahaNaskh";
+            fontName = @"KFGQPCUthmanicScriptHAFS";
             break;
     }
 
@@ -80,7 +80,7 @@
         result = (int)(result * 1.0);
     } else if ([defaultFont isEqualToString:@"Al_Mushaf"]) {
         result = (int)(result * 0.95);
-    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanTahaNaskh"]) {
+    } else if ([defaultFont isEqualToString:@"KFGQPCUthmanicScriptHAFS"]) {
         result = (int)(result * 0.8);
     }
     

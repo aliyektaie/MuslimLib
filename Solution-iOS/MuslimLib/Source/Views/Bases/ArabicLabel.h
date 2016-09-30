@@ -15,6 +15,7 @@
 + (int)getHeightForText:(NSString*)text inWidth:(int)width;
 + (void)invalidateQuranFont;
 + (int)getFontSize;
++ (NSString*)preprocessText:(NSString*)text withFont:(UIFont*)font;
 
 @end
 

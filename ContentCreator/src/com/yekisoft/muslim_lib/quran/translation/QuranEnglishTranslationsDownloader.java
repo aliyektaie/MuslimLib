@@ -134,7 +134,7 @@ public class QuranEnglishTranslationsDownloader implements IContentDownloader{
                 addTranslation(container.translationsDrGhali.get(j), result, String.format("/Quran/Translation/FrGhali/%d/%d", i + 1, j + 1));
                 addTranslation(container.translationsMuhsenKhan.get(j), result, String.format("/Quran/Translation/MusenKhan/%d/%d", i + 1, j + 1));
 
-                addWordByWordTranslations(container.ayaWordsTranslation.get(j), result, i + 1, j + 1);
+//                addWordByWordTranslations(container.ayaWordsTranslation.get(j), result, i + 1, j + 1);
             }
         }
 
@@ -146,32 +146,6 @@ public class QuranEnglishTranslationsDownloader implements IContentDownloader{
         QuranTranslationsIndexerDownloader.instance().translations.add(createTranslationInfo("Muhsin Khan", "/Quran/Translation/MusenKhan/%d/%d"));
 
         return result;
-    }
-
-    private void addWordByWordTranslations(AyaWordTranslationList wordByWordTranlations, ArrayList<ContentFile> result, int sourahNumber, int verseNumber) {
-        ContentFile file = new ContentFile();
-        file.Type = ContentFileType.Text;
-        file.Title = "";
-        file.ID = Guid.empty();
-        file.FilePath = String.format("/Quran/Translation/WordByWord/English/%d/%d", sourahNumber, verseNumber);
-        file.Content = getVerseWordByWordTranslationContent(wordByWordTranlations);
-
-        result.add(file);
-    }
-
-    private String getVerseWordByWordTranslationContent(AyaWordTranslationList wordByWordTranlations) {
-        StringBuilder result = new StringBuilder();
-
-        for (WordTransPair pair : wordByWordTranlations.words) {
-            result.append(pair.arabicText);
-            result.append("\r\n");
-            result.append(pair.englishTranslation);
-            result.append("\r\n");
-            result.append(pair.transliteration);
-            result.append("\r\n");
-        }
-
-        return result.toString().trim();
     }
 
     private TranslationInfo createTranslationInfo(String title, String path) {

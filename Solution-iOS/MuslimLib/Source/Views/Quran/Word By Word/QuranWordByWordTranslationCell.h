@@ -8,12 +8,17 @@
 
 #import "BaseCell.h"
 #import "MuslimLib.h"
+#import <UIImageView+AFNetworking.h>
+
+#define HEIGHT_OF_MORPHOLOGY_LABEL 25
 
 @interface QuranWordByWordTranslationCell : BaseCell
 
-@property (strong, nonatomic) UILabel* lblArabicText;
+@property (strong, nonatomic) UIImageView* lblArabicText;
 @property (strong, nonatomic) UILabel* lblTransliteration;
+@property (strong, nonatomic) NSMutableArray* morphologyLabels;
 @property (strong, nonatomic) UILabel* lblTranslation;
+@property (strong, nonatomic) UIImage* tempImage;
 
 @property (strong, nonatomic) VerseWordTranslation* model;
 

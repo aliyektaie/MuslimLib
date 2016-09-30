@@ -23,11 +23,11 @@
     [super viewDidLoad];
     
     self.items = @[
-                   @"QuranTab/ReadQuran/VerseOptions/Recite",
+//                   @"QuranTab/ReadQuran/VerseOptions/Recite",
                    @"QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation",
                    @"QuranTab/ReadQuran/VerseOptions/ViewVerseStructure",
-                   @"QuranTab/ReadQuran/VerseOptions/Bookmark",
-                   @"QuranTab/ReadQuran/VerseOptions/ViewCommentary",
+//                   @"QuranTab/ReadQuran/VerseOptions/Bookmark",
+//                   @"QuranTab/ReadQuran/VerseOptions/ViewCommentary",
                    ];
 
     self.title = L(@"QuranTab/ReadQuran/VerseOptions/Title");

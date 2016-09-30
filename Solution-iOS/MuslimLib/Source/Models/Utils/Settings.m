@@ -116,7 +116,7 @@
     NSString* result = (NSString*)[defaults objectForKey:@"SHOULD_REMOVE_SPECIAL_CHARS"];
     
     if (result == nil) {
-        result = @"true";
+        result = @"false";
     }
     
     return [result isEqualToString:@"true"];

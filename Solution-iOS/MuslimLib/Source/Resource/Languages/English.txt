@@ -98,7 +98,7 @@ QuranTab/ReadQuran/ViewModes/QuranOnly:Reading Friendly (Arabic Only)
 QuranTab/ReadQuran/ViewModes/QuranAndTranslation:Reading Friendly (Arabic & Translation)
 QuranTab/ReadQuran/VerseOptions/Title:Options
 QuranTab/ReadQuran/VerseOptions/Recite:Recite Verse
-QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation:View Word-by-Word Translation
+QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation:Word by Word Translation
 QuranTab/ReadQuran/VerseOptions/ViewVerseStructure:View Verse Linguistics Structure
 QuranTab/ReadQuran/VerseOptions/Bookmark:Bookmark
 QuranTab/ReadQuran/VerseOptions/ViewCommentary:View Commentary
