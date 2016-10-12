@@ -20,17 +20,17 @@ public class Program {
         // ==========================================================
         //    Quran
         // ==========================================================
-        result.add(new BasicSourahListDownloader());
-        result.add(new SourahSummaryFromWikipediaDownloader());
-        result.add(new PersianSourahContentDownloader());
-        result.add(new SourahWordAndLetterCountDownloader());
-        result.add(new EnglishPersianSourahInfoDownloader());
+//        result.add(new BasicSourahListDownloader());
+//        result.add(new SourahSummaryFromWikipediaDownloader());
+//        result.add(new PersianSourahContentDownloader());
+//        result.add(new SourahWordAndLetterCountDownloader());
+//        result.add(new EnglishPersianSourahInfoDownloader());
 
         result.add(new QuranTextDownloader());
-        result.add(new QuranPageIndexCreator());
-        result.add(new QuranEnglishTranslationsDownloader());
-        result.add(new QuranPersianTranslationsDownloader());
-        result.add(new QuranTranslationsIndexerDownloader());
+//        result.add(new QuranPageIndexCreator());
+//        result.add(new QuranEnglishTranslationsDownloader());
+//        result.add(new QuranPersianTranslationsDownloader());
+//        result.add(new QuranTranslationsIndexerDownloader());
 
         result.add(new QuranMorphologyAndSyntaxDownloader());
 

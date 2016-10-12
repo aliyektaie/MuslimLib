@@ -269,7 +269,7 @@ static NSMutableArray* cache;
 }
 
 + (NSMutableArray*)splitLineStatic:(CGFloat)lineWidth text:(NSString*)text font:(UIFont*)font {
-    [ArabicLabel preprocessText:text withFont:font];
+    text = [ArabicLabel preprocessText:text withFont:font];
     
     NSString* currentLine = @"";
     CGFloat remainedInLine = lineWidth;

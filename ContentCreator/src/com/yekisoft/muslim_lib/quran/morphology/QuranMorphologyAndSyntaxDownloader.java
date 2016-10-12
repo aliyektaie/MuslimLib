@@ -8,6 +8,7 @@ import com.yekisoft.muslim_lib.core.trie.content.ContentFile;
 import com.yekisoft.muslim_lib.core.trie.content.ContentFileType;
 import com.yekisoft.muslim_lib.quran.SourahInfo;
 import com.yekisoft.muslim_lib.quran.SourahUtils;
+import com.yekisoft.muslim_lib.quran.text.QuranTextDownloader;
 
 import java.util.ArrayList;
 
@@ -56,6 +57,11 @@ public class QuranMorphologyAndSyntaxDownloader implements IContentDownloader {
 
         String[] words = html.split("<tr>");
         for (int i = 1; i < words.length; i++) {
+            int wordCount = words.length - 1;
+            String[] ayaWords = removeVaghfs(QuranTextDownloader.instance().quran.get(sourah - 1).get(verseIndex - 1).split(" "));
+            if (wordCount != ayaWords.length) {
+                System.out.println("Error");
+            }
             String[] parts = words[i].split("<td");
             QuranWordMorphologyInfo wordSyntax = new QuranWordMorphologyInfo();
             result.words.add(wordSyntax);
@@ -109,6 +115,24 @@ public class QuranMorphologyAndSyntaxDownloader implements IContentDownloader {
 
 
         return result;
+    }
+
+    private String[] removeVaghfs(String[] words) {
+        ArrayList<String> result = new ArrayList<>();
+
+        for (String word : words) {
+            if (!word.contains("<") && !word.contains("۞")) {
+                result.add(word);
+            }
+        }
+
+        String[] r = new String[result.size()];
+
+        for (int i = 0; i < result.size(); i++) {
+            r[i] = result.get(i);
+        }
+
+        return r;
     }
 
     private String getColor(String tag) {

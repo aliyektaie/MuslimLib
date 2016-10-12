@@ -14,12 +14,15 @@
 
 @interface QuranWordByWordTranslationCell : BaseCell
 
-@property (strong, nonatomic) UIImageView* lblArabicText;
+@property (strong, nonatomic) UIImageView* lblArabicImage;
+@property (strong, nonatomic) UILabel* lblArabicText;
 @property (strong, nonatomic) UILabel* lblTransliteration;
 @property (strong, nonatomic) NSMutableArray* morphologyLabels;
 @property (strong, nonatomic) UILabel* lblTranslation;
 @property (strong, nonatomic) UIImage* tempImage;
 
 @property (strong, nonatomic) VerseWordTranslation* model;
+@property (strong, nonatomic) QuranVerse* verse;
+@property (assign, nonatomic) int wordIndex;
 
 @end

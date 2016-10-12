@@ -61,6 +61,8 @@
     }
     
     VerseWordTranslation* info = [self.words objectAtIndex:indexPath.row];
+    cell.wordIndex = (int)indexPath.row;
+    cell.verse = self.verseInfo;
     cell.model = info;
     
     return cell;

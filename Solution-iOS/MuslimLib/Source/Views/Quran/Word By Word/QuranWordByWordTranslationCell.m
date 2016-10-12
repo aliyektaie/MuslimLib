@@ -11,13 +11,15 @@
 #import "ArabicLabel.h"
 #import "Utils.h"
 #import "Theme.h"
+#import "NSString+Contains.h"
 
 #define ARABIC_WORD_WIDTH 80
 
 @implementation QuranWordByWordTranslationCell
 
 - (void)setup {
-    self.lblArabicText = [[UIImageView alloc] init];
+    self.lblArabicImage = [[UIImageView alloc] init];
+    self.lblArabicText = [[UILabel alloc] init];
     self.lblTransliteration = [[UILabel alloc] init];
     self.lblTranslation = [[UILabel alloc] init];
     
@@ -29,19 +31,49 @@
     self.lblTranslation.textAlignment = NSTextAlignmentJustified;
     self.backgroundColor = [UIColor clearColor];
     
+    [self addSubview:self.lblArabicImage];
     [self addSubview:self.lblArabicText];
     [self addSubview:self.lblTranslation];
     [self addSubview:self.lblTransliteration];
     
+    self.lblArabicText.textAlignment = NSTextAlignmentRight;
+    self.lblArabicText.font = [UIFont fontWithName:@"Scheherazade-Regular" size:32];
+    
     self.morphologyLabels = [[NSMutableArray alloc] init];
+}
+
+- (NSString*)getVerseWord:(VerseWordTranslation *)model {
+    NSArray* words = [self removeNonWordPrts:[self.verse.text componentsSeparatedByString:@" "]];
+    NSString* result = [words objectAtIndex:self.wordIndex];
+
+    if (self.verse.sourahInfo.orderInBook == 37 && self.verse.verseNumber == 130 && self.wordIndex == 2) {
+        result = [NSString stringWithFormat:@"%@ %@", result, [words objectAtIndex:self.wordIndex + 1]];
+    }
+    
+    return result;
+}
+
+- (NSArray*)removeNonWordPrts:(NSArray*)list {
+    NSMutableArray* result = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < list.count; i++) {
+        NSString* word = [list objectAtIndex:i];
+        
+        if (![word contains:@"<"] && ![word contains:@"۞"]) {
+            [result addObject:word];
+        }
+    }
+    
+    return result;
 }
 
 - (void)setModel:(VerseWordTranslation *)model {
     NSString* url = [NSString stringWithFormat:@"http://corpus.quran.com/wordimage?id=%@", model.arabicImageLink];
-    self.lblArabicText.image = nil;
+    self.lblArabicImage.image = nil;
+    self.lblArabicText.text = [self getVerseWord:model];
     self.tempImage = nil;
-    [self.lblArabicText setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
-        self.lblArabicText.image = image;
+    [self.lblArabicImage setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] placeholderImage:nil success:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, UIImage * _Nonnull image) {
+        self.lblArabicImage.image = image;
         self.tempImage = image;
         [self setNeedsLayout];
     } failure:^(NSURLRequest * _Nonnull request, NSHTTPURLResponse * _Nullable response, NSError * _Nonnull error) {
@@ -105,14 +137,13 @@
     int margin = 10;
     int y_margin = 5;
     
-    if (self.tempImage == nil) {
-        self.lblArabicText.frame = CGRectMake(0,0,0,0);
-    } else {
-        CGFloat imageHeight = 65;
-        CGFloat imageWidth = (imageHeight * self.tempImage.size.width) / self.tempImage.size.height;
-        
-        self.lblArabicText.frame = CGRectMake(width - imageWidth - 10, 5, imageWidth, imageHeight);
-    }
+    self.lblArabicImage.hidden = self.tempImage == nil;
+    self.lblArabicText.hidden = self.tempImage != nil;
+    CGFloat imageHeight = 65;
+    CGFloat imageWidth = self.tempImage == nil ? 200 : (imageHeight * self.tempImage.size.width) / self.tempImage.size.height;
+    
+    self.lblArabicImage.frame = CGRectMake(width - imageWidth - 10, 5, imageWidth, imageHeight);
+    self.lblArabicText.frame = CGRectMake(width - imageWidth - 10, 5, imageWidth, imageHeight);
   
     int translationPartHeight = 55;
     self.lblTranslation.frame = CGRectMake(margin, y_margin, width - margin - ARABIC_WORD_WIDTH, translationPartHeight / 2 - y_margin * 1.5);
