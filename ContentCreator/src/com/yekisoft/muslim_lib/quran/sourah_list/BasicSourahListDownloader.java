@@ -135,6 +135,11 @@ public class BasicSourahListDownloader implements IContentDownloader {
         }
     }
 
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
+
     public static String downloadListOfSourahTable() {
         String html = Utils.getUrlContent("https://fa.wikipedia.org/wiki/%D9%81%D9%87%D8%B1%D8%B3%D8%AA_%D8%B3%D9%88%D8%B1%D9%87%E2%80%8C%D9%87%D8%A7%DB%8C_%D9%82%D8%B1%D8%A2%D9%86");
 

@@ -34,12 +34,18 @@
     
     self.title = L(@"QuranTab/ReadQuran/VerseOptions/ViewWordByWordTranslation");
     
-    self.words = [[MuslimLib instance] getQuranVerseWordByWordTranslations:self.verseInfo];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    [self.tableView registerClass:[QuranWordByWordTranslationCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
+    [[MuslimLib instance] getQuranVerseWordByWordTranslations:self.verseInfo callback:^(NSArray *translations) {
+        if (translations == nil) {
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            self.words = translations;
+            
+            self.tableView.delegate = self;
+            self.tableView.dataSource = self;
+            
+            [self.tableView registerClass:[QuranWordByWordTranslationCell class] forCellReuseIdentifier:CELL_IDENTIFIER];
+        }
+    } controller:self];
     
     self.cmdClose.title = L(@"Close");
     

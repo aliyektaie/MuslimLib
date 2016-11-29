@@ -166,6 +166,11 @@ public class QuranPersianTranslationsDownloader implements IContentDownloader {
     public void terminate() {
 
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran-translation.db";
+    }
 }
 
 class PersianSourahTranslationContainer {

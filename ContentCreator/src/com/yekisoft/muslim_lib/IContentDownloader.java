@@ -17,4 +17,6 @@ public interface IContentDownloader {
     String getTitle();
 
     void terminate();
+
+    String getBankName();
 }

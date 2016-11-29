@@ -110,4 +110,9 @@ public class PersianSourahContentDownloader implements IContentDownloader {
 
         }
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
 }

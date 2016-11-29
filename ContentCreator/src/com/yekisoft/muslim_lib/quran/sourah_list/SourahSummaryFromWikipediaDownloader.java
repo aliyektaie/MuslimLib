@@ -168,6 +168,11 @@ public class SourahSummaryFromWikipediaDownloader implements IContentDownloader 
         properties.size();
     }
 
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
+
     private void downloadPersianSummaries() {
         String html = BasicSourahListDownloader.downloadListOfSourahTable();
         String[] lines = html.split("<tr>");

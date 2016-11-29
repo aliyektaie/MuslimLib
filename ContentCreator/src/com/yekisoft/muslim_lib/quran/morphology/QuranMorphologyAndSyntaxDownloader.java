@@ -267,6 +267,11 @@ public class QuranMorphologyAndSyntaxDownloader implements IContentDownloader {
     public void terminate() {
 
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran-morphology.db";
+    }
 }
 
 class QuranVerseMorphologyInfo {

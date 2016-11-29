@@ -653,7 +653,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OZv-S9-MAV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Commentary" image="QuranTabsCommentary" id="EmI-hg-e9p"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LtU-7Q-MNH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="LtU-7Q-MNH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -885,7 +885,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MxC-BV-O1D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kzC-Pg-bjV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="kzC-Pg-bjV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1037,6 +1037,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9d-cJ-mMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4528" y="921"/>
+        </scene>
+        <!--Module Downloader-->
+        <scene sceneID="qoH-H8-0L5">
+            <objects>
+                <viewController storyboardIdentifier="ModuleDownloaderPageViewController" id="ojd-u8-9eb" customClass="ModuleDownloaderPageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="R4G-OE-cf8"/>
+                        <viewControllerLayoutGuide type="bottom" id="0nU-9I-RXV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EXk-ce-Edz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-eg-zhz">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="NsG-TY-IXS"/>
+                                    <constraint firstAttribute="height" constant="37" id="YEB-CP-1an"/>
+                                </constraints>
+                                <state key="normal" title="Download"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PFr-rD-gjS">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="374" id="a0D-0R-Zsi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fj2-eg-zhz" firstAttribute="centerX" secondItem="EXk-ce-Edz" secondAttribute="centerX" id="ChU-0M-mYM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PFr-rD-gjS" secondAttribute="trailing" id="NT2-2m-wfc"/>
+                            <constraint firstItem="PFr-rD-gjS" firstAttribute="top" secondItem="R4G-OE-cf8" secondAttribute="bottom" constant="8" id="ddf-ui-R8M"/>
+                            <constraint firstItem="0nU-9I-RXV" firstAttribute="top" secondItem="fj2-eg-zhz" secondAttribute="bottom" constant="20" id="fDf-4c-svA"/>
+                            <constraint firstItem="PFr-rD-gjS" firstAttribute="leading" secondItem="EXk-ce-Edz" secondAttribute="leadingMargin" constant="-3" id="nZF-9s-KPB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Module Downloader" id="oZ1-jd-hp1">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Nmh-D0-PFG">
+                            <connections>
+                                <action selector="onCancel:" destination="ojd-u8-9eb" id="Qc2-9U-tbN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="cmdCancel" destination="Nmh-D0-PFG" id="Igz-kh-LSf"/>
+                        <outlet property="cmdDownload" destination="fj2-eg-zhz" id="Y0L-xe-dIx"/>
+                        <outlet property="lblDescription" destination="PFr-rD-gjS" id="q19-4v-MQQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AxQ-ch-JLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7470" y="1105.9859154929577"/>
         </scene>
         <!--Change Language Page-->
         <scene sceneID="78n-38-QXC">

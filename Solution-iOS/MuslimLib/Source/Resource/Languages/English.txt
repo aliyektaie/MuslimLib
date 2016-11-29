@@ -140,4 +140,11 @@ ChangeLanguageWindow/ConfirmLanguageChange:Note that you will have to close this
 // -----------------------------
 SelectSpecialArabicChars/Description:Please select the way you want the Quran to be shown. You can either select the full special characters or the reduced one. Note that if you select the full mode, you won't be able to customize the font anymore.
 
+// Module Downloader:
+// -------------------
+ModuleDownloader/Title/content-quran-translation:Quran Translations Module
+ModuleDownloader/Title/content-quran-morphology:Quran Morphology Module
+ModuleDownloader/Description/content-quran-translation:This module includes the Holy Quran's translations. The translations are as follow:\r\n\r\n* English Translations: Shakir, Sahih International, Pickthall, Yusuf Ali, Dr. Ghali, Muhsin Khan\r\n* Persian Translations: فولادوند، مکارم شیرازی، خرم شاهی، الهی قمشه‌ای، انصاریان
+ModuleDownloader/Description/content-quran-morphology:This module includes the syntax and morphology of the Holy Quran. These informations are extrated from:\r\n\r\nhttp://corpus.quran.com
+
 

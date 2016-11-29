@@ -31,7 +31,7 @@
 
 - (NSString*)getTranslation:(QuranVerse*)verse {
     MuslimLib* instance = [MuslimLib instance];
-    ContentFile* file = (ContentFile*)[instance.contentFile getValue:[NSString stringWithFormat:self.pathTemplate, verse.sourahInfo.orderInBook, verse.verseNumber]];
+    ContentFile* file = (ContentFile*)[[instance getContentFile:CONTENT_QURAN_TRANSLATION] getValue:[NSString stringWithFormat:self.pathTemplate, verse.sourahInfo.orderInBook, verse.verseNumber]];
     
     return file.content;
 }

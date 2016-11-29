@@ -68,10 +68,14 @@ static LanguageStrings* sharedInstance = nil;
 }
 
 - (BOOL) isCommandLine:(NSString*)line {
+    if (line.length == 0) {
+        return YES;
+    }
+    
     NSRange indexOfComment = [line rangeOfString:@"//"];
     NSRange indexOfCollon = [line rangeOfString:@":"];
 
-    return  indexOfComment.location != NSNotFound || indexOfCollon.location == NSNotFound;
+    return  indexOfComment.location == 0 && indexOfCollon.location == NSNotFound;
 }
 
 - (NSString*)get:(NSString*)name {

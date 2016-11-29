@@ -112,6 +112,11 @@ public class EnglishPersianSourahInfoDownloader implements IContentDownloader {
         }
     }
 
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
+
     private ArrayList<SourahInfo> parseSourahInfo(String html) {
         ArrayList<SourahInfo> list = new ArrayList<>();
 

@@ -106,4 +106,9 @@ public class SourahWordAndLetterCountDownloader implements IContentDownloader {
 
         }
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
 }

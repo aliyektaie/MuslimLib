@@ -16,14 +16,23 @@
 #define QURAN_SOURAH_LIST_PATH @"/Content/Quran/SourahList"
 #define QURAN_SOURAH_PAGE_INDEX_PATH @"/Content/Quran/PageIndex"
 
+#define CONTENT_QURAN @"content-quran"
+#define CONTENT_QURAN_TRANSLATION @"content-quran-translation"
+#define CONTENT_QURAN_MORPHOLOGY @"content-quran-morphology"
+
+#define GET_WORD_BY_WORD_TRANSLATION_CALLBACK void (^)(NSArray* translations)
+
+
 @interface MuslimLib : NSObject
 
 - (instancetype)init;
 
-@property (strong, nonatomic) TrieFile* contentFile;
+@property (strong, nonatomic) NSMutableDictionary* contentFiles;
+
 
 + (MuslimLib*)instance;
 
+- (TrieFile*)getContentFile:(NSString*)fileTitle;
 
 - (NSArray*)getSourahList;
 - (QuranSourahInfo*)getSourahInfo:(int)sourahNumber;
@@ -36,7 +45,7 @@
 - (int)getQuranSourahPage:(int)sourah;
 - (NSString*)removeQuranSpecialCharsForce:(NSString*)aya;
 - (NSArray*)getQuranAvailableTranslations;
-- (NSArray*)getQuranVerseWordByWordTranslations:(QuranVerse*)verse;
+- (void)getQuranVerseWordByWordTranslations:(QuranVerse*)verse callback:(GET_WORD_BY_WORD_TRANSLATION_CALLBACK)callback controller:(UIViewController*)controller;
 
 @end
 

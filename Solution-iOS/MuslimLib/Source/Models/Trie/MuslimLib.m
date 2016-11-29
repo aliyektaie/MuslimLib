@@ -11,12 +11,14 @@
 #import "LanguageStrings.h"
 #import "QuranVerseInPageIndex.h"
 #import "Settings.h"
+#import "ModuleDownloaderPageViewController.h"
 
 @interface MuslimLib () {
     NSMutableArray* _quranVersePageIndex;
     NSMutableArray* _quranSourahs;
 
     NSMutableArray* _quranPagesCache;
+    
 }
 
 @end
@@ -24,6 +26,50 @@
 @implementation MuslimLib
 
 static MuslimLib* _instance;
+
+- (TrieFile*)getContentFile:(NSString *)fileTitle {
+    TrieFile* result = [self.contentFiles objectForKey:fileTitle];
+    
+    if (result == nil) {
+        NSString *path = [self getContentFilePath:fileTitle];
+        id<IValueFactory> factory = [[ContentFileValueFactory alloc] init];
+        result = [[TrieFile alloc] initWithPath:path withFactory:factory];
+        
+        [self.contentFiles setObject:result forKey:fileTitle];
+    }
+
+    return result;
+}
+
+- (BOOL)isContentInstalled:(NSString*)title {
+    if ([self.contentFiles objectForKey:title] != nil) {
+        return YES;
+    }
+    
+    NSString *path = [self getContentFilePath:title];
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if ([fileManager fileExistsAtPath:path]){
+        return YES;
+    }
+    
+    return NO;
+}
+
+- (NSString*)getContentFilePath:(NSString*)title {
+    NSString* result = @"";
+    
+    if ([title isEqualToString:CONTENT_QURAN] || [title isEqualToString:CONTENT_QURAN_TRANSLATION]) {
+        result = [[NSBundle mainBundle] pathForResource:title ofType:@"db"];
+    } else {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        
+        result = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.db", title]];
+    }
+    
+    return result;
+}
 
 #pragma mark - General Methods
 + (MuslimLib*)instance {
@@ -38,10 +84,7 @@ static MuslimLib* _instance;
     self = [super init];
 
     if (self) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"db"];
-        id<IValueFactory> factory = [[ContentFileValueFactory alloc] init];
-        _contentFile = [[TrieFile alloc] initWithPath:path withFactory:factory];
-
+        _contentFiles = [[NSMutableDictionary alloc] init];
         _quranPagesCache = [[NSMutableArray alloc] init];
     }
 
@@ -65,7 +108,7 @@ static MuslimLib* _instance;
         return _quranSourahs;
     }
 
-    ContentFile* file = (ContentFile*)[self.contentFile getValue:QURAN_SOURAH_LIST_PATH];
+    ContentFile* file = (ContentFile*)[[self getContentFile:CONTENT_QURAN] getValue:QURAN_SOURAH_LIST_PATH];
     NSArray* json = [self loadJSON:file.content];
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:114];
 
@@ -96,7 +139,7 @@ static MuslimLib* _instance;
     [html appendString:@"</header><body>"];
 
     NSString* path = [NSString stringWithFormat:@"/Content/Quran/Sourah/Summary/%@/%d", [LanguageStrings instance].name, info.orderInBook];
-    ContentFile* file = (ContentFile*)[self.contentFile getValue:path];
+    ContentFile* file = (ContentFile*)[[self getContentFile:CONTENT_QURAN] getValue:path];
     NSDictionary* json = [self loadJSON:file.content];
     NSArray* sections = [json objectForKey:@"sections"];
 
@@ -130,7 +173,7 @@ static MuslimLib* _instance;
 
     if (result == nil) {
         result = [[NSMutableArray alloc] init];
-        NSString* indexContent = ((ContentFile*)[self.contentFile getValue:QURAN_SOURAH_PAGE_INDEX_PATH]).content;
+        NSString* indexContent = ((ContentFile*)[[self getContentFile:CONTENT_QURAN] getValue:QURAN_SOURAH_PAGE_INDEX_PATH]).content;
         NSArray* lines = [indexContent componentsSeparatedByString:@"\r\n"];
 
         for (int i = 0; i < lines.count; i++) {
@@ -165,7 +208,7 @@ static MuslimLib* _instance;
 
         return result;
     } else {
-        ContentFile* file = (ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/QP%d", page]];
+        ContentFile* file = (ContentFile*)[[self getContentFile:CONTENT_QURAN] getValue:[NSString stringWithFormat:@"/QP%d", page]];
         NSArray* json = [self loadJSON:file.content];
 
         for (int i = 0; i < json.count; i++) {
@@ -200,7 +243,7 @@ static MuslimLib* _instance;
 }
 
 - (QuranVerse*)getQuranVerse:(int)verse inSourah:(int)sourah {
-    NSString* text = ((ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/Q%d:%d", sourah, verse]]).content;
+    NSString* text = ((ContentFile*)[[self getContentFile:CONTENT_QURAN] getValue:[NSString stringWithFormat:@"/Q%d:%d", sourah, verse]]).content;
 
     QuranVerse* verseObject = [[QuranVerse alloc] init];
     verseObject.text = [self removeQuranSpecialChars:text];
@@ -382,7 +425,7 @@ static MuslimLib* _instance;
 #pragma mark - Translations
 - (NSArray*)getQuranAvailableTranslations {
     NSMutableArray* result = [[NSMutableArray alloc] init];
-    ContentFile* file = (ContentFile*)[self.contentFile getValue:@"/Quran/Translations/Index"];
+    ContentFile* file = (ContentFile*)[[self getContentFile:CONTENT_QURAN_TRANSLATION] getValue:@"/Quran/Translations/Index"];
     NSString* content = file.content;
     NSArray* lines = [content componentsSeparatedByString:@"\r\n"];
     
@@ -399,9 +442,27 @@ static MuslimLib* _instance;
     return result;
 }
 
-- (NSArray*)getQuranVerseWordByWordTranslations:(QuranVerse*)verse {
+- (void)getQuranVerseWordByWordTranslations:(QuranVerse*)verse callback:(GET_WORD_BY_WORD_TRANSLATION_CALLBACK)callback controller:(UIViewController*)controller {
+    if ([self isContentInstalled:CONTENT_QURAN_MORPHOLOGY]) {
+        callback([self loadQuranVerseWordByWordTranslations:verse]);
+    } else {
+        ModuleDownloaderPageViewController* downloader = [ModuleDownloaderPageViewController create:CONTENT_QURAN_MORPHOLOGY];
+        [downloader setModuleDownloadedAction:^{
+            callback([self loadQuranVerseWordByWordTranslations:verse]);
+        }];
+        
+        [downloader setModuleDownloadFailureAction:^{
+            callback(nil);
+        }];
+        
+        UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:downloader];
+        [controller presentViewController:navController animated:YES completion:nil];
+    }
+}
+
+- (NSArray*)loadQuranVerseWordByWordTranslations:(QuranVerse*)verse {
     NSMutableArray* result = [[NSMutableArray alloc] init];
-    ContentFile* file = (ContentFile*)[self.contentFile getValue:[NSString stringWithFormat:@"/Quran/Translation/WordByWord/%d/%d", verse.sourahInfo.orderInBook, verse.verseNumber]];
+    ContentFile* file = (ContentFile*)[[self getContentFile:CONTENT_QURAN_MORPHOLOGY] getValue:[NSString stringWithFormat:@"/Quran/Translation/WordByWord/%d/%d", verse.sourahInfo.orderInBook, verse.verseNumber]];
     NSArray* parts = [file.content componentsSeparatedByString:@"--------------------------\r\n"];
     
     for (int i = 0; i < parts.count; i++) {

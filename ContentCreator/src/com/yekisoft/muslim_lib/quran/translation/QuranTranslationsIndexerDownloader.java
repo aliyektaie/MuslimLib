@@ -69,4 +69,9 @@ public class QuranTranslationsIndexerDownloader implements IContentDownloader {
     public void terminate() {
 
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran-translation.db";
+    }
 }

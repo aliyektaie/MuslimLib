@@ -204,6 +204,11 @@ public class QuranPageIndexCreator implements IContentDownloader {
     public void terminate() {
 
     }
+
+    @Override
+    public String getBankName() {
+        return "content-quran.db";
+    }
 }
 
 class VerseInfo {

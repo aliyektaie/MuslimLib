@@ -9,6 +9,7 @@ import com.yekisoft.muslim_lib.quran.text.*;
 import com.yekisoft.muslim_lib.quran.translation.*;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Created by yektaie on 8/5/16.
@@ -20,17 +21,17 @@ public class Program {
         // ==========================================================
         //    Quran
         // ==========================================================
-//        result.add(new BasicSourahListDownloader());
-//        result.add(new SourahSummaryFromWikipediaDownloader());
-//        result.add(new PersianSourahContentDownloader());
-//        result.add(new SourahWordAndLetterCountDownloader());
-//        result.add(new EnglishPersianSourahInfoDownloader());
+        result.add(new BasicSourahListDownloader());
+        result.add(new SourahSummaryFromWikipediaDownloader());
+        result.add(new PersianSourahContentDownloader());
+        result.add(new SourahWordAndLetterCountDownloader());
+        result.add(new EnglishPersianSourahInfoDownloader());
 
         result.add(new QuranTextDownloader());
-//        result.add(new QuranPageIndexCreator());
-//        result.add(new QuranEnglishTranslationsDownloader());
-//        result.add(new QuranPersianTranslationsDownloader());
-//        result.add(new QuranTranslationsIndexerDownloader());
+        result.add(new QuranPageIndexCreator());
+        result.add(new QuranEnglishTranslationsDownloader());
+        result.add(new QuranPersianTranslationsDownloader());
+        result.add(new QuranTranslationsIndexerDownloader());
 
         result.add(new QuranMorphologyAndSyntaxDownloader());
 
@@ -42,10 +43,15 @@ public class Program {
 
     public static void main(String[] args) {
         ArrayList<IContentDownloader> contentProviders = getContentDownloaders();
-        ContentManager content = new ContentManager();
+        Hashtable<String, ContentManager> contents = new Hashtable<>();
+        ArrayList<String> titles = new ArrayList<>();
 
         for (int i = 0; i < contentProviders.size(); i++) {
             IContentDownloader downloader = contentProviders.get(i);
+            if (!contents.containsKey(downloader.getBankName())) {
+                contents.put(downloader.getBankName(), new ContentManager());
+                titles.add(downloader.getBankName());
+            }
 
             printDownloaderHeader(downloader);
             downloadContent(downloader);
@@ -53,7 +59,7 @@ public class Program {
             ArrayList<ContentFile> files = downloader.getContentFiles();
             if (files != null) {
                 for (ContentFile file : files) {
-                    content.Add(file.FilePath, file);
+                    contents.get(downloader.getBankName()).Add(file.FilePath, file);
                 }
             }
 
@@ -61,7 +67,9 @@ public class Program {
         }
 
         printSpaceBetweenContentDownloadersAndGenerator();
-        content.Save("/Volumes/Files/Projects/MuslimLib/Content/content.db", "Muslim Lib Content File");
+        for (String fileTitle : titles) {
+            contents.get(fileTitle).Save("/Volumes/Files/Projects/MuslimLib/Content/" + fileTitle, "Muslim Lib Content File");
+        }
     }
 
     private static void printSpaceBetweenContentDownloadersAndGenerator() {

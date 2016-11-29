@@ -46,7 +46,10 @@
 		283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBE1D55016900E67E49 /* IRANSans.ttf */; };
 		283C3BC31D55016900E67E49 /* roya.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BBF1D55016900E67E49 /* roya.ttf */; };
 		283C3BC41D55016900E67E49 /* royabold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 283C3BC01D55016900E67E49 /* royabold.ttf */; };
-		284896FB1D58DACE0077529D /* content.db in Resources */ = {isa = PBXBuildFile; fileRef = 284896FA1D58DACE0077529D /* content.db */; };
+		283C61891DAEA4900099595B /* content-quran-morphology.db in Resources */ = {isa = PBXBuildFile; fileRef = 283C61861DAEA4900099595B /* content-quran-morphology.db */; };
+		283C618A1DAEA4900099595B /* content-quran-translation.db in Resources */ = {isa = PBXBuildFile; fileRef = 283C61871DAEA4900099595B /* content-quran-translation.db */; };
+		283C618B1DAEA4900099595B /* content-quran.db in Resources */ = {isa = PBXBuildFile; fileRef = 283C61881DAEA4900099595B /* content-quran.db */; };
+		283C618F1DAEAE7A0099595B /* ModuleDownloaderPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C618E1DAEAE7A0099595B /* ModuleDownloaderPageViewController.m */; };
 		2848970F1D58DB500077529D /* ContentFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 284896FE1D58DB500077529D /* ContentFile.m */; };
 		284897101D58DB500077529D /* ContentFileValueFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897001D58DB500077529D /* ContentFileValueFactory.m */; };
 		284897121D58DB500077529D /* LazyLoadTrieNodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 284897061D58DB500077529D /* LazyLoadTrieNodeInfo.m */; };
@@ -164,7 +167,11 @@
 		283C3BBE1D55016900E67E49 /* IRANSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = IRANSans.ttf; path = Source/Resource/Fonts/Persian/IRANSans.ttf; sourceTree = "<group>"; };
 		283C3BBF1D55016900E67E49 /* roya.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = roya.ttf; path = Source/Resource/Fonts/Persian/roya.ttf; sourceTree = "<group>"; };
 		283C3BC01D55016900E67E49 /* royabold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = royabold.ttf; path = Source/Resource/Fonts/Persian/royabold.ttf; sourceTree = "<group>"; };
-		284896FA1D58DACE0077529D /* content.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = content.db; path = MuslimLib/Content/content.db; sourceTree = "<group>"; };
+		283C61861DAEA4900099595B /* content-quran-morphology.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "content-quran-morphology.db"; path = "MuslimLib/Content/content-quran-morphology.db"; sourceTree = "<group>"; };
+		283C61871DAEA4900099595B /* content-quran-translation.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "content-quran-translation.db"; path = "MuslimLib/Content/content-quran-translation.db"; sourceTree = "<group>"; };
+		283C61881DAEA4900099595B /* content-quran.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = "content-quran.db"; path = "MuslimLib/Content/content-quran.db"; sourceTree = "<group>"; };
+		283C618D1DAEAE7A0099595B /* ModuleDownloaderPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModuleDownloaderPageViewController.h; path = "Source/Views/Settings/Module Downloader/ModuleDownloaderPageViewController.h"; sourceTree = "<group>"; };
+		283C618E1DAEAE7A0099595B /* ModuleDownloaderPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModuleDownloaderPageViewController.m; path = "Source/Views/Settings/Module Downloader/ModuleDownloaderPageViewController.m"; sourceTree = "<group>"; };
 		284896FD1D58DB500077529D /* ContentFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentFile.h; path = Source/Models/Trie/ContentFile.h; sourceTree = "<group>"; };
 		284896FE1D58DB500077529D /* ContentFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContentFile.m; path = Source/Models/Trie/ContentFile.m; sourceTree = "<group>"; };
 		284896FF1D58DB500077529D /* ContentFileValueFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentFileValueFactory.h; path = Source/Models/Trie/ContentFileValueFactory.h; sourceTree = "<group>"; };
@@ -585,10 +592,21 @@
 			name = Persian;
 			sourceTree = "<group>";
 		};
+		283C618C1DAEAE3F0099595B /* Module Downloader */ = {
+			isa = PBXGroup;
+			children = (
+				283C618D1DAEAE7A0099595B /* ModuleDownloaderPageViewController.h */,
+				283C618E1DAEAE7A0099595B /* ModuleDownloaderPageViewController.m */,
+			);
+			name = "Module Downloader";
+			sourceTree = "<group>";
+		};
 		284896F91D58DAB60077529D /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				284896FA1D58DACE0077529D /* content.db */,
+				283C61861DAEA4900099595B /* content-quran-morphology.db */,
+				283C61871DAEA4900099595B /* content-quran-translation.db */,
+				283C61881DAEA4900099595B /* content-quran.db */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -798,6 +816,7 @@
 		28F4303B1D7D25630064900A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				283C618C1DAEAE3F0099595B /* Module Downloader */,
 				28A101EF1D83CEC40022B159 /* Select Quran Translation */,
 				28A101EB1D83C8FC0022B159 /* Show Quran Special Chars */,
 				28A101E31D83C4480022B159 /* Change Language */,
@@ -923,11 +942,13 @@
 				28190C341D4B615300CAFB88 /* Assets.xcassets in Resources */,
 				283C3BB61D55014B00E67E49 /* Al_Mushaf.ttf in Resources */,
 				283C3BC41D55016900E67E49 /* royabold.ttf in Resources */,
-				284896FB1D58DACE0077529D /* content.db in Resources */,
 				283C3BC31D55016900E67E49 /* roya.ttf in Resources */,
 				283C3BC11D55016900E67E49 /* IRANSans-Bold.ttf in Resources */,
 				283C3BC21D55016900E67E49 /* IRANSans.ttf in Resources */,
+				283C61891DAEA4900099595B /* content-quran-morphology.db in Resources */,
+				283C618B1DAEA4900099595B /* content-quran.db in Resources */,
 				283C3BB81D55014B00E67E49 /* Scheherazade-Bold.ttf in Resources */,
+				283C618A1DAEA4900099595B /* content-quran-translation.db in Resources */,
 				28190C321D4B615300CAFB88 /* Main.storyboard in Resources */,
 				283C3BAC1D54DBAF00E67E49 /* Green.txt in Resources */,
 				283C3BB91D55014B00E67E49 /* Scheherazade-Regular.ttf in Resources */,
@@ -998,6 +1019,7 @@
 				2848972C1D58E1930077529D /* QuranSourahInfo.m in Sources */,
 				284897341D5A11690077529D /* QuranSourahOptionsAndDetailsViewController.m in Sources */,
 				289FFBAF1D7BD7F6008ED24F /* ArabicLabel.m in Sources */,
+				283C618F1DAEAE7A0099595B /* ModuleDownloaderPageViewController.m in Sources */,
 				283C3B8A1D53F4BA00E67E49 /* SourahListViewController.m in Sources */,
 				2813E5991D601798002E9BA6 /* SidebarItem.m in Sources */,
 				287A32021D91C7C300A2505A /* QuranHomePage.m in Sources */,

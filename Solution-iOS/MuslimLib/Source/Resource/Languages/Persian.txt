@@ -140,3 +140,17 @@ ChangeLanguageWindow/ConfirmLanguageChange:برای اعمال تغییر زبا
 // Select Special Arabic Chars:
 // -----------------------------
 SelectSpecialArabicChars/Description:لطفا نوع حرکت گذاری قرآن را مشخص کنید. توجه داشته باشید که در صورتی که حرکت گذاری کامل را انتخاب کنید دیگر قادر به انتخاب فونت عربی قرآن نخواهید بود.
+
+// Module Downloader:
+// -------------------
+ModuleDownloader/Title/content-quran-translation:ترجمه‌های قرآن
+ModuleDownloader/Title/content-quran-morphology:صرف و نحو قرآن
+ModuleDownloader/Description/content-quran-translation:این پایگاه داده حاوی ترجمه‌های قرآن است. لیست این ترجمه‌ها عبار‌اند از:\r\n\r\n* ترجمه‌های انگلیسی: Shakir, Sahih International, Pickthall, Yusuf Ali, Dr. Ghali, Muhsin Khan\r\n* ترجمه‌های فارسی: فولادوند، مکارم شیرازی، خرم شاهی، الهی قمشه‌ای، انصاریان
+ModuleDownloader/Description/content-quran-morphology:این پایگاه داده حاوی صرف و نحو قرآن کریم است. توجه داشته باشید که اطلاعات این پک انگلیسی بوده و از سایت زیر استخراج شده است:\r\n\r\nhttp://corpus.quran.com
+
+// 
+
+
+
+
+
